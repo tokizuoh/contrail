@@ -9,7 +9,7 @@ Xcode 13.3
 Build version 13E113
 ```
   
-## Before development
+## Before Development
 
 ```sh
 make set-git-hooks  
