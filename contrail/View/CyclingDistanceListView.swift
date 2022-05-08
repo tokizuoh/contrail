@@ -14,7 +14,9 @@ struct CyclingDistanceListView: View {
         List(cyclingDistanceList) { cyclingDistance in
             CyclingDistanceRow(distance: cyclingDistance.distance,
                                date: cyclingDistance.date)
+            .listRowSeparator(.hidden)
         }
+        .listStyle(.grouped)
     }
 }
 
