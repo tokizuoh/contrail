@@ -7,20 +7,15 @@
 
 import HealthKit
 
-final class HealthKitClient {
+protocol HealthKitClientProtocol {
+    func getWorkouts() -> [HKWorkout]?
+}
+
+final class HealthKitClient: HealthKitClientProtocol {
+    private var healthStore: HKHealthStore!
+    private var workouts: [HKWorkout]?
+    
     static let shared = HealthKitClient()
-   
-    var healthStore: HKHealthStore!
-    var workouts: [HKWorkout]? {
-        didSet {
-            guard let workouts = workouts else {
-                return
-            }
-            for workout in workouts {
-                print(workout.totalDistance)
-            }
-        }
-    }
     
     private init() {
         self.healthStore = HKHealthStore()
@@ -36,11 +31,11 @@ final class HealthKitClient {
                 // TODO: エラーハンドリング
                 return
             }
-            self.getWorkouts()
+            self.fetchWorkouts()
         }
     }
     
-    private func getWorkouts() {
+    private func fetchWorkouts() {
         let type = HKWorkoutType.workoutType()
         let predicate = HKQuery.predicateForWorkouts(with: .cycling)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
@@ -58,5 +53,9 @@ final class HealthKitClient {
             })
         }
         healthStore?.execute(query)
+    }
+    
+    func getWorkouts() -> [HKWorkout]? {
+        return workouts
     }
 }
