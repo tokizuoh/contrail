@@ -45,6 +45,7 @@ final class HealthKitClient: ObservableObject {
                   error == nil else {
                 return
             }
+            // TODO: わざわざ代入する必要ある？
             self.workouts = workouts.sorted(by: { (lw, rw) -> Bool in
                 lw.startDate < rw.startDate
             })
