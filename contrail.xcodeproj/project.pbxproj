@@ -17,6 +17,7 @@
 		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
 		73CA031C2827AEF700327B0D /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA031B2827AEF700327B0D /* HealthKitClient.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
+		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		73CA03212827B49800327B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		73CA03222827C52F00327B0D /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				73A819952827641F009F2097 /* ColorExtension.swift */,
+				73CA03222827C52F00327B0D /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CA031C2827AEF700327B0D /* HealthKitClient.swift in Sources */,
+				73CA03232827C52F00327B0D /* DateExtension.swift in Sources */,
 				73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */,
 				7356FF982827570C00EC7C73 /* CyclingDistanceRowView.swift in Sources */,
 				733225C32826B77200DACB5A /* ContentView.swift in Sources */,

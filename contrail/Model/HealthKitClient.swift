@@ -51,9 +51,9 @@ final class HealthKitClient: ObservableObject {
             DispatchQueue.main.async {
                 self.cyclingDistanceList = workouts.map { workout in
                     let distance = workout.totalDistance!.doubleValue(for: .meter()) / 1000
-                    
+                    let date = workout.startDate.string(format: .yyyyMMddPd)
                     return .init(distance: distance,
-                                 date: "xx")
+                                 date: date)
                 }
             }
             
