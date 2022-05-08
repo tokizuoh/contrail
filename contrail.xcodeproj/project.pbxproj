@@ -51,8 +51,8 @@
 		733225BF2826B77200DACB5A /* contrail */ = {
 			isa = PBXGroup;
 			children = (
+				7356FF962827541700EC7C73 /* View */,
 				733225C02826B77200DACB5A /* contrailApp.swift */,
-				733225C22826B77200DACB5A /* ContentView.swift */,
 				733225C42826B77600DACB5A /* Assets.xcassets */,
 				733225C62826B77600DACB5A /* Preview Content */,
 			);
@@ -65,6 +65,14 @@
 				733225C72826B77600DACB5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7356FF962827541700EC7C73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				733225C22826B77200DACB5A /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
