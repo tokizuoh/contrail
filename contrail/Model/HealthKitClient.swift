@@ -7,13 +7,10 @@
 
 import HealthKit
 
-protocol HealthKitClientProtocol {
-    func getWorkouts() -> [HKWorkout]?
-}
-
-final class HealthKitClient: HealthKitClientProtocol {
+final class HealthKitClient: ObservableObject {
     private var healthStore: HKHealthStore!
     private var workouts: [HKWorkout]?
+    @Published var cyclingDistanceList: [CyclingDistance] = []
     
     static let shared = HealthKitClient()
     
@@ -51,11 +48,16 @@ final class HealthKitClient: HealthKitClientProtocol {
             self.workouts = workouts.sorted(by: { (lw, rw) -> Bool in
                 lw.startDate < rw.startDate
             })
+            DispatchQueue.main.async {
+                self.cyclingDistanceList = workouts.map { workout in
+                    let distance = workout.totalDistance!.doubleValue(for: .meter()) / 1000
+                    
+                    return .init(distance: distance,
+                                 date: "xx")
+                }
+            }
+            
         }
         healthStore?.execute(query)
-    }
-    
-    func getWorkouts() -> [HKWorkout]? {
-        return workouts
     }
 }
