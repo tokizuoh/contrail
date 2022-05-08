@@ -15,7 +15,7 @@ struct CyclingDistanceListView: View {
             CyclingDistanceRowView(distance: cyclingDistance.distance,
                                date: cyclingDistance.date)
             .listRowSeparator(.hidden)
-            .listRowBackground(Color.contrailGray)
+            .listRowBackground(Color.contrailLightGray)
         }
         .listStyle(.plain)
     }
