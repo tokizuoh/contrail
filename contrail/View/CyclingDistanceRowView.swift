@@ -22,6 +22,7 @@ struct CyclingDistanceRowView: View {
             Spacer()
             Text(date)
                 .font(.subheadline)
+                .foregroundColor(.contrailDarkGray)
                 .padding(EdgeInsets(top: 5,
                                     leading: 0,
                                     bottom: 5,
