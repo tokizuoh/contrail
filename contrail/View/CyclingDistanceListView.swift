@@ -12,7 +12,7 @@ struct CyclingDistanceListView: View {
     
     var body: some View {
         List(cyclingDistanceList) { cyclingDistance in
-            CyclingDistanceRow(distance: cyclingDistance.distance,
+            CyclingDistanceRowView(distance: cyclingDistance.distance,
                                date: cyclingDistance.date)
             .listRowSeparator(.hidden)
         }

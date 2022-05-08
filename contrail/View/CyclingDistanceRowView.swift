@@ -1,5 +1,5 @@
 //
-//  CyclingDistanceRow.swift
+//  CyclingDistanceRowView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/08.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CyclingDistanceRow: View {
+struct CyclingDistanceRowView: View {
     let distance: Double
     let date: String
 
@@ -30,9 +30,9 @@ struct CyclingDistanceRow: View {
     }
 }
 
-struct CyclingDistanceRow_Previews: PreviewProvider {
+struct CyclingDistanceRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceRow(distance: 41.456,
-                           date: "2022.05.08")
+        CyclingDistanceRowView(distance: 41.456,
+                               date: "2022.05.08")
     }
 }
