@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     init() {
-        let _ = HealthKitClient()
+        _ = HealthKitClient.shared
     }
     
     var body: some View {

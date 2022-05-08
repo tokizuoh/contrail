@@ -8,6 +8,7 @@
 import HealthKit
 
 final class HealthKitClient {
+    static let shared = HealthKitClient()
    
     var healthStore: HKHealthStore!
     var workouts: [HKWorkout]? {
@@ -21,7 +22,7 @@ final class HealthKitClient {
         }
     }
     
-    init() {
+    private init() {
         self.healthStore = HKHealthStore()
         let readTypes = Set([
             HKObjectType.workoutType()
@@ -58,5 +59,4 @@ final class HealthKitClient {
         }
         healthStore?.execute(query)
     }
-    
 }
