@@ -14,6 +14,7 @@
 		7356FF982827570C00EC7C73 /* CyclingDistanceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7356FF972827570C00EC7C73 /* CyclingDistanceRowView.swift */; };
 		73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */; };
 		73A8199228275984009F2097 /* CyclingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8199128275984009F2097 /* CyclingDistance.swift */; };
+		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7356FF972827570C00EC7C73 /* CyclingDistanceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceRowView.swift; sourceTree = "<group>"; };
 		73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceListView.swift; sourceTree = "<group>"; };
 		73A8199128275984009F2097 /* CyclingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistance.swift; sourceTree = "<group>"; };
+		73A819952827641F009F2097 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		733225BF2826B77200DACB5A /* contrail */ = {
 			isa = PBXGroup;
 			children = (
+				73A819942827640D009F2097 /* Extension */,
 				73A819902827596E009F2097 /* Model */,
 				7356FF962827541700EC7C73 /* View */,
 				733225C02826B77200DACB5A /* contrailApp.swift */,
@@ -90,6 +93,14 @@
 				73A8199128275984009F2097 /* CyclingDistance.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		73A819942827640D009F2097 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				73A819952827641F009F2097 /* ColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */,
 				7356FF982827570C00EC7C73 /* CyclingDistanceRowView.swift in Sources */,
 				733225C32826B77200DACB5A /* ContentView.swift in Sources */,
+				73A819962827641F009F2097 /* ColorExtension.swift in Sources */,
 				73A8199228275984009F2097 /* CyclingDistance.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,
 			);
