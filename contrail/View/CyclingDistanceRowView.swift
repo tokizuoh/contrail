@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct CyclingDistanceRowView: View {
-    let distance: Double
-    let date: String
+    let cyclingDistance: CyclingDistance
     
     var body: some View {
         HStack(alignment: .bottom) {
-            Text("\(distance.description) km")
+            Text("\(cyclingDistance.distance.description) km")
                 .font(.title)
                 .padding(EdgeInsets(top: 5,
                                     leading: 20,
                                     bottom: 5,
                                     trailing: 0))
             Spacer()
-            Text(date)
+            Text(cyclingDistance.date)
                 .font(.subheadline)
                 .foregroundColor(.contrailDarkGray)
                 .padding(EdgeInsets(top: 5,
@@ -35,7 +34,7 @@ struct CyclingDistanceRowView: View {
 
 struct CyclingDistanceRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceRowView(distance: 41.456,
-                               date: "2022.05.08")
+        CyclingDistanceRowView(cyclingDistance: .init(distance: 41.456,
+                                                      date: "2022.05.08"))
     }
 }

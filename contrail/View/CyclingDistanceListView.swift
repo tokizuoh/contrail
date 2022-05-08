@@ -12,8 +12,8 @@ struct CyclingDistanceListView: View {
     
     var body: some View {
         List(cyclingDistanceList) { cyclingDistance in
-            CyclingDistanceRowView(distance: cyclingDistance.distance,
-                               date: cyclingDistance.date)
+            CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
+                                                          date: cyclingDistance.date))
             .listRowSeparator(.hidden)
             .listRowBackground(Color.contrailLightGray)
         }
