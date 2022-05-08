@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        let _ = HealthKitClient()
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
