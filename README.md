@@ -12,5 +12,5 @@ Build version 13E113
 ## Before Development
 
 ```sh
-make set-git-hooks  
+make set-git-hooks-commit-msg
 ```
