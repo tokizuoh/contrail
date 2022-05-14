@@ -54,8 +54,3 @@ struct CyclingDistanceListView_Previews: PreviewProvider {
         CyclingDistanceListView(viewModel: CyclingDistanceListViewModel.generateMock())
     }
 }
-
-protocol ViewModelProtocol {
-    static func generateEmpty() -> Self
-    static func generateMock() -> Self
-}
