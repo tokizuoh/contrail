@@ -11,9 +11,9 @@ final class HealthKitClient: ObservableObject {
     private var healthStore: HKHealthStore!
     private var workouts: [HKWorkout]?
     @Published var cyclingDistanceList: [CyclingDistance] = []
-    
+
     static let shared = HealthKitClient()
-    
+
     private init() {
         self.healthStore = HKHealthStore()
         let readTypes = Set([
@@ -31,7 +31,7 @@ final class HealthKitClient: ObservableObject {
             self.fetchWorkouts()
         }
     }
-    
+
     private func fetchWorkouts() {
         let type = HKWorkoutType.workoutType()
         let predicate = HKQuery.predicateForWorkouts(with: .cycling)
@@ -57,7 +57,7 @@ final class HealthKitClient: ObservableObject {
                                  date: date)
                 }
             }
-            
+
         }
         healthStore?.execute(query)
     }

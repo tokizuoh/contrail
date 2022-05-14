@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CyclingDistanceRowView: View {
     let cyclingDistance: CyclingDistance
-    
+
     var body: some View {
         HStack(alignment: .bottom) {
             // TODO: ここで整形しないようにする
