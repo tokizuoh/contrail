@@ -21,11 +21,11 @@ final class HealthKitClient: ObservableObject {
         ])
         healthStore.requestAuthorization(toShare: nil, read: readTypes) { success, error in
             guard error == nil else {
-                // TODO: エラーハンドリング
+                // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
                 return
             }
             guard success else {
-                // TODO: エラーハンドリング
+                // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
                 return
             }
             self.fetchWorkouts()
@@ -45,7 +45,7 @@ final class HealthKitClient: ObservableObject {
                   error == nil else {
                 return
             }
-            // TODO: わざわざ代入する必要ある？
+            // TODO: [#33] workout取得処理を見直す
             self.workouts = workouts.sorted(by: { (lw, rw) -> Bool in
                 lw.startDate < rw.startDate
             })
