@@ -10,16 +10,14 @@ import HealthKit
 
 struct ContentView: View {
     // TODO: [#30] HealthKitClient の命名を考え直す
-    @ObservedObject var healthKitClient: HealthKitClient
+    @ObservedObject var viewModel = ContentViewModel()
 
-    init() {
-        healthKitClient = HealthKitClient.shared
-    }
+    //    init() {
+    //        healthKitClient = HealthKitClient.shared
+    //    }
 
     var body: some View {
-        CyclingDistanceListView(viewModel: .init(cyclingTopViewModel: .init(totalCyclingDistance: "1111",
-                                                                            maxDistancePerOneRide: "111"),
-                                                 cyclingDistanceList: healthKitClient.cyclingDistanceList))
+        CyclingDistanceListView(viewModel: viewModel.data)
     }
 }
 

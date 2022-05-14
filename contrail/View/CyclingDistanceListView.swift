@@ -29,9 +29,15 @@ struct CyclingDistanceListViewModel {
     let cyclingTopViewModel: CyclingDistanceTopViewModel
     let cyclingDistanceList: [CyclingDistance]
 
+    static func generateEmpty() -> Self {
+        return .init(cyclingTopViewModel: .init(totalCyclingDistanceText: "",
+                                                maxDistancePerOneRideText: "'"),
+                     cyclingDistanceList: [])
+    }
+
     static func generateMock() -> Self {
-        let cyclingTopViewModel: CyclingDistanceTopViewModel = .init(totalCyclingDistance: "1000.23",
-                                                                     maxDistancePerOneRide: "45.6")
+        let cyclingTopViewModel: CyclingDistanceTopViewModel = .init(totalCyclingDistanceText: "1000.23",
+                                                                     maxDistancePerOneRideText: "45.6")
         let cyclingDistanceList: [CyclingDistance] = [
             .init(distance: 41.1, date: "2022.05.08"),
             .init(distance: 22.4, date: "2022.05.03"),
