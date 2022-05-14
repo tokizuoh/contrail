@@ -17,7 +17,7 @@ struct CyclingDistanceRowView: View {
                     .font(.title)
                     .padding(.leading, 20)
                 Text("km")
-                    .font(.subheadline)
+                    .font(.subheadline)a
             }
             .padding(.vertical, 5)
 
