@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
-    // TODO: 命名考え直す
+    // TODO: [#30] HealthKitClient の命名を考え直す
     @ObservedObject var healthKitClient: HealthKitClient
 
     init() {
