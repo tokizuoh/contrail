@@ -17,7 +17,9 @@ struct ContentView: View {
     }
 
     var body: some View {
-        CyclingDistanceListView(cyclingDistanceList: healthKitClient.cyclingDistanceList)
+        CyclingDistanceListView(viewModel: .init(cyclingTopViewModel: .init(totalCyclingDistance: "1111",
+                                                                            maxDistancePerOneRide: "111"),
+                                                 cyclingDistanceList: healthKitClient.cyclingDistanceList))
     }
 }
 
