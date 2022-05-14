@@ -33,9 +33,14 @@ struct CyclingDistanceTopView: View {
     }
 }
 
-struct CyclingDistanceTopViewModel {
+struct CyclingDistanceTopViewModel: ViewModelProtocol {
     let totalCyclingDistanceText: String
     let maxDistancePerOneRideText: String
+
+    static func generateEmpty() -> CyclingDistanceTopViewModel {
+        return .init(totalCyclingDistanceText: "",
+                     maxDistancePerOneRideText: "")
+    }
 
     static func generateMock() -> Self {
         return .init(totalCyclingDistanceText: "1000.21",

@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct CyclingDistanceRowView: View {
-    let cyclingDistance: CyclingDistance
+    let viewModel: CyclingDistanceRowViewModel
 
     var body: some View {
         HStack(alignment: .bottom) {
-            // TODO: [#31] CyclingDistanceRowView でデータを整形しないようにする
-            Text("\(String(format: "%.2f", cyclingDistance.distance)) km")
+            Text(viewModel.distanceText)
                 .font(.title)
                 .padding(EdgeInsets(top: 5,
                                     leading: 20,
                                     bottom: 5,
                                     trailing: 0))
             Spacer()
-            Text(cyclingDistance.date)
+            Text(viewModel.dateText)
                 .font(.subheadline)
                 .foregroundColor(.contrailDarkGray)
                 .padding(EdgeInsets(top: 5,
@@ -33,9 +32,25 @@ struct CyclingDistanceRowView: View {
     }
 }
 
+struct CyclingDistanceRowViewModel: ViewModelProtocol, Identifiable {
+    var id = UUID()
+
+    let distanceText: String
+    let dateText: String
+
+    static func generateEmpty() -> CyclingDistanceRowViewModel {
+        return .init(distanceText: "",
+                     dateText: "")
+    }
+
+    static func generateMock() -> CyclingDistanceRowViewModel {
+        return .init(distanceText: "12.3",
+                     dateText: "2222.11.3")
+    }
+}
+
 struct CyclingDistanceRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceRowView(cyclingDistance: .init(distance: 41.456,
-                                                      date: "2022.05.08"))
+        CyclingDistanceRowView(viewModel: .generateMock())
     }
 }

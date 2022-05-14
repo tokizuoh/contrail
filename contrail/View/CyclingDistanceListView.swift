@@ -14,9 +14,8 @@ struct CyclingDistanceListView: View {
         VStack {
             // TODO: [#38] リストの中に追加する
             CyclingDistanceTopView(viewModel: viewModel.cyclingTopViewModel)
-            List(viewModel.cyclingDistanceList) { cyclingDistance in
-                CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
-                                                              date: cyclingDistance.date))
+            List(viewModel.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
+                CyclingDistanceRowView(viewModel: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.contrailLightGray)
             }
@@ -25,29 +24,28 @@ struct CyclingDistanceListView: View {
     }
 }
 
-struct CyclingDistanceListViewModel {
+struct CyclingDistanceListViewModel: ViewModelProtocol {
     let cyclingTopViewModel: CyclingDistanceTopViewModel
-    let cyclingDistanceList: [CyclingDistance]
+    let cyclingDistanceRowViewModels: [CyclingDistanceRowViewModel]
 
     static func generateEmpty() -> Self {
-        return .init(cyclingTopViewModel: .init(totalCyclingDistanceText: "",
-                                                maxDistancePerOneRideText: "'"),
-                     cyclingDistanceList: [])
+        return .init(cyclingTopViewModel: .generateEmpty(),
+                     cyclingDistanceRowViewModels: [.generateEmpty()])
     }
 
     static func generateMock() -> Self {
         let cyclingTopViewModel: CyclingDistanceTopViewModel = .init(totalCyclingDistanceText: "1000.23",
                                                                      maxDistancePerOneRideText: "45.6")
-        let cyclingDistanceList: [CyclingDistance] = [
-            .init(distance: 41.1, date: "2022.05.08"),
-            .init(distance: 22.4, date: "2022.05.03"),
-            .init(distance: 35.1, date: "2022.04.29"),
-            .init(distance: 33.3, date: "2022.04.24"),
-            .init(distance: 19.2, date: "2022.04.21"),
-            .init(distance: 48.5, date: "2022.04.20")
+        let cyclingDistanceRowViewModels: [CyclingDistanceRowViewModel] = [
+            .init(distanceText: "41.1", dateText: "2022.05.08"),
+            .init(distanceText: "22.4", dateText: "2022.05.03"),
+            .init(distanceText: "35.1", dateText: "2022.04.29"),
+            .init(distanceText: "33.3", dateText: "2022.04.24"),
+            .init(distanceText: "19.2", dateText: "2022.04.21"),
+            .init(distanceText: "48.5", dateText: "2022.04.20")
         ]
         return .init(cyclingTopViewModel: cyclingTopViewModel,
-                     cyclingDistanceList: cyclingDistanceList)
+                     cyclingDistanceRowViewModels: cyclingDistanceRowViewModels)
     }
 }
 
@@ -55,4 +53,9 @@ struct CyclingDistanceListView_Previews: PreviewProvider {
     static var previews: some View {
         CyclingDistanceListView(viewModel: CyclingDistanceListViewModel.generateMock())
     }
+}
+
+protocol ViewModelProtocol {
+    static func generateEmpty() -> Self
+    static func generateMock() -> Self
 }
