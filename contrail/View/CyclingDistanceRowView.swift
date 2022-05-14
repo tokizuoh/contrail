@@ -11,14 +11,18 @@ struct CyclingDistanceRowView: View {
     let viewModel: CyclingDistanceRowViewModel
 
     var body: some View {
-        HStack(alignment: .bottom) {
-            Text(viewModel.distanceText)
-                .font(.title)
-                .padding(EdgeInsets(top: 5,
-                                    leading: 20,
-                                    bottom: 5,
-                                    trailing: 0))
+        HStack(alignment: .lastTextBaseline) {
+            HStack(alignment: .lastTextBaseline) {
+                Text(viewModel.distanceText)
+                    .font(.title)
+                    .padding(.leading, 20)
+                Text("km")
+                    .font(.subheadline)
+            }
+            .padding(.vertical, 5)
+
             Spacer()
+
             Text(viewModel.dateText)
                 .font(.subheadline)
                 .foregroundColor(.contrailDarkGray)

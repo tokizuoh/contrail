@@ -36,7 +36,7 @@ struct CyclingDistanceListTranslator {
     private func makeCyclingDistanceRowViewModels(_ from: From) -> [CyclingDistanceRowViewModel] {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
-            let distanceText = "\(String(format: "%.2f", distance)) km"
+            let distanceText = String(format: "%.2f", distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
 
             return CyclingDistanceRowViewModel(distanceText: distanceText,
