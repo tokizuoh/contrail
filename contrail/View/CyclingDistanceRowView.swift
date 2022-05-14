@@ -12,7 +12,8 @@ struct CyclingDistanceRowView: View {
     
     var body: some View {
         HStack(alignment: .bottom) {
-            Text("\(cyclingDistance.distance.description) km")
+            // TODO: ここで整形しないようにする
+            Text("\(String(format: "%.2f", cyclingDistance.distance)) km")
                 .font(.title)
                 .padding(EdgeInsets(top: 5,
                                     leading: 20,

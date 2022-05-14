@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
+    // TODO: 命名考え直す
+    @ObservedObject var healthKitClient: HealthKitClient
     
     init() {
-        _ = HealthKitClient.shared
+        healthKitClient = HealthKitClient.shared
     }
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        CyclingDistanceListView(cyclingDistanceList: healthKitClient.cyclingDistanceList)
     }
 }
 
