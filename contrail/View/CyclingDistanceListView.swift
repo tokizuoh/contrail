@@ -11,13 +11,18 @@ struct CyclingDistanceListView: View {
     let cyclingDistanceList: [CyclingDistance]
 
     var body: some View {
-        List(cyclingDistanceList) { cyclingDistance in
-            CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
-                                                          date: cyclingDistance.date))
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.contrailLightGray)
+        VStack {
+            // TODO: [#38] リストの中に追加する
+            CyclingDistanceTopView(viewModel: .init(totalCyclingDistance: "1000.23",
+                                                    maxDistancePerOneRide: "45.6"))
+            List(cyclingDistanceList) { cyclingDistance in
+                CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
+                                                              date: cyclingDistance.date))
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.contrailLightGray)
+            }
+            .listStyle(.plain)
         }
-        .listStyle(.plain)
     }
 }
 

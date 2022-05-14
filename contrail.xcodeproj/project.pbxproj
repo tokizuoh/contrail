@@ -15,6 +15,7 @@
 		73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */; };
 		73A8199228275984009F2097 /* CyclingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8199128275984009F2097 /* CyclingDistance.swift */; };
 		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
+		73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */; };
 		73CA031C2827AEF700327B0D /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA031B2827AEF700327B0D /* HealthKitClient.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
@@ -30,6 +31,7 @@
 		73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceListView.swift; sourceTree = "<group>"; };
 		73A8199128275984009F2097 /* CyclingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistance.swift; sourceTree = "<group>"; };
 		73A819952827641F009F2097 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceTopView.swift; sourceTree = "<group>"; };
 		73CA031B2827AEF700327B0D /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -95,6 +97,7 @@
 				733225C22826B77200DACB5A /* ContentView.swift */,
 				7356FF972827570C00EC7C73 /* CyclingDistanceRowView.swift */,
 				73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */,
+				73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				7356FF982827570C00EC7C73 /* CyclingDistanceRowView.swift in Sources */,
 				733225C32826B77200DACB5A /* ContentView.swift in Sources */,
 				73A819962827641F009F2097 /* ColorExtension.swift in Sources */,
+				73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */,
 				73A8199228275984009F2097 /* CyclingDistance.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,
 			);
