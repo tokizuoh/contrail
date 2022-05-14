@@ -1,20 +1,19 @@
 //
-//  HealthKitClient.swift
+//  ContentViewModel.swift
 //  contrail
 //
-//  Created by tokizo on 2022/05/08.
+//  Created by tokizo on 2022/05/14.
 //
 
+// import Foundation
 import HealthKit
 
-final class HealthKitClient: ObservableObject {
+final class ContentViewModel: ObservableObject {
+    @Published var data: CyclingDistanceListViewModel = .generateEmpty()
+
     private var healthStore: HKHealthStore!
-    private var workouts: [HKWorkout]?
-    @Published var cyclingDistanceList: [CyclingDistance] = []
 
-    static let shared = HealthKitClient()
-
-    private init() {
+    init() {
         self.healthStore = HKHealthStore()
         let readTypes = Set([
             HKObjectType.workoutType()
@@ -45,17 +44,11 @@ final class HealthKitClient: ObservableObject {
                   error == nil else {
                 return
             }
-            // TODO: [#33] workout取得処理を見直す
-            self.workouts = workouts.sorted(by: { (lw, rw) -> Bool in
+            let sortedWorkouts = workouts.sorted(by: { (lw, rw) -> Bool in
                 lw.startDate < rw.startDate
             })
             DispatchQueue.main.async {
-                self.cyclingDistanceList = workouts.map { workout in
-                    let distance = workout.totalDistance!.doubleValue(for: .meter()) / 1000
-                    let date = workout.startDate.string(format: .yyyyMMddPd)
-                    return .init(distance: distance,
-                                 date: date)
-                }
+                self.data = CyclingDistanceListTranslator().translate(sortedWorkouts.reversed())
             }
 
         }

@@ -9,15 +9,10 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
-    // TODO: [#30] HealthKitClient の命名を考え直す
-    @ObservedObject var healthKitClient: HealthKitClient
-
-    init() {
-        healthKitClient = HealthKitClient.shared
-    }
+    @ObservedObject var viewModel = ContentViewModel()
 
     var body: some View {
-        CyclingDistanceListView(cyclingDistanceList: healthKitClient.cyclingDistanceList)
+        CyclingDistanceListView(viewModel: viewModel.data)
     }
 }
 

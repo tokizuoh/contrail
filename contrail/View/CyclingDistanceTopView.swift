@@ -16,14 +16,14 @@ struct CyclingDistanceTopView: View {
                 .font(.headline)
                 .padding(.top, 8)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.totalCyclingDistance) km")
+            Text("\(viewModel.totalCyclingDistanceText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 12)
             Text("Maximum Distance for one ride")
                 .font(.headline)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.maxDistancePerOneRide) km")
+            Text("\(viewModel.maxDistancePerOneRideText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 8)
@@ -34,13 +34,17 @@ struct CyclingDistanceTopView: View {
 }
 
 struct CyclingDistanceTopViewModel {
-    let totalCyclingDistance: String
-    let maxDistancePerOneRide: String
+    let totalCyclingDistanceText: String
+    let maxDistancePerOneRideText: String
+
+    static func generateMock() -> Self {
+        return .init(totalCyclingDistanceText: "1000.21",
+                     maxDistancePerOneRideText: "30.5")
+    }
 }
 
 struct CyclingDistanceTotalView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceTopView(viewModel: .init(totalCyclingDistance: "1000.21",
-                                                maxDistancePerOneRide: "30.5"))
+        CyclingDistanceTopView(viewModel: CyclingDistanceTopViewModel.generateMock())
     }
 }
