@@ -2,6 +2,10 @@
 
 [![CI](https://github.com/tokizuoh/contrail/actions/workflows/main.yml/badge.svg)](https://github.com/tokizuoh/contrail/actions/workflows/main.yml)
 
+<div style="text-align: center;">
+  <img src="https://user-images.githubusercontent.com/37968814/168440294-2097be29-f452-4c50-a0fa-a1a53d8845a0.png" width="250">
+</div>
+
 ## About
 A simple app to view your cycling workouts in SwiftUI.
 
