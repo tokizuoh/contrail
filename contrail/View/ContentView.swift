@@ -11,11 +11,11 @@ import HealthKit
 struct ContentView: View {
     // TODO: 命名考え直す
     @ObservedObject var healthKitClient: HealthKitClient
-    
+
     init() {
         healthKitClient = HealthKitClient.shared
     }
-    
+
     var body: some View {
         CyclingDistanceListView(cyclingDistanceList: healthKitClient.cyclingDistanceList)
     }

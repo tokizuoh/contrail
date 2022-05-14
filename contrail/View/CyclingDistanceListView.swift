@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CyclingDistanceListView: View {
     let cyclingDistanceList: [CyclingDistance]
-    
+
     var body: some View {
         List(cyclingDistanceList) { cyclingDistance in
             CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
                                                           date: cyclingDistance.date))
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.contrailLightGray)
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.contrailLightGray)
         }
         .listStyle(.plain)
     }
@@ -29,7 +29,7 @@ struct CyclingDistanceListView_Previews: PreviewProvider {
             .init(distance: 35.1, date: "2022.04.29"),
             .init(distance: 33.3, date: "2022.04.24"),
             .init(distance: 19.2, date: "2022.04.21"),
-            .init(distance: 48.5, date: "2022.04.20"),
+            .init(distance: 48.5, date: "2022.04.20")
         ])
     }
 }
