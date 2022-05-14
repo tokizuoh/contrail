@@ -36,11 +36,15 @@ struct CyclingDistanceTopView: View {
 struct CyclingDistanceTopViewModel {
     let totalCyclingDistance: String
     let maxDistancePerOneRide: String
+
+    static func generateMock() -> Self {
+        return .init(totalCyclingDistance: "1000.21",
+                     maxDistancePerOneRide: "30.5")
+    }
 }
 
 struct CyclingDistanceTotalView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceTopView(viewModel: .init(totalCyclingDistance: "1000.21",
-                                                maxDistancePerOneRide: "30.5"))
+        CyclingDistanceTopView(viewModel: CyclingDistanceTopViewModel.generateMock())
     }
 }
