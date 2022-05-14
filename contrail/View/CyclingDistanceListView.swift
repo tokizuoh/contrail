@@ -12,7 +12,9 @@ struct CyclingDistanceListView: View {
 
     var body: some View {
         VStack {
-            // TODO: [#37] View追加
+            // TODO: [#38] リストの中に追加する
+            CyclingDistanceTopView(viewModel: .init(totalCyclingDistance: "1000.23",
+                                                    maxDistancePerOneRide: "45.6"))
             List(cyclingDistanceList) { cyclingDistance in
                 CyclingDistanceRowView(cyclingDistance: .init(distance: cyclingDistance.distance,
                                                               date: cyclingDistance.date))
