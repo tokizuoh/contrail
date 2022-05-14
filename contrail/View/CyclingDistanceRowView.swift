@@ -44,7 +44,7 @@ struct CyclingDistanceRowViewModel: ViewModelProtocol, Identifiable {
     }
 
     static func generateMock() -> CyclingDistanceRowViewModel {
-        return .init(distanceText: "12.3",
+        return .init(distanceText: "12.3 km",
                      dateText: "2222.11.3")
     }
 }
