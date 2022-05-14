@@ -13,9 +13,8 @@ struct CyclingDistanceListTranslator {
     typealias To = CyclingDistanceListViewModel
 
     func translate(_ from: From) -> To {
-        let cyclingTopViewModel = makeCyclingDistanceTopViewModel(from)
-        return .init(cyclingTopViewModel: cyclingTopViewModel,
-                     cyclingDistanceList: []) // TODO: [#39]
+        return .init(cyclingTopViewModel: makeCyclingDistanceTopViewModel(from),
+                     cyclingDistanceList: makeCyclingDistanceList(from))
     }
 
     private func makeCyclingDistanceTopViewModel(_ from: From) -> CyclingDistanceTopViewModel {
@@ -32,6 +31,15 @@ struct CyclingDistanceListTranslator {
 
         return .init(totalCyclingDistanceText: totalCyclingDistanceText,
                      maxDistancePerOneRideText: maxDistancePerOneRideText)
+    }
+
+    private func makeCyclingDistanceList(_ from: From) -> [CyclingDistance] {
+        return from.map { workout in
+            let distance = workout.totalDistance!.kilometers()
+            let date = workout.startDate.string(format: .yyyyMMddPd)
+            return .init(distance: distance,
+                         date: date)
+        }
     }
 }
 

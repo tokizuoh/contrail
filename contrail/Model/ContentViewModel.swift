@@ -48,7 +48,7 @@ final class ContentViewModel: ObservableObject {
                 lw.startDate < rw.startDate
             })
             DispatchQueue.main.async {
-                self.data = CyclingDistanceListTranslator().translate(sortedWorkouts)
+                self.data = CyclingDistanceListTranslator().translate(sortedWorkouts.reversed())
             }
 
         }
