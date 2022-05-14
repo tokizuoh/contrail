@@ -18,7 +18,6 @@
 		73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */; };
 		73AAF232282F870400927BAB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF231282F870400927BAB /* ContentViewModel.swift */; };
 		73AAF235282F943400927BAB /* CyclingDistanceListTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF234282F943400927BAB /* CyclingDistanceListTranslator.swift */; };
-		73CA031C2827AEF700327B0D /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA031B2827AEF700327B0D /* HealthKitClient.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceTopView.swift; sourceTree = "<group>"; };
 		73AAF231282F870400927BAB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		73AAF234282F943400927BAB /* CyclingDistanceListTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceListTranslator.swift; sourceTree = "<group>"; };
-		73CA031B2827AEF700327B0D /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		73CA03212827B49800327B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 			children = (
 				73AAF233282F940F00927BAB /* Translator */,
 				73A8199128275984009F2097 /* CyclingDistance.swift */,
-				73CA031B2827AEF700327B0D /* HealthKitClient.swift */,
 				73AAF231282F870400927BAB /* ContentViewModel.swift */,
 			);
 			path = Model;
@@ -233,7 +230,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73CA031C2827AEF700327B0D /* HealthKitClient.swift in Sources */,
 				73CA03232827C52F00327B0D /* DateExtension.swift in Sources */,
 				73AAF235282F943400927BAB /* CyclingDistanceListTranslator.swift in Sources */,
 				73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */,
