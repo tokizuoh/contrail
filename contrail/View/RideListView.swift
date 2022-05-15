@@ -12,17 +12,17 @@ struct RideListView: View {
 
     var body: some View {
         List {
-            aggregationSection
+            rideStatisticsSection
             ridesSection
         }
         .listStyle(GroupedListStyle())
     }
 
-    var aggregationSection: some View {
+    var rideStatisticsSection: some View {
         Section(content: {
-            RideAggregationRowView(rideAggregation: rideList.rideAggregation)
+            RideStatisticsRowView(rideStatistics: rideList.rideStatistics)
         }, header: {
-            Text("Aggregation")
+            Text("Statistics")
         })
     }
 
@@ -40,17 +40,17 @@ struct RideListView: View {
 }
 
 struct RideList: ViewModelProtocol {
-    let rideAggregation: RideAggregation
+    let rideStatistics: RideStatistics
     let rides: [Ride]
 
     static func generateEmpty() -> Self {
-        return .init(rideAggregation: .generateEmpty(),
+        return .init(rideStatistics: .generateEmpty(),
                      rides: [.generateEmpty()])
     }
 
     static func generateMock() -> Self {
-        let rideAggregation: RideAggregation = .init(totalDistanceText: "1000.23",
-                                                     maxDistancePerOneRideText: "45.6")
+        let rideStatistics: RideStatistics = .init(totalDistanceText: "1000.23",
+                                                   maxDistancePerOneRideText: "45.6")
         let rides: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),
@@ -59,7 +59,7 @@ struct RideList: ViewModelProtocol {
             .init(distanceText: "19.2", dateText: "2022.04.21"),
             .init(distanceText: "48.5", dateText: "2022.04.20")
         ]
-        return .init(rideAggregation: rideAggregation,
+        return .init(rideStatistics: rideStatistics,
                      rides: rides)
     }
 }

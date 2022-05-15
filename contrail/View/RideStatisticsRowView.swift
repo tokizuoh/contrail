@@ -1,5 +1,5 @@
 //
-//  RideAggregationRowView.swift
+//  RideStatisticsRowView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/14.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RideAggregationRowView: View {
-    let rideAggregation: RideAggregation
+struct RideStatisticsRowView: View {
+    let rideStatistics: RideStatistics
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,14 +16,14 @@ struct RideAggregationRowView: View {
                 .font(.headline)
                 .padding(.top, 8)
                 .padding(.horizontal, 16)
-            Text("\(rideAggregation.totalDistanceText) km")
+            Text("\(rideStatistics.totalDistanceText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 12)
             Text("Maximum Distance for one ride")
                 .font(.headline)
                 .padding(.horizontal, 16)
-            Text("\(rideAggregation.maxDistancePerOneRideText) km")
+            Text("\(rideStatistics.maxDistancePerOneRideText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 8)
@@ -33,11 +33,11 @@ struct RideAggregationRowView: View {
     }
 }
 
-struct RideAggregation: ViewModelProtocol {
+struct RideStatistics: ViewModelProtocol {
     let totalDistanceText: String
     let maxDistancePerOneRideText: String
 
-    static func generateEmpty() -> RideAggregation {
+    static func generateEmpty() -> RideStatistics {
         return .init(totalDistanceText: "",
                      maxDistancePerOneRideText: "")
     }
@@ -48,8 +48,8 @@ struct RideAggregation: ViewModelProtocol {
     }
 }
 
-struct RideAggregationRowView_Previews: PreviewProvider {
+struct RideStatisticsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RideAggregationRowView(rideAggregation: RideAggregation.generateMock())
+        RideStatisticsRowView(rideStatistics: RideStatistics.generateMock())
     }
 }
