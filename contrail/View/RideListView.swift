@@ -11,16 +11,21 @@ struct RideListView: View {
     let rideList: RideList
 
     var body: some View {
-        VStack {
-            // TODO: [#38] リストの中に追加する
-            RideAggregationRowView(rideAggregation: rideList.rideAggregation)
-            List(rideList.rides) { ride in
-                RideRowView(ride: ride)
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.contrailLightGray)
+        List {
+            Section {
+                RideAggregationRowView(rideAggregation: rideList.rideAggregation)
             }
-            .listStyle(.plain)
+            Section {
+                LazyVStack {
+                    ForEach(rideList.rides) { ride in
+                        RideRowView(ride: ride)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.contrailLightGray)
+                    }
+                }
+            }
         }
+        .listStyle(.plain)
     }
 }
 
