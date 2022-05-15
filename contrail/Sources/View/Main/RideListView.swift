@@ -17,7 +17,7 @@ struct RideListView: View {
         }
     }
 
-    // MARK: - componnt
+    // MARK: - component
     var contentView: some View {
         List {
             rideStatisticsSection
