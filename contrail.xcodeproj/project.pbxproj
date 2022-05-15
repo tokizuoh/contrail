@@ -16,7 +16,7 @@
 		73A8198F282758EC009F2097 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8198E282758EC009F2097 /* RideListView.swift */; };
 		73A8199228275984009F2097 /* CyclingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8199128275984009F2097 /* CyclingDistance.swift */; };
 		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
-		73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */; };
+		73AAF230282F7D3300927BAB /* RideAggregationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* RideAggregationRowView.swift */; };
 		73AAF232282F870400927BAB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF231282F870400927BAB /* MainViewModel.swift */; };
 		73AAF235282F943400927BAB /* CyclingDistanceListTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF234282F943400927BAB /* CyclingDistanceListTranslator.swift */; };
 		73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */; };
@@ -35,7 +35,7 @@
 		73A8198E282758EC009F2097 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
 		73A8199128275984009F2097 /* CyclingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistance.swift; sourceTree = "<group>"; };
 		73A819952827641F009F2097 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceTopView.swift; sourceTree = "<group>"; };
+		73AAF22F282F7D3300927BAB /* RideAggregationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAggregationRowView.swift; sourceTree = "<group>"; };
 		73AAF231282F870400927BAB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		73AAF234282F943400927BAB /* CyclingDistanceListTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistanceListTranslator.swift; sourceTree = "<group>"; };
 		73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 				733225C22826B77200DACB5A /* MainScreen.swift */,
 				7356FF972827570C00EC7C73 /* RideRowView.swift */,
 				73A8198E282758EC009F2097 /* RideListView.swift */,
-				73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */,
+				73AAF22F282F7D3300927BAB /* RideAggregationRowView.swift */,
 				73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */,
 			);
 			path = View;
@@ -252,7 +252,7 @@
 				733225C32826B77200DACB5A /* MainScreen.swift in Sources */,
 				73A819962827641F009F2097 /* ColorExtension.swift in Sources */,
 				73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */,
-				73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */,
+				73AAF230282F7D3300927BAB /* RideAggregationRowView.swift in Sources */,
 				737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */,
 				73A8199228275984009F2097 /* CyclingDistance.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,

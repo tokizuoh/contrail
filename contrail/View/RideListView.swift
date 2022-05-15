@@ -13,7 +13,7 @@ struct RideListView: View {
     var body: some View {
         VStack {
             // TODO: [#38] リストの中に追加する
-            CyclingDistanceTopView(viewModel: rideList.cyclingTopViewModel)
+            RideAggregationRowView(viewModel: rideList.cyclingTopViewModel)
             List(rideList.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
                 RideRowView(ride: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
