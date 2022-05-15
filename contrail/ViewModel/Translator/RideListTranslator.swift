@@ -20,10 +20,10 @@ struct RideListTranslator {
     }
 
     private func makeRideAggregation(_ from: From) -> RideAggregation {
-        let totalCyclingDistance = from.reduce(0.0) { t, workout in
+        let totalRideDistance = from.reduce(0.0) { t, workout in
             return t + workout.totalDistance!.kilometers()
         }
-        let totalCyclingDistanceText = String(format: format, totalCyclingDistance)
+        let totalRideDistanceText = String(format: format, totalRideDistance)
 
         let maxDistancePerOneRide = from.reduce(0.0) { maxDistance, workout in
             let distance = workout.totalDistance!.kilometers()
@@ -31,7 +31,7 @@ struct RideListTranslator {
         }
         let maxDistancePerOneRideText = String(format: format, maxDistancePerOneRide)
 
-        return .init(totalCyclingDistanceText: totalCyclingDistanceText,
+        return .init(totalDistanceText: totalRideDistanceText,
                      maxDistancePerOneRideText: maxDistancePerOneRideText)
     }
 

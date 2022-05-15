@@ -16,7 +16,7 @@ struct RideAggregationRowView: View {
                 .font(.headline)
                 .padding(.top, 8)
                 .padding(.horizontal, 16)
-            Text("\(rideAggregation.totalCyclingDistanceText) km")
+            Text("\(rideAggregation.totalDistanceText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 12)
@@ -34,16 +34,16 @@ struct RideAggregationRowView: View {
 }
 
 struct RideAggregation: ViewModelProtocol {
-    let totalCyclingDistanceText: String
+    let totalDistanceText: String
     let maxDistancePerOneRideText: String
 
     static func generateEmpty() -> RideAggregation {
-        return .init(totalCyclingDistanceText: "",
+        return .init(totalDistanceText: "",
                      maxDistancePerOneRideText: "")
     }
 
     static func generateMock() -> Self {
-        return .init(totalCyclingDistanceText: "1000.21",
+        return .init(totalDistanceText: "1000.21",
                      maxDistancePerOneRideText: "30.5")
     }
 }
