@@ -18,10 +18,18 @@ struct AllRidesTranslator {
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: format, distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
-            let durationText = workout.duration.debugDescription
+            let durationText = makeDurationText(workout.duration)
             return .init(distanceText: distanceText,
                          dateText: dateText,
                          durationText: durationText)
         }
+    }
+
+    // timeIntervalをどうにかする
+    private func makeDurationText(_ timeInterval: TimeInterval) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "mm:ss.SS"
+        let targetDate = Date(timeIntervalSinceReferenceDate: timeInterval)
+        return formatter.string(from: targetDate)
     }
 }

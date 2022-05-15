@@ -14,12 +14,11 @@ struct AllRidesScreen: View {
         List {
             ForEach(viewModel.data) { item in
                 AllRideRowView(rideDetail: item)
-                    .listRowSeparator(.hidden)
+                    .listRowSeparator(.visible)
             }
             .navigationTitle("all rides")
             .navigationBarTitleDisplayMode(.inline)
-        }
-
+        }.environment(\.defaultMinListRowHeight, 250)
     }
 }
 
@@ -27,11 +26,29 @@ struct AllRideRowView: View {
     let rideDetail: RideDetail
 
     var body: some View {
-        HStack {
-            // TODO: [#67] デザイン考える
+        VStack {
+            HStack(alignment: .lastTextBaseline) {
+                HStack(alignment: .lastTextBaseline) {
+                    Text(rideDetail.distanceText)
+                        .font(.title)
+                    Text("km")
+                        .font(.subheadline)
+                }
+                .foregroundColor(.contrailBrand)
+                .padding(.vertical, 5)
+
+                Spacer()
+
+                Text(rideDetail.dateText)
+                    .font(.subheadline)
+                    .foregroundColor(.contrailLightGray2)
+                    .padding(.vertical, 5)
+            }
+            Divider()
+                .padding(.bottom, 4)
+
             Text(rideDetail.durationText)
-            Text(rideDetail.dateText)
-            Text(rideDetail.distanceText)
+            Spacer()
         }
     }
 }

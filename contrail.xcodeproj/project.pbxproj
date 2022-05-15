@@ -104,7 +104,7 @@
 		7356FF962827541700EC7C73 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				73C24D0028310508006FCD00 /* AllRideList */,
+				73C24D0028310508006FCD00 /* AllRides */,
 				73C24CFF283104EE006FCD00 /* Main */,
 				73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */,
 			);
@@ -170,12 +170,12 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		73C24D0028310508006FCD00 /* AllRideList */ = {
+		73C24D0028310508006FCD00 /* AllRides */ = {
 			isa = PBXGroup;
 			children = (
 				73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */,
 			);
-			path = AllRideList;
+			path = AllRides;
 			sourceTree = "<group>";
 		};
 		73CA031E2827B3CD00327B0D /* Frameworks */ = {
