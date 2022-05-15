@@ -12,20 +12,22 @@ struct RideListView: View {
 
     var body: some View {
         List {
-            Section {
+            Section(content: {
                 RideAggregationRowView(rideAggregation: rideList.rideAggregation)
-            }
-            Section {
-                LazyVStack {
-                    ForEach(rideList.rides) { ride in
-                        RideRowView(ride: ride)
-                            .listRowSeparator(.hidden)
-                            .listRowBackground(Color.contrailLightGray)
-                    }
+            }, header: {
+                Text("Aggregation")
+            })
+            Section(content: {
+                ForEach(rideList.rides) { ride in
+                    RideRowView(ride: ride)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.contrailLightGray)
                 }
-            }
+            }, header: {
+                Text("Rides")
+            })
         }
-        .listStyle(.plain)
+        .listStyle(GroupedListStyle())
     }
 }
 
