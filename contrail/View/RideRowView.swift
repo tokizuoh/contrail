@@ -25,7 +25,7 @@ struct RideRowView: View {
 
             Text(ride.dateText)
                 .font(.subheadline)
-                .foregroundColor(.contrailLightGray)
+                .foregroundColor(.contrailLightGray2)
                 .padding(.vertical, 5)
         }
     }

@@ -27,7 +27,7 @@ struct RideStatisticsRowView: View {
         VStack(alignment: .leading) {
             Text("Total Distance")
                 .font(.headline)
-                .foregroundColor(.contrailLightGray)
+                .foregroundColor(.contrailLightGray1)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.totalDistanceText)")
                     .font(.title3)
@@ -41,7 +41,7 @@ struct RideStatisticsRowView: View {
         VStack(alignment: .leading) {
             Text("Max Distance for one ride")
                 .font(.headline)
-                .foregroundColor(.contrailLightGray)
+                .foregroundColor(.contrailLightGray1)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.maxDistancePerOneRideText)")
                     .font(.title3)
