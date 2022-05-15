@@ -16,7 +16,6 @@ struct RideStatisticsRowView: View {
                 .padding(.top, 8)
                 .foregroundColor(.contrailBrand)
                 .padding(.bottom, 12)
-
             maxDistanceText
                 .foregroundColor(.contrailBrand)
                 .padding(.bottom, 8)
