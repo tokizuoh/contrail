@@ -1,5 +1,5 @@
 //
-//  AllRideListScreen.swift
+//  AllRidesScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AllRideListScreen: View {
+struct AllRidesScreen: View {
     var body: some View {
         Text("Hello, World!")
             .navigationTitle("all rides")
@@ -15,8 +15,8 @@ struct AllRideListScreen: View {
     }
 }
 
-struct RideAllListScreen_Previews: PreviewProvider {
+struct AllRidesListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AllRideListScreen()
+        AllRidesScreen()
     }
 }

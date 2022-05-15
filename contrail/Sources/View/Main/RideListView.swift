@@ -45,7 +45,7 @@ struct RideListView: View {
                 Text("Rides")
                     .font(.headline)
                 Spacer()
-                NavigationLink(destination: AllRideListScreen()) {
+                NavigationLink(destination: AllRidesScreen()) {
                     Image(systemName: "arrowtriangle.right.fill")
                         .foregroundColor(.contrailBrand)
                 }

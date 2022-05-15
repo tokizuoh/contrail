@@ -20,7 +20,7 @@
 		73AAF235282F943400927BAB /* RideListTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF234282F943400927BAB /* RideListTranslator.swift */; };
 		73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */; };
 		73C24CFB2830FE30006FCD00 /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24CFA2830FE30006FCD00 /* WorkoutsCacher.swift */; };
-		73C24CFE283104B1006FCD00 /* AllRideListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24CFD283104B1006FCD00 /* AllRideListScreen.swift */; };
+		73C24CFE283104B1006FCD00 /* AllRidesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,7 @@
 		73AAF234282F943400927BAB /* RideListTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListTranslator.swift; sourceTree = "<group>"; };
 		73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		73C24CFA2830FE30006FCD00 /* WorkoutsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCacher.swift; sourceTree = "<group>"; };
-		73C24CFD283104B1006FCD00 /* AllRideListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRideListScreen.swift; sourceTree = "<group>"; };
+		73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRidesScreen.swift; sourceTree = "<group>"; };
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		73CA03212827B49800327B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		73C24D0028310508006FCD00 /* AllRideList */ = {
 			isa = PBXGroup;
 			children = (
-				73C24CFD283104B1006FCD00 /* AllRideListScreen.swift */,
+				73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */,
 			);
 			path = AllRideList;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CA03232827C52F00327B0D /* DateExtension.swift in Sources */,
-				73C24CFE283104B1006FCD00 /* AllRideListScreen.swift in Sources */,
+				73C24CFE283104B1006FCD00 /* AllRidesScreen.swift in Sources */,
 				73AAF235282F943400927BAB /* RideListTranslator.swift in Sources */,
 				73A8198F282758EC009F2097 /* RideListView.swift in Sources */,
 				73C24CFB2830FE30006FCD00 /* WorkoutsCacher.swift in Sources */,
