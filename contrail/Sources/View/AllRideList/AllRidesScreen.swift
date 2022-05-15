@@ -28,8 +28,7 @@ struct AllRidesScreen: View {
     }
 }
 
-// TODO: rename
-struct AllRidesListScreen_Previews: PreviewProvider {
+struct AllRidesScreen_Previews: PreviewProvider {
     static var previews: some View {
         AllRidesScreen()
     }
