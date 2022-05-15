@@ -13,18 +13,26 @@ struct AllRidesScreen: View {
     var body: some View {
         List {
             ForEach(viewModel.data) { item in
-                HStack {
-                    // TODO: [#67] デザイン考える
-                    Text(item.durationText)
-                    Text(item.dateText)
-                    Text(item.distanceText)
-                }
-                .listRowSeparator(.hidden)
+                AllRideRowView(rideDetail: item)
+                    .listRowSeparator(.hidden)
             }
             .navigationTitle("all rides")
             .navigationBarTitleDisplayMode(.inline)
         }
 
+    }
+}
+
+struct AllRideRowView: View {
+    let rideDetail: RideDetail
+
+    var body: some View {
+        HStack {
+            // TODO: [#67] デザイン考える
+            Text(rideDetail.durationText)
+            Text(rideDetail.dateText)
+            Text(rideDetail.distanceText)
+        }
     }
 }
 
