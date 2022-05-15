@@ -12,6 +12,8 @@ struct RideListTranslator {
     typealias From = [HKWorkout]
     typealias To = RideList
 
+    private let format = "%.2f"
+
     func translate(_ from: From) -> To {
         return .init(rideAggregation: makeRideAggregation(from),
                      rides: makeRides(from))
@@ -21,13 +23,13 @@ struct RideListTranslator {
         let totalCyclingDistance = from.reduce(0.0) { t, workout in
             return t + workout.totalDistance!.kilometers()
         }
-        let totalCyclingDistanceText = String(format: "%.2f", totalCyclingDistance)
+        let totalCyclingDistanceText = String(format: format, totalCyclingDistance)
 
         let maxDistancePerOneRide = from.reduce(0.0) { maxDistance, workout in
             let distance = workout.totalDistance!.kilometers()
             return maxDistance < distance ? distance : maxDistance
         }
-        let maxDistancePerOneRideText = String(format: "%.2f", maxDistancePerOneRide)
+        let maxDistancePerOneRideText = String(format: format, maxDistancePerOneRide)
 
         return .init(totalCyclingDistanceText: totalCyclingDistanceText,
                      maxDistancePerOneRideText: maxDistancePerOneRideText)
@@ -36,7 +38,7 @@ struct RideListTranslator {
     private func makeRides(_ from: From) -> [Ride] {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
-            let distanceText = String(format: "%.2f", distance)
+            let distanceText = String(format: format, distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
 
             return Ride(distanceText: distanceText,
