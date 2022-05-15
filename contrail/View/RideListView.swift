@@ -13,8 +13,8 @@ struct RideListView: View {
     var body: some View {
         VStack {
             // TODO: [#38] リストの中に追加する
-            RideAggregationRowView(rideAggregation: rideList.cyclingTopViewModel)
-            List(rideList.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
+            RideAggregationRowView(rideAggregation: rideList.rideAggregation)
+            List(rideList.rides) { cyclingDistanceRowViewModel in
                 RideRowView(ride: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.contrailLightGray)
@@ -25,17 +25,17 @@ struct RideListView: View {
 }
 
 struct RideList: ViewModelProtocol {
-    let cyclingTopViewModel: RideAggregation
-    let cyclingDistanceRowViewModels: [Ride]
+    let rideAggregation: RideAggregation
+    let rides: [Ride]
 
     static func generateEmpty() -> Self {
-        return .init(cyclingTopViewModel: .generateEmpty(),
-                     cyclingDistanceRowViewModels: [.generateEmpty()])
+        return .init(rideAggregation: .generateEmpty(),
+                     rides: [.generateEmpty()])
     }
 
     static func generateMock() -> Self {
-        let cyclingTopViewModel: RideAggregation = .init(totalCyclingDistanceText: "1000.23",
-                                                         maxDistancePerOneRideText: "45.6")
+        let rideAggregation: RideAggregation = .init(totalCyclingDistanceText: "1000.23",
+                                                     maxDistancePerOneRideText: "45.6")
         let cyclingDistanceRowViewModels: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),
@@ -44,12 +44,12 @@ struct RideList: ViewModelProtocol {
             .init(distanceText: "19.2", dateText: "2022.04.21"),
             .init(distanceText: "48.5", dateText: "2022.04.20")
         ]
-        return .init(cyclingTopViewModel: cyclingTopViewModel,
-                     cyclingDistanceRowViewModels: cyclingDistanceRowViewModels)
+        return .init(rideAggregation: rideAggregation,
+                     rides: cyclingDistanceRowViewModels)
     }
 }
 
-struct CyclingDistanceListView_Previews: PreviewProvider {
+struct RideListView_Previews: PreviewProvider {
     static var previews: some View {
         RideListView(rideList: RideList.generateMock())
     }

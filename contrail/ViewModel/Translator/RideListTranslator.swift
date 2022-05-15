@@ -13,8 +13,8 @@ struct RideListTranslator {
     typealias To = RideList
 
     func translate(_ from: From) -> To {
-        return .init(cyclingTopViewModel: makeCyclingDistanceTopViewModel(from),
-                     cyclingDistanceRowViewModels: makeCyclingDistanceRowViewModels(from))
+        return .init(rideAggregation: makeCyclingDistanceTopViewModel(from),
+                     rides: makeCyclingDistanceRowViewModels(from))
     }
 
     private func makeCyclingDistanceTopViewModel(_ from: From) -> RideAggregation {
