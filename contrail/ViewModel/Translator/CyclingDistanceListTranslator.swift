@@ -10,7 +10,7 @@ import HealthKit
 
 struct CyclingDistanceListTranslator {
     typealias From = [HKWorkout]
-    typealias To = CyclingDistanceListViewModel
+    typealias To = RideList
 
     func translate(_ from: From) -> To {
         return .init(cyclingTopViewModel: makeCyclingDistanceTopViewModel(from),

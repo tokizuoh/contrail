@@ -12,7 +12,7 @@ struct MainScreen: View {
     @ObservedObject var viewModel = MainViewModel()
 
     var body: some View {
-        CyclingDistanceListView(viewModel: viewModel.data)
+        RideListView(rideList: viewModel.data)
     }
 }
 

@@ -8,7 +8,7 @@
 import HealthKit
 
 final class MainViewModel: ObservableObject {
-    @Published var data: CyclingDistanceListViewModel = .generateEmpty()
+    @Published var data: RideList = .generateEmpty()
     let client = HealthKitClient()
 
     init() {

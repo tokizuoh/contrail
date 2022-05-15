@@ -1,5 +1,5 @@
 //
-//  CyclingDistanceListView.swift
+//  RideListView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/08.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct CyclingDistanceListView: View {
-    let viewModel: CyclingDistanceListViewModel
+struct RideListView: View {
+    let rideList: RideList
 
     var body: some View {
         VStack {
             // TODO: [#38] リストの中に追加する
-            CyclingDistanceTopView(viewModel: viewModel.cyclingTopViewModel)
-            List(viewModel.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
+            CyclingDistanceTopView(viewModel: rideList.cyclingTopViewModel)
+            List(rideList.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
                 RideRowView(ride: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.contrailLightGray)
@@ -24,7 +24,7 @@ struct CyclingDistanceListView: View {
     }
 }
 
-struct CyclingDistanceListViewModel: ViewModelProtocol {
+struct RideList: ViewModelProtocol {
     let cyclingTopViewModel: CyclingDistanceTopViewModel
     let cyclingDistanceRowViewModels: [Ride]
 
@@ -51,6 +51,6 @@ struct CyclingDistanceListViewModel: ViewModelProtocol {
 
 struct CyclingDistanceListView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceListView(viewModel: CyclingDistanceListViewModel.generateMock())
+        RideListView(rideList: RideList.generateMock())
     }
 }
