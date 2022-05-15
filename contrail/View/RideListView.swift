@@ -25,6 +25,7 @@ struct RideListView: View {
             RideStatisticsRowView(rideStatistics: rideList.rideStatistics)
         }, header: {
             Text("Statistics")
+                .font(.headline)
         })
     }
 
@@ -37,6 +38,7 @@ struct RideListView: View {
             }
         }, header: {
             Text("Rides")
+                .font(.headline)
         })
     }
 }
