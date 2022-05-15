@@ -12,32 +12,43 @@ struct RideStatisticsRowView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
+            totalDistanceText
+                .padding(.top, 8)
+                .foregroundColor(.contrailBrand)
+                .padding(.bottom, 12)
+
+            maxDistanceText
+                .foregroundColor(.contrailBrand)
+                .padding(.bottom, 8)
+        }
+    }
+
+    // MARK: - component
+    var totalDistanceText: some View {
+        VStack(alignment: .leading) {
             Text("Total Distance")
                 .font(.headline)
                 .foregroundColor(.contrailLightGray)
-                .padding(.top, 8)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.totalDistanceText)")
                     .font(.title3)
-
                 Text("km")
                     .font(.subheadline)
             }
-            .foregroundColor(.contrailBrand)
-            .padding(.bottom, 12)
+        }
+    }
 
-            Text("Maximum Distance for one ride")
+    var maxDistanceText: some View {
+        VStack(alignment: .leading) {
+            Text("Max Distance for one ride")
                 .font(.headline)
                 .foregroundColor(.contrailLightGray)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.maxDistancePerOneRideText)")
                     .font(.title3)
-
                 Text("km")
                     .font(.subheadline)
             }
-            .foregroundColor(.contrailBrand)
-            .padding(.bottom, 8)
         }
     }
 }

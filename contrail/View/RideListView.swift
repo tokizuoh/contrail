@@ -10,13 +10,11 @@ import SwiftUI
 struct RideListView: View {
     let rideList: RideList
 
-    // MARK: - body
     var body: some View {
         NavigationView {
             contentView
                 .navigationTitle("contrail")
         }
-
     }
 
     // MARK: - component
