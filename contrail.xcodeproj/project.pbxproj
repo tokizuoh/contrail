@@ -19,6 +19,7 @@
 		73AAF232282F870400927BAB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF231282F870400927BAB /* MainViewModel.swift */; };
 		73AAF235282F943400927BAB /* RideListTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF234282F943400927BAB /* RideListTranslator.swift */; };
 		73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */; };
+		73C24CFB2830FE30006FCD00 /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24CFA2830FE30006FCD00 /* WorkoutsCacher.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		73AAF231282F870400927BAB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		73AAF234282F943400927BAB /* RideListTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListTranslator.swift; sourceTree = "<group>"; };
 		73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		73C24CFA2830FE30006FCD00 /* WorkoutsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCacher.swift; sourceTree = "<group>"; };
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		73CA03212827B49800327B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				737F115728308AF700A87ABB /* HealthKitClient.swift */,
+				73C24CFA2830FE30006FCD00 /* WorkoutsCacher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				73CA03232827C52F00327B0D /* DateExtension.swift in Sources */,
 				73AAF235282F943400927BAB /* RideListTranslator.swift in Sources */,
 				73A8198F282758EC009F2097 /* RideListView.swift in Sources */,
+				73C24CFB2830FE30006FCD00 /* WorkoutsCacher.swift in Sources */,
 				7356FF982827570C00EC7C73 /* RideRowView.swift in Sources */,
 				73AAF232282F870400927BAB /* MainViewModel.swift in Sources */,
 				733225C32826B77200DACB5A /* MainScreen.swift in Sources */,

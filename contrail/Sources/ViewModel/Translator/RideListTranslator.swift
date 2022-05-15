@@ -36,7 +36,7 @@ struct RideListTranslator {
     }
 
     private func makeRides(_ from: From) -> [Ride] {
-        return from.map { workout in
+        return from.prefix(5).map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: format, distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
