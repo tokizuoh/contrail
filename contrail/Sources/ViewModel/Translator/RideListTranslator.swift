@@ -47,7 +47,7 @@ struct RideListTranslator {
     }
 }
 
-private extension HKQuantity {
+extension HKQuantity {
     func kilometers() -> Double {
         return self.doubleValue(for: .meter()) / 1000
     }
