@@ -23,6 +23,7 @@
 		73C24CFE283104B1006FCD00 /* AllRidesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */; };
 		73C24D0228310776006FCD00 /* AllRidesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24D0128310776006FCD00 /* AllRidesViewModel.swift */; };
 		73C24D04283107D3006FCD00 /* AllRidesTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24D03283107D3006FCD00 /* AllRidesTranslator.swift */; };
+		73C24D06283139BD006FCD00 /* AllRideRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C24D05283139BD006FCD00 /* AllRideRowView.swift */; };
 		73CA03202827B3CD00327B0D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CA031F2827B3CD00327B0D /* HealthKit.framework */; };
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRidesScreen.swift; sourceTree = "<group>"; };
 		73C24D0128310776006FCD00 /* AllRidesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRidesViewModel.swift; sourceTree = "<group>"; };
 		73C24D03283107D3006FCD00 /* AllRidesTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRidesTranslator.swift; sourceTree = "<group>"; };
+		73C24D05283139BD006FCD00 /* AllRideRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRideRowView.swift; sourceTree = "<group>"; };
 		73CA031D2827B3CD00327B0D /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		73CA031F2827B3CD00327B0D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		73CA03212827B49800327B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				73C24CFD283104B1006FCD00 /* AllRidesScreen.swift */,
+				73C24D05283139BD006FCD00 /* AllRideRowView.swift */,
 			);
 			path = AllRides;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */,
 				73C24D0228310776006FCD00 /* AllRidesViewModel.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,
+				73C24D06283139BD006FCD00 /* AllRideRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
