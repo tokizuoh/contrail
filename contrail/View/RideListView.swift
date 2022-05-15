@@ -12,7 +12,11 @@ struct RideListView: View {
 
     // MARK: - body
     var body: some View {
-        contentView
+        NavigationView {
+            contentView
+                .navigationTitle("contrail")
+        }
+
     }
 
     // MARK: - component
