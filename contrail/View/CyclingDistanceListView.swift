@@ -15,7 +15,7 @@ struct CyclingDistanceListView: View {
             // TODO: [#38] リストの中に追加する
             CyclingDistanceTopView(viewModel: viewModel.cyclingTopViewModel)
             List(viewModel.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
-                CyclingDistanceRowView(viewModel: cyclingDistanceRowViewModel)
+                RideRowView(viewModel: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.contrailLightGray)
             }

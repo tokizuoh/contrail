@@ -1,5 +1,5 @@
 //
-//  CyclingDistanceRowView.swift
+//  RideRowView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/08.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CyclingDistanceRowView: View {
+struct RideRowView: View {
     let viewModel: CyclingDistanceRowViewModel
 
     var body: some View {
@@ -53,8 +53,8 @@ struct CyclingDistanceRowViewModel: ViewModelProtocol, Identifiable {
     }
 }
 
-struct CyclingDistanceRowView_Previews: PreviewProvider {
+struct RideRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceRowView(viewModel: .generateMock())
+        RideRowView(viewModel: .generateMock())
     }
 }
