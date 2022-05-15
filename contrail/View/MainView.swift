@@ -1,5 +1,5 @@
 //
-//  MainCyclingView.swift
+//  MainView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/07.
@@ -8,16 +8,16 @@
 import SwiftUI
 import HealthKit
 
-struct MainCyclingView: View {
-    @ObservedObject var viewModel = MainCyclingViewModel()
+struct MainView: View {
+    @ObservedObject var viewModel = MainViewModel()
 
     var body: some View {
         CyclingDistanceListView(viewModel: viewModel.data)
     }
 }
 
-struct MainCyclingView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainCyclingView()
+        MainView()
     }
 }

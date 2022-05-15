@@ -11,7 +11,7 @@ import SwiftUI
 struct contrailApp: App {
     var body: some Scene {
         WindowGroup {
-            MainCyclingView()
+            MainView()
         }
     }
 }
