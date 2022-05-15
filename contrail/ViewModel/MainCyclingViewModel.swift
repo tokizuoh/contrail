@@ -1,14 +1,13 @@
 //
-//  ContentViewModel.swift
+//  MainCyclingViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/14.
 //
 
-// import Foundation
 import HealthKit
 
-final class ContentViewModel: ObservableObject {
+final class MainCyclingViewModel: ObservableObject {
     @Published var data: CyclingDistanceListViewModel = .generateEmpty()
 
     private var healthStore: HKHealthStore!

@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct MainCyclingView: View {
-    @ObservedObject var viewModel = ContentViewModel()
+    @ObservedObject var viewModel = MainCyclingViewModel()
 
     var body: some View {
         CyclingDistanceListView(viewModel: viewModel.data)
