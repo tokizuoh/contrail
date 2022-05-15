@@ -17,7 +17,7 @@ final class MainViewModel: ObservableObject {
                 lw.startDate < rw.startDate
             })
             DispatchQueue.main.async {
-                self.data = CyclingDistanceListTranslator().translate(sortedWorkouts.reversed())
+                self.data = RideListTranslator().translate(sortedWorkouts.reversed())
             }
         }
     }
