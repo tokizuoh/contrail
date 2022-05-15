@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RideAggregationRowView: View {
-    let viewModel: CyclingDistanceTopViewModel
+    let rideAggregation: RideAggregation
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,14 +16,14 @@ struct RideAggregationRowView: View {
                 .font(.headline)
                 .padding(.top, 8)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.totalCyclingDistanceText) km")
+            Text("\(rideAggregation.totalCyclingDistanceText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 12)
             Text("Maximum Distance for one ride")
                 .font(.headline)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.maxDistancePerOneRideText) km")
+            Text("\(rideAggregation.maxDistancePerOneRideText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 8)
@@ -33,11 +33,11 @@ struct RideAggregationRowView: View {
     }
 }
 
-struct CyclingDistanceTopViewModel: ViewModelProtocol {
+struct RideAggregation: ViewModelProtocol {
     let totalCyclingDistanceText: String
     let maxDistancePerOneRideText: String
 
-    static func generateEmpty() -> CyclingDistanceTopViewModel {
+    static func generateEmpty() -> RideAggregation {
         return .init(totalCyclingDistanceText: "",
                      maxDistancePerOneRideText: "")
     }
@@ -50,6 +50,6 @@ struct CyclingDistanceTopViewModel: ViewModelProtocol {
 
 struct RideAggregationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        RideAggregationRowView(viewModel: CyclingDistanceTopViewModel.generateMock())
+        RideAggregationRowView(rideAggregation: RideAggregation.generateMock())
     }
 }

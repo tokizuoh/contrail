@@ -13,7 +13,7 @@ struct RideListView: View {
     var body: some View {
         VStack {
             // TODO: [#38] リストの中に追加する
-            RideAggregationRowView(viewModel: rideList.cyclingTopViewModel)
+            RideAggregationRowView(rideAggregation: rideList.cyclingTopViewModel)
             List(rideList.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
                 RideRowView(ride: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
@@ -25,7 +25,7 @@ struct RideListView: View {
 }
 
 struct RideList: ViewModelProtocol {
-    let cyclingTopViewModel: CyclingDistanceTopViewModel
+    let cyclingTopViewModel: RideAggregation
     let cyclingDistanceRowViewModels: [Ride]
 
     static func generateEmpty() -> Self {
@@ -34,8 +34,8 @@ struct RideList: ViewModelProtocol {
     }
 
     static func generateMock() -> Self {
-        let cyclingTopViewModel: CyclingDistanceTopViewModel = .init(totalCyclingDistanceText: "1000.23",
-                                                                     maxDistancePerOneRideText: "45.6")
+        let cyclingTopViewModel: RideAggregation = .init(totalCyclingDistanceText: "1000.23",
+                                                         maxDistancePerOneRideText: "45.6")
         let cyclingDistanceRowViewModels: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),

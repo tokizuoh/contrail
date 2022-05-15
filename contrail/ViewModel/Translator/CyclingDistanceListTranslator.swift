@@ -17,7 +17,7 @@ struct CyclingDistanceListTranslator {
                      cyclingDistanceRowViewModels: makeCyclingDistanceRowViewModels(from))
     }
 
-    private func makeCyclingDistanceTopViewModel(_ from: From) -> CyclingDistanceTopViewModel {
+    private func makeCyclingDistanceTopViewModel(_ from: From) -> RideAggregation {
         let totalCyclingDistance = from.reduce(0.0) { t, workout in
             return t + workout.totalDistance!.kilometers()
         }
