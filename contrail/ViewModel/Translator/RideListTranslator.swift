@@ -13,11 +13,11 @@ struct RideListTranslator {
     typealias To = RideList
 
     func translate(_ from: From) -> To {
-        return .init(rideAggregation: makeCyclingDistanceTopViewModel(from),
-                     rides: makeCyclingDistanceRowViewModels(from))
+        return .init(rideAggregation: makeRideAggregation(from),
+                     rides: makeRides(from))
     }
 
-    private func makeCyclingDistanceTopViewModel(_ from: From) -> RideAggregation {
+    private func makeRideAggregation(_ from: From) -> RideAggregation {
         let totalCyclingDistance = from.reduce(0.0) { t, workout in
             return t + workout.totalDistance!.kilometers()
         }
@@ -33,7 +33,7 @@ struct RideListTranslator {
                      maxDistancePerOneRideText: maxDistancePerOneRideText)
     }
 
-    private func makeCyclingDistanceRowViewModels(_ from: From) -> [Ride] {
+    private func makeRides(_ from: From) -> [Ride] {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: "%.2f", distance)
