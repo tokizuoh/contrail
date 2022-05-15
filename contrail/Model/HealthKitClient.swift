@@ -1,15 +1,13 @@
 //
-//  ContentViewModel.swift
+//  HealthKitClient.swift
 //  contrail
 //
-//  Created by tokizo on 2022/05/14.
+//  Created by tokizo on 2022/05/15.
 //
 
-// import Foundation
 import HealthKit
 
-final class ContentViewModel: ObservableObject {
-    @Published var data: CyclingDistanceListViewModel = .generateEmpty()
+final class HealthKitClient {
 
     private var healthStore: HKHealthStore!
 
@@ -27,11 +25,10 @@ final class ContentViewModel: ObservableObject {
                 // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
                 return
             }
-            self.fetchWorkouts()
         }
     }
 
-    private func fetchWorkouts() {
+    func fetchWorkouts(completion: @escaping (([HKWorkout]) -> Void)) {
         let type = HKWorkoutType.workoutType()
         let predicate = HKQuery.predicateForWorkouts(with: .cycling)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
@@ -42,16 +39,12 @@ final class ContentViewModel: ObservableObject {
                                   sortDescriptors: [sortDescriptor]) { _, samples, error in
             guard let workouts = samples as? [HKWorkout],
                   error == nil else {
+                // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
                 return
             }
-            let sortedWorkouts = workouts.sorted(by: { (lw, rw) -> Bool in
-                lw.startDate < rw.startDate
-            })
-            DispatchQueue.main.async {
-                self.data = CyclingDistanceListTranslator().translate(sortedWorkouts.reversed())
-            }
-
+            completion(workouts)
         }
         healthStore?.execute(query)
     }
+
 }

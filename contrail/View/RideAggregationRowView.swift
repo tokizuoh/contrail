@@ -1,5 +1,5 @@
 //
-//  CyclingDistanceTopView.swift
+//  RideAggregationRowView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/14.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CyclingDistanceTopView: View {
-    let viewModel: CyclingDistanceTopViewModel
+struct RideAggregationRowView: View {
+    let rideAggregation: RideAggregation
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,14 +16,14 @@ struct CyclingDistanceTopView: View {
                 .font(.headline)
                 .padding(.top, 8)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.totalCyclingDistanceText) km")
+            Text("\(rideAggregation.totalDistanceText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 12)
             Text("Maximum Distance for one ride")
                 .font(.headline)
                 .padding(.horizontal, 16)
-            Text("\(viewModel.maxDistancePerOneRideText) km")
+            Text("\(rideAggregation.maxDistancePerOneRideText) km")
                 .font(.body)
                 .padding(.horizontal, 16)
                 .padding(.bottom, 8)
@@ -33,23 +33,23 @@ struct CyclingDistanceTopView: View {
     }
 }
 
-struct CyclingDistanceTopViewModel: ViewModelProtocol {
-    let totalCyclingDistanceText: String
+struct RideAggregation: ViewModelProtocol {
+    let totalDistanceText: String
     let maxDistancePerOneRideText: String
 
-    static func generateEmpty() -> CyclingDistanceTopViewModel {
-        return .init(totalCyclingDistanceText: "",
+    static func generateEmpty() -> RideAggregation {
+        return .init(totalDistanceText: "",
                      maxDistancePerOneRideText: "")
     }
 
     static func generateMock() -> Self {
-        return .init(totalCyclingDistanceText: "1000.21",
+        return .init(totalDistanceText: "1000.21",
                      maxDistancePerOneRideText: "30.5")
     }
 }
 
-struct CyclingDistanceTotalView_Previews: PreviewProvider {
+struct RideAggregationRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CyclingDistanceTopView(viewModel: CyclingDistanceTopViewModel.generateMock())
+        RideAggregationRowView(rideAggregation: RideAggregation.generateMock())
     }
 }
