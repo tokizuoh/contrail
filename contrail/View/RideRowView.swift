@@ -15,24 +15,19 @@ struct RideRowView: View {
             HStack(alignment: .lastTextBaseline) {
                 Text(ride.distanceText)
                     .font(.title)
-                    .padding(.leading, 20)
                 Text("km")
                     .font(.subheadline)
             }
+            .foregroundColor(.contrailBrand)
             .padding(.vertical, 5)
 
             Spacer()
 
             Text(ride.dateText)
                 .font(.subheadline)
-                .foregroundColor(.contrailDarkGray)
-                .padding(EdgeInsets(top: 5,
-                                    leading: 0,
-                                    bottom: 5,
-                                    trailing: 20))
+                .foregroundColor(.contrailLightGray)
+                .padding(.vertical, 5)
         }
-        .background(.white)
-        .cornerRadius(8)
     }
 }
 

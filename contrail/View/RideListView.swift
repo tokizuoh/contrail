@@ -43,7 +43,6 @@ struct RideListView: View {
             ForEach(rideList.rides) { ride in
                 RideRowView(ride: ride)
                     .listRowSeparator(.hidden)
-                    .listRowBackground(Color.contrailLightGray)
             }
         }, header: {
             Text("Rides")
