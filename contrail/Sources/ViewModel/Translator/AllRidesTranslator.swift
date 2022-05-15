@@ -25,11 +25,10 @@ struct AllRidesTranslator {
         }
     }
 
-    // timeIntervalをどうにかする
     private func makeDurationText(_ timeInterval: TimeInterval) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "mm:ss.SS"
-        let targetDate = Date(timeIntervalSinceReferenceDate: timeInterval)
-        return formatter.string(from: targetDate)
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.hour, .minute, .second]
+        return formatter.string(from: timeInterval)!
     }
 }
