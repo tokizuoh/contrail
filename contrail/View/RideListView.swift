@@ -12,6 +12,11 @@ struct RideListView: View {
 
     // MARK: - body
     var body: some View {
+        contentView
+    }
+
+    // MARK: - component
+    var contentView: some View {
         List {
             rideStatisticsSection
             ridesSection
@@ -19,7 +24,6 @@ struct RideListView: View {
         .listStyle(GroupedListStyle())
     }
 
-    // MARK: - section
     var rideStatisticsSection: some View {
         Section(content: {
             RideStatisticsRowView(rideStatistics: rideList.rideStatistics)
