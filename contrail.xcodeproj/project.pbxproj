@@ -100,12 +100,9 @@
 		7356FF962827541700EC7C73 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				733225C22826B77200DACB5A /* MainScreen.swift */,
-				7356FF972827570C00EC7C73 /* RideRowView.swift */,
-				73A8198E282758EC009F2097 /* RideListView.swift */,
-				73AAF22F282F7D3300927BAB /* RideStatisticsRowView.swift */,
+				73C24D0028310508006FCD00 /* AllRideList */,
+				73C24CFF283104EE006FCD00 /* Main */,
 				73AAF236282FA5C600927BAB /* ViewModelProtocol.swift */,
-				73C24CFD283104B1006FCD00 /* AllRideListScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +151,25 @@
 				737F1155283083CD00A87ABB /* ViewModel */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		73C24CFF283104EE006FCD00 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				733225C22826B77200DACB5A /* MainScreen.swift */,
+				73A8198E282758EC009F2097 /* RideListView.swift */,
+				7356FF972827570C00EC7C73 /* RideRowView.swift */,
+				73AAF22F282F7D3300927BAB /* RideStatisticsRowView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		73C24D0028310508006FCD00 /* AllRideList */ = {
+			isa = PBXGroup;
+			children = (
+				73C24CFD283104B1006FCD00 /* AllRideListScreen.swift */,
+			);
+			path = AllRideList;
 			sourceTree = "<group>";
 		};
 		73CA031E2827B3CD00327B0D /* Frameworks */ = {
