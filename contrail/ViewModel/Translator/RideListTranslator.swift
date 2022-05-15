@@ -15,11 +15,11 @@ struct RideListTranslator {
     private let format = "%.2f"
 
     func translate(_ from: From) -> To {
-        return .init(rideAggregation: makeRideAggregation(from),
+        return .init(rideStatistics: makeRideStatistics(from),
                      rides: makeRides(from))
     }
 
-    private func makeRideAggregation(_ from: From) -> RideAggregation {
+    private func makeRideStatistics(_ from: From) -> RideStatistics {
         let totalRideDistance = from.reduce(0.0) { t, workout in
             return t + workout.totalDistance!.kilometers()
         }
