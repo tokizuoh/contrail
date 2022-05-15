@@ -22,6 +22,7 @@ struct RideStatisticsRowView: View {
                 Text("km")
                     .font(.subheadline)
             }
+            .foregroundColor(.contrailBrand)
 
             Text("Maximum Distance for one ride")
                 .font(.headline)
@@ -32,6 +33,7 @@ struct RideStatisticsRowView: View {
                 Text("km")
                     .font(.subheadline)
             }
+            .foregroundColor(.contrailBrand)
         }
     }
 }
