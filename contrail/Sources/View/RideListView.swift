@@ -17,7 +17,7 @@ struct RideListView: View {
         }
     }
 
-    // MARK: - component
+    // MARK: - componnt
     var contentView: some View {
         List {
             rideStatisticsSection
@@ -45,8 +45,10 @@ struct RideListView: View {
                 Text("Rides")
                     .font(.headline)
                 Spacer()
-                Image(systemName: "arrowtriangle.right.fill")
-                    .foregroundColor(.contrailBrand)
+                NavigationLink(destination: AllRideListScreen()) {
+                    Image(systemName: "arrowtriangle.right.fill")
+                        .foregroundColor(.contrailBrand)
+                }
             }
         })
     }
