@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		733225C12826B77200DACB5A /* contrailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C02826B77200DACB5A /* contrailApp.swift */; };
-		733225C32826B77200DACB5A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C22826B77200DACB5A /* MainView.swift */; };
+		733225C32826B77200DACB5A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C22826B77200DACB5A /* MainScreen.swift */; };
 		733225C52826B77600DACB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733225C42826B77600DACB5A /* Assets.xcassets */; };
 		733225C82826B77600DACB5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733225C72826B77600DACB5A /* Preview Assets.xcassets */; };
 		7356FF982827570C00EC7C73 /* RideRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7356FF972827570C00EC7C73 /* RideRowView.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		733225BD2826B77200DACB5A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733225C02826B77200DACB5A /* contrailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailApp.swift; sourceTree = "<group>"; };
-		733225C22826B77200DACB5A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		733225C22826B77200DACB5A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		733225C42826B77600DACB5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		733225C72826B77600DACB5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7356FF972827570C00EC7C73 /* RideRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRowView.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		7356FF962827541700EC7C73 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				733225C22826B77200DACB5A /* MainView.swift */,
+				733225C22826B77200DACB5A /* MainScreen.swift */,
 				7356FF972827570C00EC7C73 /* RideRowView.swift */,
 				73A8198E282758EC009F2097 /* CyclingDistanceListView.swift */,
 				73AAF22F282F7D3300927BAB /* CyclingDistanceTopView.swift */,
@@ -249,7 +249,7 @@
 				73A8198F282758EC009F2097 /* CyclingDistanceListView.swift in Sources */,
 				7356FF982827570C00EC7C73 /* RideRowView.swift in Sources */,
 				73AAF232282F870400927BAB /* MainViewModel.swift in Sources */,
-				733225C32826B77200DACB5A /* MainView.swift in Sources */,
+				733225C32826B77200DACB5A /* MainScreen.swift in Sources */,
 				73A819962827641F009F2097 /* ColorExtension.swift in Sources */,
 				73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */,
 				73AAF230282F7D3300927BAB /* CyclingDistanceTopView.swift in Sources */,

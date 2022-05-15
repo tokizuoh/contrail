@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  MainScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/05/07.
@@ -8,7 +8,7 @@
 import SwiftUI
 import HealthKit
 
-struct MainView: View {
+struct MainScreen: View {
     @ObservedObject var viewModel = MainViewModel()
 
     var body: some View {
@@ -16,8 +16,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainScreen()
     }
 }
