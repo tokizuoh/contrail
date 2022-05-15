@@ -14,26 +14,30 @@ struct RideStatisticsRowView: View {
         VStack(alignment: .leading) {
             Text("Total Distance")
                 .font(.headline)
+                .foregroundColor(.contrailLightGray)
                 .padding(.top, 8)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.totalDistanceText)")
                     .font(.title3)
-                    .padding(.bottom, 12)
+
                 Text("km")
                     .font(.subheadline)
             }
             .foregroundColor(.contrailBrand)
+            .padding(.bottom, 12)
 
             Text("Maximum Distance for one ride")
                 .font(.headline)
+                .foregroundColor(.contrailLightGray)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
                 Text("\(rideStatistics.maxDistancePerOneRideText)")
                     .font(.title3)
-                    .padding(.bottom, 12)
+
                 Text("km")
                     .font(.subheadline)
             }
             .foregroundColor(.contrailBrand)
+            .padding(.bottom, 8)
         }
     }
 }
