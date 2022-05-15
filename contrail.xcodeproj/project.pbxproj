@@ -75,12 +75,9 @@
 		733225BF2826B77200DACB5A /* contrail */ = {
 			isa = PBXGroup;
 			children = (
-				737F1155283083CD00A87ABB /* ViewModel */,
+				73C24CF92830C91F006FCD00 /* Sources */,
 				73CA03212827B49800327B0D /* Info.plist */,
 				73CA031D2827B3CD00327B0D /* contrail.entitlements */,
-				73A819942827640D009F2097 /* Extension */,
-				73A819902827596E009F2097 /* Model */,
-				7356FF962827541700EC7C73 /* View */,
 				733225C02826B77200DACB5A /* contrailApp.swift */,
 				733225C42826B77600DACB5A /* Assets.xcassets */,
 				733225C62826B77600DACB5A /* Preview Content */,
@@ -140,6 +137,17 @@
 				73AAF234282F943400927BAB /* RideListTranslator.swift */,
 			);
 			path = Translator;
+			sourceTree = "<group>";
+		};
+		73C24CF92830C91F006FCD00 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				73A819942827640D009F2097 /* Extension */,
+				7356FF962827541700EC7C73 /* View */,
+				73A819902827596E009F2097 /* Model */,
+				737F1155283083CD00A87ABB /* ViewModel */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		73CA031E2827B3CD00327B0D /* Frameworks */ = {
