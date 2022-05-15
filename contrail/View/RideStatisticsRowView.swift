@@ -15,21 +15,15 @@ struct RideStatisticsRowView: View {
             Text("Total Distance")
                 .font(.headline)
                 .padding(.top, 8)
-                .padding(.horizontal, 16)
             Text("\(rideStatistics.totalDistanceText) km")
                 .font(.body)
-                .padding(.horizontal, 16)
                 .padding(.bottom, 12)
             Text("Maximum Distance for one ride")
                 .font(.headline)
-                .padding(.horizontal, 16)
             Text("\(rideStatistics.maxDistancePerOneRideText) km")
                 .font(.body)
-                .padding(.horizontal, 16)
                 .padding(.bottom, 8)
         }
-        .background(Color.contrailLightGray)
-        .cornerRadius(8)
     }
 }
 

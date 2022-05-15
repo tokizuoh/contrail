@@ -25,7 +25,8 @@ struct RideListView: View {
             rideStatisticsSection
             ridesSection
         }
-        .listStyle(GroupedListStyle())
+        //        .listStyle(GroupedListStyle())
+        //        .listStyle(.)
     }
 
     var rideStatisticsSection: some View {
