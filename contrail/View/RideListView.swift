@@ -10,6 +10,7 @@ import SwiftUI
 struct RideListView: View {
     let rideList: RideList
 
+    // MARK: - body
     var body: some View {
         List {
             rideStatisticsSection
@@ -18,6 +19,7 @@ struct RideListView: View {
         .listStyle(GroupedListStyle())
     }
 
+    // MARK: - section
     var rideStatisticsSection: some View {
         Section(content: {
             RideStatisticsRowView(rideStatistics: rideList.rideStatistics)
