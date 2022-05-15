@@ -12,22 +12,30 @@ struct RideListView: View {
 
     var body: some View {
         List {
-            Section(content: {
-                RideAggregationRowView(rideAggregation: rideList.rideAggregation)
-            }, header: {
-                Text("Aggregation")
-            })
-            Section(content: {
-                ForEach(rideList.rides) { ride in
-                    RideRowView(ride: ride)
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.contrailLightGray)
-                }
-            }, header: {
-                Text("Rides")
-            })
+            aggregationSection
+            ridesSection
         }
         .listStyle(GroupedListStyle())
+    }
+
+    var aggregationSection: some View {
+        Section(content: {
+            RideAggregationRowView(rideAggregation: rideList.rideAggregation)
+        }, header: {
+            Text("Aggregation")
+        })
+    }
+
+    var ridesSection: some View {
+        Section(content: {
+            ForEach(rideList.rides) { ride in
+                RideRowView(ride: ride)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.contrailLightGray)
+            }
+        }, header: {
+            Text("Rides")
+        })
     }
 }
 
