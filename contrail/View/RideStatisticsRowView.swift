@@ -15,14 +15,23 @@ struct RideStatisticsRowView: View {
             Text("Total Distance")
                 .font(.headline)
                 .padding(.top, 8)
-            Text("\(rideStatistics.totalDistanceText) km")
-                .font(.body)
-                .padding(.bottom, 12)
+            HStack(alignment: .lastTextBaseline, spacing: 4) {
+                Text("\(rideStatistics.totalDistanceText)")
+                    .font(.title3)
+                    .padding(.bottom, 12)
+                Text("km")
+                    .font(.subheadline)
+            }
+
             Text("Maximum Distance for one ride")
                 .font(.headline)
-            Text("\(rideStatistics.maxDistancePerOneRideText) km")
-                .font(.body)
-                .padding(.bottom, 8)
+            HStack(alignment: .lastTextBaseline, spacing: 4) {
+                Text("\(rideStatistics.maxDistancePerOneRideText)")
+                    .font(.title3)
+                    .padding(.bottom, 12)
+                Text("km")
+                    .font(.subheadline)
+            }
         }
     }
 }

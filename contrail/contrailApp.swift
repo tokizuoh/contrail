@@ -12,6 +12,7 @@ struct contrailApp: App {
     var body: some Scene {
         WindowGroup {
             MainScreen()
+                .preferredColorScheme(.dark)
         }
     }
 }
