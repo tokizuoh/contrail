@@ -15,8 +15,10 @@ struct AllRideRowView: View {
             distanceComponent
             Divider()
                 .padding(.bottom, 4)
-
-            Text(rideDetail.durationText)
+            HStack {
+                totalTimeComponent
+                Spacer()
+            }
             Spacer()
         }
     }
@@ -30,7 +32,7 @@ struct AllRideRowView: View {
                 Text("km")
                     .font(.subheadline)
             }
-            .foregroundColor(.contrailBrand)
+            .foregroundColor(.contrailBrand1)
             .padding(.vertical, 5)
 
             Spacer()
@@ -39,6 +41,17 @@ struct AllRideRowView: View {
                 .font(.subheadline)
                 .foregroundColor(.contrailLightGray2)
                 .padding(.vertical, 5)
+        }
+    }
+
+    var totalTimeComponent: some View {
+        VStack(alignment: .leading) {
+            Text("Total Time")
+                .font(.subheadline)
+                .foregroundColor(.contrailLightGray2)
+            Text(rideDetail.durationText)
+                .font(.title2)
+                .foregroundColor(.contrailBrand2)
         }
     }
 }

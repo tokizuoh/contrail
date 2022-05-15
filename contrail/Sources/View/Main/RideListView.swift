@@ -47,7 +47,7 @@ struct RideListView: View {
                 Spacer()
                 NavigationLink(destination: AllRidesScreen()) {
                     Image(systemName: "arrowtriangle.right.fill")
-                        .foregroundColor(.contrailBrand)
+                        .foregroundColor(.contrailBrand1)
                 }
             }
         })

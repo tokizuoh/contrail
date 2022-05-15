@@ -14,10 +14,10 @@ struct RideStatisticsRowView: View {
         VStack(alignment: .leading) {
             totalDistanceText
                 .padding(.top, 8)
-                .foregroundColor(.contrailBrand)
+                .foregroundColor(.contrailBrand1)
                 .padding(.bottom, 12)
             maxDistanceText
-                .foregroundColor(.contrailBrand)
+                .foregroundColor(.contrailBrand1)
                 .padding(.bottom, 8)
         }
     }
