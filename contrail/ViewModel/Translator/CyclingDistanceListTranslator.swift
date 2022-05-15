@@ -33,14 +33,14 @@ struct CyclingDistanceListTranslator {
                      maxDistancePerOneRideText: maxDistancePerOneRideText)
     }
 
-    private func makeCyclingDistanceRowViewModels(_ from: From) -> [CyclingDistanceRowViewModel] {
+    private func makeCyclingDistanceRowViewModels(_ from: From) -> [Ride] {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: "%.2f", distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
 
-            return CyclingDistanceRowViewModel(distanceText: distanceText,
-                                               dateText: dateText)
+            return Ride(distanceText: distanceText,
+                        dateText: dateText)
         }
     }
 }

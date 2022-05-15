@@ -15,7 +15,7 @@ struct CyclingDistanceListView: View {
             // TODO: [#38] リストの中に追加する
             CyclingDistanceTopView(viewModel: viewModel.cyclingTopViewModel)
             List(viewModel.cyclingDistanceRowViewModels) { cyclingDistanceRowViewModel in
-                RideRowView(viewModel: cyclingDistanceRowViewModel)
+                RideRowView(ride: cyclingDistanceRowViewModel)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.contrailLightGray)
             }
@@ -26,7 +26,7 @@ struct CyclingDistanceListView: View {
 
 struct CyclingDistanceListViewModel: ViewModelProtocol {
     let cyclingTopViewModel: CyclingDistanceTopViewModel
-    let cyclingDistanceRowViewModels: [CyclingDistanceRowViewModel]
+    let cyclingDistanceRowViewModels: [Ride]
 
     static func generateEmpty() -> Self {
         return .init(cyclingTopViewModel: .generateEmpty(),
@@ -36,7 +36,7 @@ struct CyclingDistanceListViewModel: ViewModelProtocol {
     static func generateMock() -> Self {
         let cyclingTopViewModel: CyclingDistanceTopViewModel = .init(totalCyclingDistanceText: "1000.23",
                                                                      maxDistancePerOneRideText: "45.6")
-        let cyclingDistanceRowViewModels: [CyclingDistanceRowViewModel] = [
+        let cyclingDistanceRowViewModels: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),
             .init(distanceText: "35.1", dateText: "2022.04.29"),
