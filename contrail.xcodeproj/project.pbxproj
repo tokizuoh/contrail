@@ -14,7 +14,6 @@
 		7356FF982827570C00EC7C73 /* RideRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7356FF972827570C00EC7C73 /* RideRowView.swift */; };
 		737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F115728308AF700A87ABB /* HealthKitClient.swift */; };
 		73A8198F282758EC009F2097 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8198E282758EC009F2097 /* RideListView.swift */; };
-		73A8199228275984009F2097 /* CyclingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8199128275984009F2097 /* CyclingDistance.swift */; };
 		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
 		73AAF230282F7D3300927BAB /* RideAggregationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* RideAggregationRowView.swift */; };
 		73AAF232282F870400927BAB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF231282F870400927BAB /* MainViewModel.swift */; };
@@ -33,7 +32,6 @@
 		7356FF972827570C00EC7C73 /* RideRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRowView.swift; sourceTree = "<group>"; };
 		737F115728308AF700A87ABB /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
 		73A8198E282758EC009F2097 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
-		73A8199128275984009F2097 /* CyclingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingDistance.swift; sourceTree = "<group>"; };
 		73A819952827641F009F2097 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		73AAF22F282F7D3300927BAB /* RideAggregationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAggregationRowView.swift; sourceTree = "<group>"; };
 		73AAF231282F870400927BAB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		73A819902827596E009F2097 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				73A8199128275984009F2097 /* CyclingDistance.swift */,
 				737F115728308AF700A87ABB /* HealthKitClient.swift */,
 			);
 			path = Model;
@@ -254,7 +251,6 @@
 				73AAF237282FA5C600927BAB /* ViewModelProtocol.swift in Sources */,
 				73AAF230282F7D3300927BAB /* RideAggregationRowView.swift in Sources */,
 				737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */,
-				73A8199228275984009F2097 /* CyclingDistance.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
