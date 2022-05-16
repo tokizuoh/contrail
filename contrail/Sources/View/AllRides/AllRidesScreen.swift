@@ -18,7 +18,7 @@ struct AllRidesScreen: View {
             }
             .navigationTitle("all rides")
             .navigationBarTitleDisplayMode(.inline)
-        }.environment(\.defaultMinListRowHeight, 250)
+        }.environment(\.defaultMinListRowHeight, 150)
     }
 }
 
