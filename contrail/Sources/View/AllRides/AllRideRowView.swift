@@ -59,12 +59,16 @@ struct AllRideRowView: View {
 
     var averageSpeedComponent: some View {
         VStack(alignment: .leading) {
-            Text("Total Time")
+            Text("Avg. Speed")
                 .font(.subheadline)
                 .foregroundColor(.contrailLightGray2)
-            Text(rideDetail.averageSpeedText)
-                .font(.title2)
-                .foregroundColor(.contrailBrand2)
+            HStack(alignment: .lastTextBaseline, spacing: 4) {
+                Text(rideDetail.averageSpeedText)
+                    .font(.title2)
+                Text("km/h")
+                    .font(.subheadline)
+            }
+            .foregroundColor(.contrailBrand2)
         }
     }
 }
