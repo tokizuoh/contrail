@@ -47,6 +47,6 @@ struct AllRidesTranslator {
             return nil
         }
 
-        return gainedElevation.doubleValue(for: .meter()).description
+        return String(format: format, gainedElevation.doubleValue(for: .meter()))
     }
 }
