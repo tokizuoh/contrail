@@ -50,6 +50,6 @@ struct RideDetail: ViewModelProtocol, Identifiable {
                      dateText: "2222.11.3",
                      durationText: "xx:xx - xx:xx",
                      averageSpeedText: "",
-                     gainedElevationText: ""a)
+                     gainedElevationText: "")
     }
 }
