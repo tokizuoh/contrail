@@ -21,10 +21,12 @@ struct AllRidesTranslator {
             let durationText = makeDurationText(workout.duration)
             let averageSpeedText = makeAverageSpeedText(timeInterval: workout.duration,
                                                         distance: distance)
+            let gainedElevationText = makeGainedElevationText(workout)
             return .init(distanceText: distanceText,
                          dateText: dateText,
                          durationText: durationText,
-                         averageSpeedText: averageSpeedText)
+                         averageSpeedText: averageSpeedText,
+                         gainedElevationText: gainedElevationText)
         }
     }
 
@@ -38,5 +40,13 @@ struct AllRidesTranslator {
     private func makeAverageSpeedText(timeInterval: TimeInterval, distance: Double) -> String {
         let averageSpeed = distance / ((Double)(Int(timeInterval)) / 3600)
         return String(format: format, averageSpeed)
+    }
+
+    private func makeGainedElevationText(_ workout: HKWorkout) -> String? {
+        guard let gainedElevation = workout.metadata?[HKMetadataKeyElevationAscended] as? HKQuantity else {
+            return nil
+        }
+
+        return String(format: format, gainedElevation.doubleValue(for: .meter()))
     }
 }

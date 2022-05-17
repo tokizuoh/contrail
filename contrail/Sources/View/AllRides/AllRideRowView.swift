@@ -19,6 +19,8 @@ struct AllRideRowView: View {
                 totalTimeComponent
                     .padding(.trailing, 8)
                 averageSpeedComponent
+                    .padding(.trailing, 8)
+                gainedElevationComponent
                 Spacer()
             }
             Spacer()
@@ -69,6 +71,24 @@ struct AllRideRowView: View {
                     .font(.subheadline)
             }
             .foregroundColor(.contrailBrand2)
+        }
+    }
+
+    @ViewBuilder
+    var gainedElevationComponent: some View {
+        if let gainedElevationText = rideDetail.gainedElevationText {
+            VStack(alignment: .leading) {
+                Text("Elevation Gain")
+                    .font(.subheadline)
+                    .foregroundColor(.contrailLightGray2)
+                HStack(alignment: .lastTextBaseline, spacing: 4) {
+                    Text(gainedElevationText)
+                        .font(.title2)
+                    Text("m")
+                        .font(.subheadline)
+                }
+                .foregroundColor(.contrailBrand2)
+            }
         }
     }
 }
