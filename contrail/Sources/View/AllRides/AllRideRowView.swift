@@ -17,6 +17,8 @@ struct AllRideRowView: View {
                 .padding(.bottom, 4)
             HStack {
                 totalTimeComponent
+                    .padding(.trailing, 8)
+                averageSpeedComponent
                 Spacer()
             }
             Spacer()

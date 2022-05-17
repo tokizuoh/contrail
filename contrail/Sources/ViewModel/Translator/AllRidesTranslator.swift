@@ -19,10 +19,12 @@ struct AllRidesTranslator {
             let distanceText = String(format: format, distance)
             let dateText = workout.startDate.string(format: .yyyyMMddPd)
             let durationText = makeDurationText(workout.duration)
+            let averageSpeedText = makeAverageSpeedText(timeInterval: workout.duration,
+                                                        distance: distance)
             return .init(distanceText: distanceText,
                          dateText: dateText,
                          durationText: durationText,
-                         averageSpeedText: "")
+                         averageSpeedText: averageSpeedText)
         }
     }
 
@@ -31,5 +33,10 @@ struct AllRidesTranslator {
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [.hour, .minute, .second]
         return formatter.string(from: timeInterval)!
+    }
+
+    private func makeAverageSpeedText(timeInterval: TimeInterval, distance: Double) -> String {
+        let averageSpeed = distance / ((Double)(Int(timeInterval)) / 3600)
+        return String(format: format, averageSpeed)
     }
 }
