@@ -54,6 +54,17 @@ struct AllRideRowView: View {
                 .foregroundColor(.contrailBrand2)
         }
     }
+
+    var averageSpeedComponent: some View {
+        VStack(alignment: .leading) {
+            Text("Total Time")
+                .font(.subheadline)
+                .foregroundColor(.contrailLightGray2)
+            Text(rideDetail.averageSpeedText)
+                .font(.title2)
+                .foregroundColor(.contrailBrand2)
+        }
+    }
 }
 
 struct AllRideRowView_Previews: PreviewProvider {

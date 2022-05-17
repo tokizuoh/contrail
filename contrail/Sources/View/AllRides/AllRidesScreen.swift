@@ -34,16 +34,19 @@ struct RideDetail: ViewModelProtocol, Identifiable {
     let distanceText: String
     let dateText: String
     let durationText: String
+    let averageSpeedText: String
 
     static func generateEmpty() -> RideDetail {
         return .init(distanceText: "",
                      dateText: "",
-                     durationText: "")
+                     durationText: "",
+                     averageSpeedText: "")
     }
 
     static func generateMock() -> RideDetail {
         return .init(distanceText: "10.3",
                      dateText: "2222.11.3",
-                     durationText: "xx:xx - xx:xx")
+                     durationText: "xx:xx - xx:xx",
+                     averageSpeedText: "")
     }
 }

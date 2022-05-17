@@ -21,7 +21,8 @@ struct AllRidesTranslator {
             let durationText = makeDurationText(workout.duration)
             return .init(distanceText: distanceText,
                          dateText: dateText,
-                         durationText: durationText)
+                         durationText: durationText,
+                         averageSpeedText: "")
         }
     }
 
