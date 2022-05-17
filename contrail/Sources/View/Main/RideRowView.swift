@@ -18,7 +18,7 @@ struct RideRowView: View {
                 Text("km")
                     .font(.subheadline)
             }
-            .foregroundColor(.contrailBrand)
+            .foregroundColor(.contrailBrand1)
             .padding(.vertical, 5)
 
             Spacer()

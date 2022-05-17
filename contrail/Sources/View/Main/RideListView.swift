@@ -41,8 +41,15 @@ struct RideListView: View {
                     .listRowSeparator(.hidden)
             }
         }, header: {
-            Text("Rides")
-                .font(.headline)
+            HStack(alignment: .lastTextBaseline) {
+                Text("Rides")
+                    .font(.headline)
+                Spacer()
+                NavigationLink(destination: AllRidesScreen()) {
+                    Image(systemName: "arrowtriangle.right.fill")
+                        .foregroundColor(.contrailBrand1)
+                }
+            }
         })
     }
 }
