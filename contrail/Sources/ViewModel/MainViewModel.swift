@@ -12,7 +12,8 @@ final class MainViewModel: ObservableObject {
     let client = HealthKitClient()
     let cacher = WorkoutsCacher.shared
 
-    init() {
+    func fetch() async {
+        await requestAuthorization()
         client.fetchWorkouts { workouts in
             let sortedWorkouts = workouts.sorted(by: { (lw, rw) -> Bool in
                 lw.startDate < rw.startDate
@@ -21,6 +22,14 @@ final class MainViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.data = RideListTranslator().translate(self.cacher.getWorkouts())
             }
+        }
+    }
+
+    private func requestAuthorization() async {
+        do {
+            try await client.requestAuthorization()
+        } catch let error {
+            print(error)
         }
     }
 }

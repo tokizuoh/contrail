@@ -8,24 +8,14 @@
 import HealthKit
 
 final class HealthKitClient {
+    private let healthStore = HKHealthStore()
 
-    private var healthStore: HKHealthStore!
-
-    init() {
-        self.healthStore = HKHealthStore()
+    func requestAuthorization() async throws {
         let readTypes = Set([
             HKObjectType.workoutType()
         ])
-        healthStore.requestAuthorization(toShare: nil, read: readTypes) { success, error in
-            guard error == nil else {
-                // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
-                return
-            }
-            guard success else {
-                // TODO: [#32] HealthKitClient のエラーハンドリングを追加する
-                return
-            }
-        }
+
+        try await healthStore.requestAuthorization(toShare: Set([]), read: readTypes)
     }
 
     func fetchWorkouts(completion: @escaping (([HKWorkout]) -> Void)) {
@@ -44,7 +34,6 @@ final class HealthKitClient {
             }
             completion(workouts)
         }
-        healthStore?.execute(query)
+        healthStore.execute(query)
     }
-
 }
