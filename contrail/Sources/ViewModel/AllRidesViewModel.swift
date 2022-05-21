@@ -12,7 +12,7 @@ final class AllRidesViewModel: ObservableObject {
     let cacher = WorkoutsCacher.shared
 
     init() {
-        let workouts = cacher.getWorkouts()
+        let workouts = cacher.getWorkouts() ?? []
         self.data = AllRidesTranslator().translate(workouts)
     }
 }

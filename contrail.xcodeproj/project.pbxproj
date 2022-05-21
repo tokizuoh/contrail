@@ -11,8 +11,10 @@
 		733225C32826B77200DACB5A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C22826B77200DACB5A /* MainScreen.swift */; };
 		733225C52826B77600DACB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733225C42826B77600DACB5A /* Assets.xcassets */; };
 		733225C82826B77600DACB5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733225C72826B77600DACB5A /* Preview Assets.xcassets */; };
+		735597752839222D00AEC5D9 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735597742839222D00AEC5D9 /* MainViewModelTests.swift */; };
 		7356FF982827570C00EC7C73 /* RideRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7356FF972827570C00EC7C73 /* RideRowView.swift */; };
 		737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F115728308AF700A87ABB /* HealthKitClient.swift */; };
+		737FEF782839255C00E8E63B /* MockResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FEF762839255500E8E63B /* MockResults.swift */; };
 		73A8198F282758EC009F2097 /* RideListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8198E282758EC009F2097 /* RideListView.swift */; };
 		73A819962827641F009F2097 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A819952827641F009F2097 /* ColorExtension.swift */; };
 		73AAF230282F7D3300927BAB /* RideStatisticsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AAF22F282F7D3300927BAB /* RideStatisticsRowView.swift */; };
@@ -28,14 +30,27 @@
 		73CA03232827C52F00327B0D /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CA03222827C52F00327B0D /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		73163A6228391F4000BEA059 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 733225B52826B77200DACB5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 733225BC2826B77200DACB5A;
+			remoteInfo = contrail;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		73163A5E28391F4000BEA059 /* contrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		733225BD2826B77200DACB5A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733225C02826B77200DACB5A /* contrailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailApp.swift; sourceTree = "<group>"; };
 		733225C22826B77200DACB5A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		733225C42826B77600DACB5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		733225C72826B77600DACB5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		735597742839222D00AEC5D9 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		7356FF972827570C00EC7C73 /* RideRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRowView.swift; sourceTree = "<group>"; };
 		737F115728308AF700A87ABB /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
+		737FEF762839255500E8E63B /* MockResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockResults.swift; sourceTree = "<group>"; };
 		73A8198E282758EC009F2097 /* RideListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListView.swift; sourceTree = "<group>"; };
 		73A819952827641F009F2097 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		73AAF22F282F7D3300927BAB /* RideStatisticsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideStatisticsRowView.swift; sourceTree = "<group>"; };
@@ -54,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		73163A5B28391F4000BEA059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		733225BA2826B77200DACB5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,10 +87,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73163A5F28391F4000BEA059 /* contrailTests */ = {
+			isa = PBXGroup;
+			children = (
+				735597742839222D00AEC5D9 /* MainViewModelTests.swift */,
+			);
+			path = contrailTests;
+			sourceTree = "<group>";
+		};
 		733225B42826B77200DACB5A = {
 			isa = PBXGroup;
 			children = (
 				733225BF2826B77200DACB5A /* contrail */,
+				73163A5F28391F4000BEA059 /* contrailTests */,
 				733225BE2826B77200DACB5A /* Products */,
 				73CA031E2827B3CD00327B0D /* Frameworks */,
 			);
@@ -78,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				733225BD2826B77200DACB5A /* contrail.app */,
+				73163A5E28391F4000BEA059 /* contrailTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +117,7 @@
 		733225BF2826B77200DACB5A /* contrail */ = {
 			isa = PBXGroup;
 			children = (
+				737FEF762839255500E8E63B /* MockResults.swift */,
 				73C24CF92830C91F006FCD00 /* Sources */,
 				73CA03212827B49800327B0D /* Info.plist */,
 				73CA031D2827B3CD00327B0D /* contrail.entitlements */,
@@ -192,14 +225,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		73163A5D28391F4000BEA059 /* contrailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73163A6428391F4000BEA059 /* Build configuration list for PBXNativeTarget "contrailTests" */;
+			buildPhases = (
+				73163A5A28391F4000BEA059 /* Sources */,
+				73163A5B28391F4000BEA059 /* Frameworks */,
+				73163A5C28391F4000BEA059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73163A6328391F4000BEA059 /* PBXTargetDependency */,
+			);
+			name = contrailTests;
+			productName = contrailTests;
+			productReference = 73163A5E28391F4000BEA059 /* contrailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		733225BC2826B77200DACB5A /* contrail */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 733225CB2826B77600DACB5A /* Build configuration list for PBXNativeTarget "contrail" */;
 			buildPhases = (
+				73AAF22A282F4E0F00927BAB /* ShellScript */,
+				73163A58283913B600BEA059 /* Generate Mocks by Mockolo */,
 				733225B92826B77200DACB5A /* Sources */,
 				733225BA2826B77200DACB5A /* Frameworks */,
 				733225BB2826B77200DACB5A /* Resources */,
-				73AAF22A282F4E0F00927BAB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -220,6 +272,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					73163A5D28391F4000BEA059 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 733225BC2826B77200DACB5A;
+					};
 					733225BC2826B77200DACB5A = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -239,11 +295,19 @@
 			projectRoot = "";
 			targets = (
 				733225BC2826B77200DACB5A /* contrail */,
+				73163A5D28391F4000BEA059 /* contrailTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		73163A5C28391F4000BEA059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		733225BB2826B77200DACB5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +320,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		73163A58283913B600BEA059 /* Generate Mocks by Mockolo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mocks by Mockolo";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/contrail/MockResults.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n  rm -f $SRCROOT/contrail/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift --mock-final\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
 		73AAF22A282F4E0F00927BAB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +359,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		73163A5A28391F4000BEA059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735597752839222D00AEC5D9 /* MainViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		733225B92826B77200DACB5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,6 +385,7 @@
 				73AAF230282F7D3300927BAB /* RideStatisticsRowView.swift in Sources */,
 				737F115828308AF700A87ABB /* HealthKitClient.swift in Sources */,
 				73C24D0228310776006FCD00 /* AllRidesViewModel.swift in Sources */,
+				737FEF782839255C00E8E63B /* MockResults.swift in Sources */,
 				733225C12826B77200DACB5A /* contrailApp.swift in Sources */,
 				73C24D06283139BD006FCD00 /* AllRideRowView.swift in Sources */,
 			);
@@ -301,7 +393,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		73163A6328391F4000BEA059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 733225BC2826B77200DACB5A /* contrail */;
+			targetProxy = 73163A6228391F4000BEA059 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		73163A6528391F4000BEA059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/contrail.app/contrail";
+			};
+			name = Debug;
+		};
+		73163A6628391F4000BEA059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/contrail.app/contrail";
+			};
+			name = Release;
+		};
 		733225C92826B77600DACB5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +621,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		73163A6428391F4000BEA059 /* Build configuration list for PBXNativeTarget "contrailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73163A6528391F4000BEA059 /* Debug */,
+				73163A6628391F4000BEA059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		733225B82826B77200DACB5A /* Build configuration list for PBXProject "contrail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

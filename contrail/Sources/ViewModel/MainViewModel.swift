@@ -9,8 +9,16 @@ import HealthKit
 
 final class MainViewModel: ObservableObject {
     @Published var data: RideList = .generateEmpty()
-    let client = HealthKitClient()
-    let cacher = WorkoutsCacher.shared
+    let cacher: WorkoutsCacherProtocol
+    let client: HealthKitClientProtocol
+
+    init(
+        cacher: WorkoutsCacherProtocol,
+        client: HealthKitClientProtocol
+    ) {
+        self.cacher = cacher
+        self.client = client
+    }
 
     func fetch() async {
         await requestAuthorization()
@@ -20,7 +28,8 @@ final class MainViewModel: ObservableObject {
             })
             self.cacher.cacheWorkouts(sortedWorkouts.reversed())
             DispatchQueue.main.async {
-                self.data = RideListTranslator().translate(self.cacher.getWorkouts())
+                let workouts = self.cacher.getWorkouts() ?? []
+                self.data = RideListTranslator().translate(workouts)
             }
         }
     }
