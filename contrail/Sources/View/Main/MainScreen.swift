@@ -13,6 +13,11 @@ struct MainScreen: View {
 
     var body: some View {
         RideListView(rideList: viewModel.data)
+            .onAppear {
+                Task {
+                    await viewModel.fetch()
+                }
+            }
     }
 }
 
