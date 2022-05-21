@@ -7,7 +7,12 @@
 
 import HealthKit
 
-final class HealthKitClient {
+public protocol HealthKitClientProtocol {
+    func requestAuthorization() async throws
+    func fetchWorkouts(completion: @escaping (([HKWorkout]) -> Void))
+}
+
+final class HealthKitClient: HealthKitClientProtocol {
     private let healthStore = HKHealthStore()
 
     func requestAuthorization() async throws {
