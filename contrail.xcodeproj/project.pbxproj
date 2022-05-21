@@ -322,6 +322,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		73163A58283913B600BEA059 /* Generate Mocks by Mockolo */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
