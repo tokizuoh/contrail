@@ -7,7 +7,13 @@
 
 import HealthKit
 
-final class WorkoutsCacher {
+/// @mockable
+protocol WorkoutsCacherProtocol {
+    func cacheWorkouts(_ cachedWorkouts: [HKWorkout])
+    func getWorkouts() -> [HKWorkout]
+}
+
+final class WorkoutsCacher: WorkoutsCacherProtocol {
     static let shared = WorkoutsCacher()
 
     private init() {}

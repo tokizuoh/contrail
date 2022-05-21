@@ -10,7 +10,11 @@ import HealthKit
 final class MainViewModel: ObservableObject {
     @Published var data: RideList = .generateEmpty()
     let client = HealthKitClient()
-    let cacher = WorkoutsCacher.shared
+    let cacher: WorkoutsCacherProtocol
+
+    init(cacher: WorkoutsCacherProtocol) {
+        self.cacher = cacher
+    }
 
     func fetch() async {
         await requestAuthorization()

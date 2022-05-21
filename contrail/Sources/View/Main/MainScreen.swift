@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct MainScreen: View {
-    @ObservedObject var viewModel = MainViewModel()
+    @ObservedObject var viewModel = MainViewModel(cacher: WorkoutsCacher.shared)
 
     var body: some View {
         RideListView(rideList: viewModel.data)
