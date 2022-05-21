@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73163A6128391F4000BEA059 /* contrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73163A6028391F4000BEA059 /* contrailTests.swift */; };
 		733225C12826B77200DACB5A /* contrailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C02826B77200DACB5A /* contrailApp.swift */; };
 		733225C32826B77200DACB5A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733225C22826B77200DACB5A /* MainScreen.swift */; };
 		733225C52826B77600DACB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733225C42826B77600DACB5A /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		73163A5E28391F4000BEA059 /* contrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		73163A6028391F4000BEA059 /* contrailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailTests.swift; sourceTree = "<group>"; };
 		733225BD2826B77200DACB5A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733225C02826B77200DACB5A /* contrailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailApp.swift; sourceTree = "<group>"; };
 		733225C22826B77200DACB5A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 		73163A5F28391F4000BEA059 /* contrailTests */ = {
 			isa = PBXGroup;
 			children = (
-				73163A6028391F4000BEA059 /* contrailTests.swift */,
 				735597742839222D00AEC5D9 /* MainViewModelTests.swift */,
 			);
 			path = contrailTests;
@@ -366,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73163A6128391F4000BEA059 /* contrailTests.swift in Sources */,
 				735597752839222D00AEC5D9 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
