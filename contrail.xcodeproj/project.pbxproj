@@ -200,6 +200,7 @@
 				733225BA2826B77200DACB5A /* Frameworks */,
 				733225BB2826B77200DACB5A /* Resources */,
 				73AAF22A282F4E0F00927BAB /* ShellScript */,
+				73163A58283913B600BEA059 /* Generate Mocks by Mockolo */,
 			);
 			buildRules = (
 			);
@@ -256,6 +257,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		73163A58283913B600BEA059 /* Generate Mocks by Mockolo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mocks by Mockolo";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/contrail/MockResults.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n  rm -f $SRCROOT/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
 		73AAF22A282F4E0F00927BAB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
