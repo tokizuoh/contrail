@@ -17,12 +17,7 @@ jobs:
       run: xcodebuild -version
     - name: Install Mint
       run: brew install mint
-    - name: Cache Mint packages
-      uses: actions/cache@v2
-      with:
-        path: mint
-        key: ${{ runner.os }}-mint-${{ hashFiles('**/Mintfile') }}
-        restore-keys: |
-          ${{ runner.os }}-mint-
+    - name: HOGE
+      run: mint bootstrap
     - name: Build
       run: xcodebuild -sdk iphonesimulator -configuration Debug build 
