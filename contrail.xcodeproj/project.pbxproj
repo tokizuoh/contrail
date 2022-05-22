@@ -324,7 +324,7 @@
 		73163A58283913B600BEA059 /* Generate Mocks by Mockolo */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -337,7 +337,7 @@
 			outputPaths = (
 				$SRCROOT/contrail/MockResults.swift,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which mint >/dev/null; then\n  rm -f $SRCROOT/contrail/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift --mock-final\n  # Debug Start\n  echo \"HOGEHOGE\"\n  ls $SRCROOT/contrail\n  # Debug END\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
