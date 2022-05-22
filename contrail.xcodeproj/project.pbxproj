@@ -323,8 +323,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		73163A58283913B600BEA059 /* Generate Mocks by Mockolo */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -338,9 +337,9 @@
 				"",
 				$SRCROOT/contrail/MockResults.swift,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which mint >/dev/null; then\n  rm -f $SRCROOT/contrail/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift --mock-final\n  # Debug Start\n  echo \"HOGEHOGE\"\n  ls $SRCROOT/contrail\n  # Debug END\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+			shellScript = "echo \"RUN MOCKOLO\"\nif which mint >/dev/null; then\n  rm -f $SRCROOT/contrail/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift --mock-final\n  # Debug Start\n  echo \"HOGEHOGE\"\n  ls $SRCROOT/contrail\n  # Debug END\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
 		734326732839D2410069B9B5 /* Confirm env */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -375,7 +374,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "echo \"RUN SWIFTLINT\"\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
