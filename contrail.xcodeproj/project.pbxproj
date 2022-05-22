@@ -247,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 733225CB2826B77600DACB5A /* Build configuration list for PBXNativeTarget "contrail" */;
 			buildPhases = (
+				734326732839D2410069B9B5 /* Confirm env */,
 				73AAF22A282F4E0F00927BAB /* ShellScript */,
 				73163A58283913B600BEA059 /* Generate Mocks by Mockolo */,
 				733225B92826B77200DACB5A /* Sources */,
@@ -339,6 +340,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which mint >/dev/null; then\n  rm -f $SRCROOT/contrail/MockResults.swift\n  mint run mockolo mockolo --sourcedirs $SRCROOT/contrail --destination $SRCROOT/contrail/MockResults.swift --mock-final\nelse\n  echo \"Mint does not exist, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+		734326732839D2410069B9B5 /* Confirm env */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Confirm env";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "env > env.txt\ncat env.txt\n";
 		};
 		73AAF22A282F4E0F00927BAB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
