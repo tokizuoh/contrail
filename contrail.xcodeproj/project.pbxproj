@@ -336,7 +336,7 @@
 			);
 			outputPaths = (
 				"",
-				$SRCROOT/MockResults.swift,
+				$SRCROOT/contrail/MockResults.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
