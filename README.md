@@ -10,7 +10,7 @@
 A simple app to view your cycling workouts in SwiftUI.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37968814/169692359-ea969e14-1ca8-4d03-bbc3-5c57a72d4010.png" width="600">
+  <img src="https://user-images.githubusercontent.com/37968814/169692359-ea969e14-1ca8-4d03-bbc3-5c57a72d4010.png" width="1000">
 </p>
 
 ## Development Environment
