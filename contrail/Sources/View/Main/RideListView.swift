@@ -65,7 +65,8 @@ struct RideList: ViewModelProtocol {
 
     static func generateMock() -> Self {
         let rideStatistics: RideStatistics = .init(totalDistanceText: "1000.23",
-                                                   maxDistancePerOneRideText: "45.6")
+                                                   maxDistancePerOneRideText: "45.6",
+                                                   maxDistancePerOneRideDate: "2022.05.23")
         let rides: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),

@@ -25,14 +25,22 @@ struct RideListTranslator {
         }
         let totalRideDistanceText = String(format: format, totalRideDistance)
 
+        var maxDistancePerOneRideDate = Date()
         let maxDistancePerOneRide = from.reduce(0.0) { maxDistance, workout in
             let distance = workout.totalDistance!.kilometers()
-            return maxDistance < distance ? distance : maxDistance
+            if maxDistance < distance {
+                maxDistancePerOneRideDate = workout.startDate
+                return distance
+            } else {
+                return maxDistance
+            }
         }
         let maxDistancePerOneRideText = String(format: format, maxDistancePerOneRide)
+        let maxDistancePerOneRideDateText = maxDistancePerOneRideDate.string(format: .yyyyMMddPd)
 
         return .init(totalDistanceText: totalRideDistanceText,
-                     maxDistancePerOneRideText: maxDistancePerOneRideText)
+                     maxDistancePerOneRideText: maxDistancePerOneRideText,
+                     maxDistancePerOneRideDate: maxDistancePerOneRideDateText)
     }
 
     private func makeRides(_ from: From) -> [Ride] {
