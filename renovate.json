@@ -2,8 +2,6 @@
   "regexManagers": [
     {
       "fileMatch": ["^Mintfile$"],
-      // ENV YARN_VERSION=1.19.1
-      // "matchStrings": ["ENV YARN_VERSION=(?<currentValue>.*?)\\n"],
       "matchStrings": [
         "<depName>@<currentValue>\\n"
       ],
