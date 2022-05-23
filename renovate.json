@@ -3,7 +3,7 @@
     {
       "fileMatch": ["^Mintfile$"],
       "matchStrings": [
-        "<depName>@<currentValue>\\n"
+        "(?<depName>.*?)@(?<currentValue>.*?)\\n"
       ],
       "datasourceTemplate": "github-releases"
     }
