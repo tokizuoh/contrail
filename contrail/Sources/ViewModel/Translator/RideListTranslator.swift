@@ -39,8 +39,8 @@ struct RideListTranslator {
         let maxDistancePerOneRideDateText = maxDistancePerOneRideDate.string(format: .yyyyMMddPd)
 
         return .init(totalDistanceText: totalRideDistanceText,
-                     maxDistancePerOneRideText: maxDistancePerOneRideText,
-                     maxDistancePerOneRideDate: maxDistancePerOneRideDateText)
+                     maxDistanceText: maxDistancePerOneRideText,
+                     maxDistanceDate: maxDistancePerOneRideDateText)
     }
 
     private func makeRides(_ from: From) -> [Ride] {
