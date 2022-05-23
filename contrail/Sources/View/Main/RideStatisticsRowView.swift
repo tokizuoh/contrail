@@ -17,7 +17,6 @@ struct RideStatisticsRowView: View {
                 .foregroundColor(.contrailBrand1)
                 .padding(.bottom, 12)
             maxDistanceText
-                .foregroundColor(.contrailBrand1)
                 .padding(.bottom, 8)
         }
     }
@@ -43,10 +42,16 @@ struct RideStatisticsRowView: View {
                 .font(.headline)
                 .foregroundColor(.contrailLightGray1)
             HStack(alignment: .lastTextBaseline, spacing: 4) {
-                Text("\(rideStatistics.maxDistancePerOneRideText)")
+                Text("\(rideStatistics.maxDistanceText)")
                     .font(.title3)
+                    .foregroundColor(.contrailBrand1)
                 Text("km")
                     .font(.subheadline)
+                    .foregroundColor(.contrailBrand1)
+                    .padding(.trailing, 8)
+                Text("( \(rideStatistics.maxDistanceDate) )")
+                    .font(.caption)
+                    .foregroundColor(.contrailLightGray2)
             }
         }
     }
@@ -54,16 +59,19 @@ struct RideStatisticsRowView: View {
 
 struct RideStatistics: ViewModelProtocol {
     let totalDistanceText: String
-    let maxDistancePerOneRideText: String
+    let maxDistanceText: String
+    let maxDistanceDate: String
 
     static func generateEmpty() -> RideStatistics {
         return .init(totalDistanceText: "",
-                     maxDistancePerOneRideText: "")
+                     maxDistanceText: "",
+                     maxDistanceDate: "")
     }
 
     static func generateMock() -> Self {
         return .init(totalDistanceText: "1000.21",
-                     maxDistancePerOneRideText: "30.5")
+                     maxDistanceText: "30.5",
+                     maxDistanceDate: "2022.05.23")
     }
 }
 

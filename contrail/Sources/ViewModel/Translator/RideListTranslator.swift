@@ -5,7 +5,6 @@
 //  Created by tokizo on 2022/05/14.
 //
 
-import Foundation
 import HealthKit
 
 struct RideListTranslator {
@@ -25,14 +24,20 @@ struct RideListTranslator {
         }
         let totalRideDistanceText = String(format: format, totalRideDistance)
 
-        let maxDistancePerOneRide = from.reduce(0.0) { maxDistance, workout in
+        var maxDistanceDate = Date()
+        let maxDistance = from.reduce(0.0) { maxDistance, workout in
             let distance = workout.totalDistance!.kilometers()
-            return maxDistance < distance ? distance : maxDistance
+            if maxDistance < distance {
+                maxDistanceDate = workout.startDate
+                return distance
+            } else {
+                return maxDistance
+            }
         }
-        let maxDistancePerOneRideText = String(format: format, maxDistancePerOneRide)
 
         return .init(totalDistanceText: totalRideDistanceText,
-                     maxDistancePerOneRideText: maxDistancePerOneRideText)
+                     maxDistanceText: String(format: format, maxDistance),
+                     maxDistanceDate: maxDistanceDate.string(format: .yyyyMMddPd))
     }
 
     private func makeRides(_ from: From) -> [Ride] {
