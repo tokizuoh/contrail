@@ -98,5 +98,3 @@ MockResults.swift
 *.xcodeproj
 *.xcworkspace
 Info.plist
-
-.env
