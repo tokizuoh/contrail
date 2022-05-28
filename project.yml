@@ -59,6 +59,11 @@ targets:
           [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
         UISupportedInterfaceOrientations~ipad:
           [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+    preBuildScripts:
+      - path: scripts/mockolo.sh
+        name: Mockolo
+      - path: scripts/swiftlint.sh
+        name: SwiftLint
   contrailTests:
     type: bundle.unit-test
     platform: iOS
