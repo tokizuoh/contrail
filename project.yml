@@ -1,0 +1,55 @@
+name: contrail
+
+options:
+  bundleIdPrefix: dev.tokizuoh
+  developmentLanguage: ja
+  deploymentTarget:
+    iOS: 15.4
+  xcodeVersion: "13.3"
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: 
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    CODE_SIGN_STYLE: Manual
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+
+targets:
+  contrail:
+    type: application
+    platform: iOS
+    sources:
+      - contrail
+    settings:
+      base:
+        ENABLE_PREVIEWS: YES
+        DEVELOPMENT_ASSET_PATHS: "\"contrail/Preview Content\""
+        PROVISIONING_PROFILE_SPECIFIER: contrailProvisioning
+    info:
+      path: contrail/Info.plist
+      properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        NSHealthShareUsageDescription: Get a bike workout.
+        UILaunchScreen: ""
+        LSRequiresIPhoneOS: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        UIRequiresFullScreen: YES
+        # INFOPLIST_KEY_UILaunchScreen_Generation: YES# 
+        UIApplicationSceneManifest: 
+          UIApplicationSupportsMultipleScenes: YES
+        UISupportedInterfaceOrientations~iphone:
+          [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad:
+          [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+  contrailTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - contrailTests
+    dependencies:
+      - target: contrail
+    # settings:
+      # - ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
