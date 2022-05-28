@@ -93,3 +93,9 @@ iOSInjectionProject/
 
 # uber/mockolo
 MockResults.swift
+
+
+# XcodeGen
+*.xcodeproj
+*.xcworkspace
+Info.plist
