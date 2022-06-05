@@ -1,6 +1,6 @@
 #!/bin/sh
-if which swiftlint >/dev/null; then
-    swiftlint --fix --format
+if which mint >/dev/null; then
+     mint run swiftlint --fix --format
 else
-    echo "SwiftLint does not exist"
+    echo "Mint does not exist"
 fi
