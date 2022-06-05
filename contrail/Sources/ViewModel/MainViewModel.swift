@@ -22,15 +22,15 @@ final class MainViewModel: ObservableObject {
 
     func fetch() async {
         await requestAuthorization()
-        client.fetchWorkouts { workouts in
-            let sortedWorkouts = workouts.sorted(by: { (lw, rw) -> Bool in
-                lw.startDate < rw.startDate
-            })
-            self.cacher.cacheWorkouts(sortedWorkouts.reversed())
-            DispatchQueue.main.async {
-                let workouts = self.cacher.getWorkouts() ?? []
-                self.data = RideListTranslator().translate(workouts)
-            }
+        let workouts = await client.fetchWorkouts()
+
+        let sortedWorkouts = workouts.sorted(by: { (lw, rw) -> Bool in
+            lw.startDate < rw.startDate
+        })
+        self.cacher.cacheWorkouts(sortedWorkouts.reversed())
+        DispatchQueue.main.async {
+            let workouts = self.cacher.getWorkouts() ?? []
+            self.data = RideListTranslator().translate(workouts)
         }
     }
 

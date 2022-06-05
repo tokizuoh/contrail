@@ -10,6 +10,7 @@ import HealthKit
 public protocol HealthKitClientProtocol {
     func requestAuthorization() async throws
     func fetchWorkouts(completion: @escaping (([HKWorkout]) -> Void))
+    func fetchWorkouts() async -> [HKWorkout]
 }
 
 final class HealthKitClient: HealthKitClientProtocol {
@@ -40,5 +41,13 @@ final class HealthKitClient: HealthKitClientProtocol {
             completion(workouts)
         }
         healthStore.execute(query)
+    }
+
+    func fetchWorkouts() async -> [HKWorkout] {
+        return await withCheckedContinuation { continuation in
+            fetchWorkouts { workouts in
+                continuation.resume(returning: workouts)
+            }
+        }
     }
 }
