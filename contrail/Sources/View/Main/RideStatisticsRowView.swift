@@ -6,18 +6,31 @@
 //
 
 import SwiftUI
+import Charts
 
 struct RideStatisticsRowView: View {
     let rideStatistics: RideStatistics
 
     var body: some View {
         VStack(alignment: .leading) {
+            totalDistanceChartView
+                .frame(height: 250)
             totalDistanceText
                 .padding(.top, 8)
                 .foregroundColor(.contrailBrand1)
                 .padding(.bottom, 12)
             maxDistanceText
                 .padding(.bottom, 8)
+        }
+    }
+
+    var totalDistanceChartView: some View {
+        Chart(rideStatistics.cumulativeRides) {
+            BarMark(
+                x: .value("Date", $0.date),
+                y: .value("CumulativeDistance", $0.distance)
+            )
+            .foregroundStyle(Color.contrailBrand1)
         }
     }
 
@@ -58,20 +71,29 @@ struct RideStatisticsRowView: View {
 }
 
 struct RideStatistics: ViewModelProtocol {
+    struct CumulativeRide: Identifiable {
+        var id = UUID()
+        let date: String
+        let distance: Double
+    }
+
     let totalDistanceText: String
     let maxDistanceText: String
     let maxDistanceDate: String
+    let cumulativeRides: [CumulativeRide]
 
     static func generateEmpty() -> RideStatistics {
         return .init(totalDistanceText: "",
                      maxDistanceText: "",
-                     maxDistanceDate: "")
+                     maxDistanceDate: "",
+                     cumulativeRides: [])
     }
 
     static func generateMock() -> Self {
         return .init(totalDistanceText: "1000.21",
                      maxDistanceText: "30.5",
-                     maxDistanceDate: "2022.05.23")
+                     maxDistanceDate: "2022.05.23",
+                     cumulativeRides: [])
     }
 }
 
