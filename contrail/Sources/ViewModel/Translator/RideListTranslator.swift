@@ -35,10 +35,13 @@ struct RideListTranslator {
             }
         }
 
-        return .init(totalDistanceText: totalRideDistanceText,
-                     maxDistanceText: String(format: format, maxDistance),
-                     maxDistanceDate: maxDistanceDate.string(format: .yyyyMMddPd),
-                     cumulativeRides: makeCumulativeRides(from))
+        return .init(
+            totalDistanceText: totalRideDistanceText,
+            maxDistanceText: String(format: format, maxDistance),
+            maxDistanceDate: maxDistanceDate.string(format: .yyyyMMddPd),
+            cumulativeRides: makeCumulativeRides(from),
+            averageSpeeds: makeAverageSpeeds(from)
+        )
     }
 
     private func makeRides(_ from: From) -> [Ride] {
@@ -59,6 +62,17 @@ struct RideListTranslator {
             return .init(
                 date: workout.startDate.description,
                 distance: temporaryTotalDistance
+            )
+        }
+    }
+
+    private func makeAverageSpeeds(_ from: From) -> [RideStatistics.AverageSpeed] {
+        return from.reversed().map { workout in
+            let distance = workout.totalDistance!.kilometers()
+            let timeInterval = workout.duration
+            return .init(
+                date: workout.startDate.description,
+                speed: distance / ((Double)(Int(timeInterval)) / 3600)
             )
         }
     }

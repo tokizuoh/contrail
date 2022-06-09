@@ -12,15 +12,26 @@ struct RideStatisticsRowView: View {
     let rideStatistics: RideStatistics
 
     var body: some View {
-        VStack(alignment: .leading) {
-            totalDistanceChartView
-                .frame(height: 250)
-            totalDistanceText
-                .padding(.top, 8)
-                .foregroundColor(.contrailBrand1)
-                .padding(.bottom, 12)
+        VStack(alignment: .leading, spacing: 16) {
+            ZStack(alignment: .topLeading) {
+                totalDistanceChartView
+                    .frame(height: 250)
+                    .padding(.vertical, 12)
+                totalDistanceText
+                    .padding(.top, 8)
+                    .foregroundColor(.contrailBrand1)
+                    .padding(.bottom, 12)
+            }
             maxDistanceText
-                .padding(.bottom, 8)
+            ZStack(alignment: .topLeading) {
+                Text("Average Speed")
+                    .font(.headline)
+                    .foregroundColor(.contrailLightGray1)
+                    .padding(.vertical, 12)
+                totalDistanceAverageSpeedsChartView
+                    .frame(height: 200)
+            }
+
         }
     }
 
@@ -32,6 +43,17 @@ struct RideStatisticsRowView: View {
                 y: .value("CumulativeDistance", $0.distance)
             )
             .foregroundStyle(Color.contrailBrand1)
+        }
+        .chartXAxis(.hidden)
+    }
+
+    var totalDistanceAverageSpeedsChartView: some View {
+        Chart(rideStatistics.averageSpeeds) {
+            LineMark(
+                x: .value("Date", $0.date),
+                y: .value("AverageSpeed", $0.speed)
+            )
+            .foregroundStyle(.green)
         }
         .chartXAxis(.hidden)
     }
@@ -78,23 +100,32 @@ struct RideStatistics: ViewModelProtocol {
         let distance: Double
     }
 
+    struct AverageSpeed: Identifiable {
+        var id = UUID()
+        let date: String
+        let speed: Double
+    }
+
     let totalDistanceText: String
     let maxDistanceText: String
     let maxDistanceDate: String
     let cumulativeRides: [CumulativeRide]
+    let averageSpeeds: [AverageSpeed]
 
     static func generateEmpty() -> RideStatistics {
         return .init(totalDistanceText: "",
                      maxDistanceText: "",
                      maxDistanceDate: "",
-                     cumulativeRides: [])
+                     cumulativeRides: [],
+                     averageSpeeds: [])
     }
 
     static func generateMock() -> Self {
         return .init(totalDistanceText: "1000.21",
                      maxDistanceText: "30.5",
                      maxDistanceDate: "2022.05.23",
-                     cumulativeRides: [])
+                     cumulativeRides: [],
+                     averageSpeeds: [])
     }
 }
 

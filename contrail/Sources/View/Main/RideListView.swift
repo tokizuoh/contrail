@@ -67,7 +67,8 @@ struct RideList: ViewModelProtocol {
         let rideStatistics: RideStatistics = .init(totalDistanceText: "1000.23",
                                                    maxDistanceText: "45.6",
                                                    maxDistanceDate: "2022.05.23",
-                                                   cumulativeRides: [])
+                                                   cumulativeRides: [],
+                                                   averageSpeeds: [])
         let rides: [Ride] = [
             .init(distanceText: "41.1", dateText: "2022.05.08"),
             .init(distanceText: "22.4", dateText: "2022.05.03"),
