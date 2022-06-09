@@ -32,6 +32,7 @@ struct RideStatisticsRowView: View {
             )
             .foregroundStyle(Color.contrailBrand1)
         }
+        .chartXAxis(.hidden)
     }
 
     // MARK: - component
