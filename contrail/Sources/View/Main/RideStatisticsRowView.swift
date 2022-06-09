@@ -24,6 +24,7 @@ struct RideStatisticsRowView: View {
         }
     }
 
+    // MARK: - component
     var totalDistanceChartView: some View {
         Chart(rideStatistics.cumulativeRides) {
             BarMark(
@@ -35,7 +36,6 @@ struct RideStatisticsRowView: View {
         .chartXAxis(.hidden)
     }
 
-    // MARK: - component
     var totalDistanceText: some View {
         VStack(alignment: .leading) {
             Text("Total Distance")
