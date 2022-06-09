@@ -30,6 +30,7 @@ struct RideStatisticsRowView: View {
                     .padding(.vertical, 12)
                 totalDistanceAverageSpeedsChartView
                     .frame(height: 200)
+                    .padding(.bottom, 12)
             }
 
         }
