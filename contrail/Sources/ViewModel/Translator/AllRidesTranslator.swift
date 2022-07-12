@@ -17,7 +17,7 @@ struct AllRidesTranslator {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: format, distance)
-            let dateText = workout.startDate.string(format: .yyyyMMddPd)
+            let dateText = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
             let durationText = makeDurationText(workout.duration)
             let averageSpeedText = makeAverageSpeedText(timeInterval: workout.duration,
                                                         distance: distance)
