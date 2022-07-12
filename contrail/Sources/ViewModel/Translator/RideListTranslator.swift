@@ -44,7 +44,7 @@ struct RideListTranslator {
         return from.prefix(5).map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: format, distance)
-            let dateText = workout.startDate.string(format: .yyyyMMddPd)
+            let dateText = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
 
             return Ride(distanceText: distanceText,
                         dateText: dateText)
