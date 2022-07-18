@@ -71,3 +71,9 @@ targets:
       - contrailTests
     dependencies:
       - target: contrail
+
+schemes:
+  contrail:
+    build:
+      targets:
+        contrail: all
