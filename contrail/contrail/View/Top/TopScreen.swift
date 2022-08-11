@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-enum ScreenState<Value> {
-    case empty
-    case loaded(Value)
-}
-
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
 
@@ -29,6 +24,7 @@ struct TopScreen: View {
                         .font(.title)
                         .bold()
                         .padding(.horizontal, 5)
+                    TopStatisticsView(item: viewModel.data.topStatisticsItem)
                 }
                 VStack(
                     alignment: .leading,
@@ -42,11 +38,10 @@ struct TopScreen: View {
                         alignment: .leading,
                         spacing: 5
                     ) {
-                        ForEach(viewModel.data) { item in
+                        ForEach(viewModel.data.workoutCellItems) { item in
                             TopWorkoutCell(item: item)
                         }
                     }
-
                 }
             }
             .padding(.horizontal, 10)

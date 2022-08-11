@@ -10,60 +10,62 @@ import HealthKit
 struct TopItem {
     let topStatisticsItem: TopStatisticsItem
     let workoutCellItems: [TopWorkoutCellItem]
-}
 
-enum TopItemType {
-    case existed(item: TopItem)
-    case empty
+    static func empty() -> Self {
+        return .init(topStatisticsItem: .init(allTotalDistanceText: "0",
+                                              maxDistanceText: "0",
+                                              thisMonthTotalDistanceText: "0"),
+                     workoutCellItems: [])
+    }
 }
 
 final class TopViewModel: ObservableObject {
-    @Published var data: TopItemType = .empty
+    @Published var data: TopItem = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
-    
+
     init(workoutsCacher: WorkoutsCacherProtocol) {
         self.workoutsCacher = workoutsCacher
     }
-    
+
     func dispatch() {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
         let topItem = TopTranslator.translate(workouts)
-        data = .existed(item: topItem)
+        data = topItem
     }
 }
 
 struct TopTranslator {
     typealias From = [HKWorkout]
     typealias To = TopItem
-    
+
     static private let format = "%.2f"
-    
+
     static func translate(_ from: From) -> To {
         return .init(
             topStatisticsItem: makeStatisticsItem(from),
             workoutCellItems: makeWorkoutCellItems(from)
         )
     }
-    
+
     // MARK: - makeStatisticsItem
     private static func makeStatisticsItem(_ from: From) -> TopStatisticsItem {
         // TODO: 3回走査するの改善できそう
         return .init(
             allTotalDistanceText: makeAllTotalDistanceText(from),
             maxDistanceText: makeMaxDistanceText(from),
-            thisMonthTotalDistanceText: makethisMonthTotalDistanceText(from)
+            thisMonthTotalDistanceText: makeThisMonthTotalDistanceText(from)
         )
     }
-    
+
     private static func makeAllTotalDistanceText(_ from: From) -> String {
-        let allTotalDistance = from.reduce(0.0) { t, workout in
-            return t + (workout.totalDistance?.kilometers() ?? 0.0)
+        let allTotalDistance = from.reduce(0.0) { totalDistance, workout in
+            return totalDistance + (workout.totalDistance?.kilometers() ?? 0.0)
         }
         return String(format: format, allTotalDistance)
     }
-    
+
     private static func makeMaxDistanceText(_ from: From) -> String {
         let maxDistance = from.reduce(0.0) { maxDistance, workout in
             let distance = workout.totalDistance?.kilometers() ?? 0.0
@@ -71,18 +73,19 @@ struct TopTranslator {
         }
         return String(format: format, maxDistance)
     }
-    
-    private static func makethisMonthTotalDistanceText(_ from: From) -> String {
-        let today = Date()
-        let thisMonthTotalDistance = from.reduce(0.0) { t, workout in
-            guard Calendar.current.isDate(
+
+    private static func makeThisMonthTotalDistanceText(_ from: From) -> String {
+        let today = Date(timeIntervalSinceNow: 60 * 60 * 9)
+        let calendar = Calendar(identifier: .japanese)
+        let thisMonthTotalDistance = from.reduce(0.0) { totalDistance, workout in
+            guard calendar.isDate(
                 today,
                 equalTo: workout.startDate,
                 toGranularity: .month
             ) else {
-                return
+                return totalDistance
             }
-            return t + (workout.totalDistance?.kilometers() ?? 0.0)
+            return totalDistance + (workout.totalDistance?.kilometers() ?? 0.0)
         }
         return String(format: format, thisMonthTotalDistance)
     }
@@ -100,7 +103,6 @@ struct TopTranslator {
         }
     }
 }
-
 
 private extension HKQuantity {
     func kilometers() -> Double {
