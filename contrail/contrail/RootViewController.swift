@@ -18,6 +18,9 @@ final class RootViewController: UIViewController {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
                 workoutsCacher.cacheWorkouts(workout)
+                // 暫定
+                let vc = TopScreenBuilder.build()
+                present(vc, animated: true)
             } catch {
                 fatalError(error.localizedDescription)
             }

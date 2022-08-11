@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct TopScreen: View {
+    @ObservedObject
+    var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(viewModel.data) { item in
+                TopWorkoutCell(item: item)
+            }
+        }
+        .onAppear {
+            viewModel.dispatch()
+        }
     }
 }
 
 struct TopScreen_Previews: PreviewProvider {
     static var previews: some View {
         TopScreen()
+    }
+}
+
+final class TopScreenHostingController: UIHostingController<TopScreen> {}
+
+struct TopScreenBuilder {
+    static func build() -> TopScreenHostingController {
+        let vc = TopScreenHostingController(rootView: TopScreen())
+        return vc
     }
 }
