@@ -26,6 +26,7 @@ final class RootViewController: UIViewController {
     }
 
     private func showTopScreen() {
+        // swiftlint:disable identifier_name
         let vc = TopScreenBuilder.build()
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve

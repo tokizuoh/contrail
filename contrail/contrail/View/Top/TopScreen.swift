@@ -33,6 +33,7 @@ final class TopScreenHostingController: UIHostingController<TopScreen> {}
 
 struct TopScreenBuilder {
     static func build() -> TopScreenHostingController {
+        // swiftlint:disable identifier_name
         let vc = TopScreenHostingController(rootView: TopScreen())
         return vc
     }
