@@ -25,7 +25,7 @@ struct TopWorkoutCell: View {
                     .font(.subheadline)
             }
             .foregroundColor(.brand)
-            .padding(.vertical, 5)
+            .padding(.vertical, 10)
 
             Spacer()
 
@@ -34,6 +34,9 @@ struct TopWorkoutCell: View {
                 .foregroundColor(.lightGray)
                 .padding(.vertical, 5)
         }
+        .padding(.horizontal, 10)
+        .background(Color.darkGray)
+        .cornerRadius(10)
     }
 }
 
