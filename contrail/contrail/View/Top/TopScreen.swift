@@ -12,9 +12,11 @@ struct TopScreen: View {
     var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
 
     var body: some View {
-        List {
-            ForEach(viewModel.data) { item in
-                TopWorkoutCell(item: item)
+        VStack {
+            List {
+                ForEach(viewModel.data) { item in
+                    TopWorkoutCell(item: item)
+                }
             }
         }
         .onAppear {
