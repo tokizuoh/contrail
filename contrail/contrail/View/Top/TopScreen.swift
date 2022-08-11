@@ -18,6 +18,7 @@ struct TopScreen: View {
                     TopWorkoutCell(item: item)
                 }
             }
+            .padding(.horizontal, 20)
         }
         .onAppear {
             viewModel.dispatch()
