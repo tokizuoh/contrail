@@ -9,6 +9,7 @@ import UIKit
 
 final class RootViewController: UIViewController {
     let healthKitClient: HealthKitClientProtocol = HealthKitClient()
+    let workoutsCacher: WorkoutsCacherProtocol = WorkoutsCacher.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,7 @@ final class RootViewController: UIViewController {
             do {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
-                print(workout)
-                //                self.cacher.cacheWorkouts(workouts)
+                workoutsCacher.cacheWorkouts(workout)
             } catch {
                 fatalError(error.localizedDescription)
             }
