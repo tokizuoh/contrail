@@ -12,8 +12,8 @@ struct TopScreen: View {
     var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
 
     var body: some View {
-        VStack {
-            List {
+        ScrollView {
+            VStack {
                 ForEach(viewModel.data) { item in
                     TopWorkoutCell(item: item)
                 }
