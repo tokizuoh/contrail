@@ -23,6 +23,7 @@
 		733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61928A4EC9D00D4364A /* TopScreen.swift */; };
 		733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
+		733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61F28A5348700D4364A /* TopStatisticsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		733DE61928A4EC9D00D4364A /* TopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreen.swift; sourceTree = "<group>"; };
 		733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWorkoutCell.swift; sourceTree = "<group>"; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		733DE61F28A5348700D4364A /* TopStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStatisticsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				733DE61128A4B28200D4364A /* TopViewModel.swift */,
 				733DE61928A4EC9D00D4364A /* TopScreen.swift */,
 				733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */,
+				733DE61F28A5348700D4364A /* TopStatisticsView.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
+				733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
 				733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */,
 				733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */,

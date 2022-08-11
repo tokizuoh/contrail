@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+enum ScreenState<Value> {
+    case empty
+    case loaded(Value)
+}
+
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
 
