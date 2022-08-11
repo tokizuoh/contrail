@@ -8,6 +8,7 @@
 import XCTest
 @testable import contrail
 
+// swiftlint:disable type_name
 final class contrailTests: XCTestCase {
 
     override func setUpWithError() throws {

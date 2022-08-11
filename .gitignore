@@ -90,11 +90,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-# uber/mockolo
-MockResults.swift
-
-# XcodeGen
-*.xcodeproj
-*.xcworkspace
-Info.plist
