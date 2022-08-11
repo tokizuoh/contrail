@@ -20,6 +20,7 @@ struct TopScreen: View {
             }
             .padding(.horizontal, 20)
         }
+        .navigationTitle("Abstract")
         .onAppear {
             viewModel.dispatch()
         }
