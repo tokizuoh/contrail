@@ -24,7 +24,7 @@ struct MainWorkoutCell: View {
                 Text("km")
                     .font(.subheadline)
             }
-            //            .foregroundColor(.contrailBrand1)
+            .foregroundColor(.brand)
             .padding(.vertical, 5)
 
             Spacer()
