@@ -18,14 +18,17 @@ final class RootViewController: UIViewController {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
                 workoutsCacher.cacheWorkouts(workout)
-                // 暫定
-                let vc = TopScreenBuilder.build()
-                vc.modalPresentationStyle = .fullScreen
-                vc.modalTransitionStyle = .crossDissolve
-                present(vc, animated: true)
+                showTopScreen()
             } catch {
                 fatalError(error.localizedDescription)
             }
         }
+    }
+
+    private func showTopScreen() {
+        let vc = TopScreenBuilder.build()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
 }
