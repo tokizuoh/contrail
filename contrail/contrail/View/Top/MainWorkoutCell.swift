@@ -31,7 +31,7 @@ struct MainWorkoutCell: View {
 
             Text(item.dateText)
                 .font(.subheadline)
-                //                .foregroundColor(.contrailLightGray2)
+                .foregroundColor(.lightGray)
                 .padding(.vertical, 5)
         }
     }
