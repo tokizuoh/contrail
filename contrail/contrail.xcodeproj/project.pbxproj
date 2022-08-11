@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
+		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
+		733DE5E028A482B500D4364A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DF28A482B500D4364A /* RootViewController.swift */; };
+		733DE5E328A482B500D4364A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E128A482B500D4364A /* Main.storyboard */; };
+		733DE5E528A482B700D4364A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E428A482B700D4364A /* Assets.xcassets */; };
+		733DE5E828A482B700D4364A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E628A482B700D4364A /* LaunchScreen.storyboard */; };
+		733DE5F328A482B700D4364A /* contrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5F228A482B700D4364A /* contrailTests.swift */; };
+		733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FC28A482B700D4364A /* contrailUITests.swift */; };
+		733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */; };
+		733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE60D28A4B23000D4364A /* HealthKitClient.swift */; };
+		733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61128A4B28200D4364A /* TopViewModel.swift */; };
+		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
+		733DE61828A4B67800D4364A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
+		733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61928A4EC9D00D4364A /* TopScreen.swift */; };
+		733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */; };
+		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		733DE5EF28A482B700D4364A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 733DE5D028A482B500D4364A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 733DE5D728A482B500D4364A;
+			remoteInfo = contrail;
+		};
+		733DE5F928A482B700D4364A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 733DE5D028A482B500D4364A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 733DE5D728A482B500D4364A;
+			remoteInfo = contrail;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		733DE5DD28A482B500D4364A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		733DE5DF28A482B500D4364A /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		733DE5E228A482B500D4364A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		733DE5E428A482B700D4364A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		733DE5E728A482B700D4364A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		733DE5E928A482B700D4364A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		733DE5EE28A482B700D4364A /* contrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		733DE5F228A482B700D4364A /* contrailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailTests.swift; sourceTree = "<group>"; };
+		733DE5F828A482B700D4364A /* contrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		733DE5FC28A482B700D4364A /* contrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITests.swift; sourceTree = "<group>"; };
+		733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		733DE60D28A4B23000D4364A /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
+		733DE61128A4B28200D4364A /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
+		733DE61328A4B45400D4364A /* WorkoutsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCacher.swift; sourceTree = "<group>"; };
+		733DE61528A4B67800D4364A /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
+		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		733DE61928A4EC9D00D4364A /* TopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreen.swift; sourceTree = "<group>"; };
+		733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWorkoutCell.swift; sourceTree = "<group>"; };
+		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		733DE5D528A482B500D4364A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE61828A4B67800D4364A /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5EB28A482B700D4364A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5F528A482B700D4364A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		733DE5CF28A482B500D4364A = {
+			isa = PBXGroup;
+			children = (
+				733DE5DA28A482B500D4364A /* contrail */,
+				733DE5F128A482B700D4364A /* contrailTests */,
+				733DE5FB28A482B700D4364A /* contrailUITests */,
+				733DE5D928A482B500D4364A /* Products */,
+				733DE61628A4B67800D4364A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		733DE5D928A482B500D4364A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				733DE5D828A482B500D4364A /* contrail.app */,
+				733DE5EE28A482B700D4364A /* contrailTests.xctest */,
+				733DE5F828A482B700D4364A /* contrailUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		733DE5DA28A482B500D4364A /* contrail */ = {
+			isa = PBXGroup;
+			children = (
+				733DE61528A4B67800D4364A /* contrail.entitlements */,
+				733DE60F28A4B25D00D4364A /* View */,
+				733DE60C28A4B21900D4364A /* Model */,
+				733DE5DB28A482B500D4364A /* AppDelegate.swift */,
+				733DE5DD28A482B500D4364A /* SceneDelegate.swift */,
+				733DE5DF28A482B500D4364A /* RootViewController.swift */,
+				733DE5E128A482B500D4364A /* Main.storyboard */,
+				733DE5E428A482B700D4364A /* Assets.xcassets */,
+				733DE5E628A482B700D4364A /* LaunchScreen.storyboard */,
+				733DE5E928A482B700D4364A /* Info.plist */,
+			);
+			path = contrail;
+			sourceTree = "<group>";
+		};
+		733DE5F128A482B700D4364A /* contrailTests */ = {
+			isa = PBXGroup;
+			children = (
+				733DE5F228A482B700D4364A /* contrailTests.swift */,
+			);
+			path = contrailTests;
+			sourceTree = "<group>";
+		};
+		733DE5FB28A482B700D4364A /* contrailUITests */ = {
+			isa = PBXGroup;
+			children = (
+				733DE5FC28A482B700D4364A /* contrailUITests.swift */,
+				733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */,
+			);
+			path = contrailUITests;
+			sourceTree = "<group>";
+		};
+		733DE60C28A4B21900D4364A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				733DE60D28A4B23000D4364A /* HealthKitClient.swift */,
+				733DE61328A4B45400D4364A /* WorkoutsCacher.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		733DE60F28A4B25D00D4364A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				733DE61028A4B26D00D4364A /* Top */,
+				733DE61D28A4F1C600D4364A /* Color+.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		733DE61028A4B26D00D4364A /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				733DE61128A4B28200D4364A /* TopViewModel.swift */,
+				733DE61928A4EC9D00D4364A /* TopScreen.swift */,
+				733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		733DE61628A4B67800D4364A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				733DE61728A4B67800D4364A /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		733DE5D728A482B500D4364A /* contrail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 733DE60228A482B700D4364A /* Build configuration list for PBXNativeTarget "contrail" */;
+			buildPhases = (
+				733DE5D428A482B500D4364A /* Sources */,
+				733DE60B28A4A9FC00D4364A /* Custom: Run Swiftlint */,
+				733DE5D528A482B500D4364A /* Frameworks */,
+				733DE5D628A482B500D4364A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = contrail;
+			productName = contrail;
+			productReference = 733DE5D828A482B500D4364A /* contrail.app */;
+			productType = "com.apple.product-type.application";
+		};
+		733DE5ED28A482B700D4364A /* contrailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 733DE60528A482B700D4364A /* Build configuration list for PBXNativeTarget "contrailTests" */;
+			buildPhases = (
+				733DE5EA28A482B700D4364A /* Sources */,
+				733DE5EB28A482B700D4364A /* Frameworks */,
+				733DE5EC28A482B700D4364A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				733DE5F028A482B700D4364A /* PBXTargetDependency */,
+			);
+			name = contrailTests;
+			productName = contrailTests;
+			productReference = 733DE5EE28A482B700D4364A /* contrailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		733DE5F728A482B700D4364A /* contrailUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 733DE60828A482B700D4364A /* Build configuration list for PBXNativeTarget "contrailUITests" */;
+			buildPhases = (
+				733DE5F428A482B700D4364A /* Sources */,
+				733DE5F528A482B700D4364A /* Frameworks */,
+				733DE5F628A482B700D4364A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				733DE5FA28A482B700D4364A /* PBXTargetDependency */,
+			);
+			name = contrailUITests;
+			productName = contrailUITests;
+			productReference = 733DE5F828A482B700D4364A /* contrailUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		733DE5D028A482B500D4364A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					733DE5D728A482B500D4364A = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					733DE5ED28A482B700D4364A = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 733DE5D728A482B500D4364A;
+					};
+					733DE5F728A482B700D4364A = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 733DE5D728A482B500D4364A;
+					};
+				};
+			};
+			buildConfigurationList = 733DE5D328A482B500D4364A /* Build configuration list for PBXProject "contrail" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 733DE5CF28A482B500D4364A;
+			productRefGroup = 733DE5D928A482B500D4364A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				733DE5D728A482B500D4364A /* contrail */,
+				733DE5ED28A482B700D4364A /* contrailTests */,
+				733DE5F728A482B700D4364A /* contrailUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		733DE5D628A482B500D4364A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE5E828A482B700D4364A /* LaunchScreen.storyboard in Resources */,
+				733DE5E528A482B700D4364A /* Assets.xcassets in Resources */,
+				733DE5E328A482B500D4364A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5EC28A482B700D4364A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5F628A482B700D4364A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		733DE60B28A4A9FC00D4364A /* Custom: Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Custom: Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint > /dev/null; then\n  mint run swiftlint autocorrect --format\n  mint run swiftlint\nelse\n  echo \"warning: mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		733DE5D428A482B500D4364A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */,
+				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
+				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
+				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
+				733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */,
+				733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */,
+				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
+				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
+				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5EA28A482B700D4364A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE5F328A482B700D4364A /* contrailTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DE5F428A482B700D4364A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */,
+				733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		733DE5F028A482B700D4364A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 733DE5D728A482B500D4364A /* contrail */;
+			targetProxy = 733DE5EF28A482B700D4364A /* PBXContainerItemProxy */;
+		};
+		733DE5FA28A482B700D4364A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 733DE5D728A482B500D4364A /* contrail */;
+			targetProxy = 733DE5F928A482B700D4364A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		733DE5E128A482B500D4364A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				733DE5E228A482B500D4364A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		733DE5E628A482B700D4364A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				733DE5E728A482B700D4364A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		733DE60028A482B700D4364A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		733DE60128A482B700D4364A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		733DE60328A482B700D4364A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = contrail/contrail.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = contrail/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = contrailProvisioning;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		733DE60428A482B700D4364A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = contrail/contrail.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = contrail/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = contrailProvisioning;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		733DE60628A482B700D4364A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/contrail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/contrail";
+			};
+			name = Debug;
+		};
+		733DE60728A482B700D4364A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/contrail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/contrail";
+			};
+			name = Release;
+		};
+		733DE60928A482B700D4364A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = contrail;
+			};
+			name = Debug;
+		};
+		733DE60A28A482B700D4364A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2YRXH6ZZZY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tokizuoh.contrailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = contrail;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		733DE5D328A482B500D4364A /* Build configuration list for PBXProject "contrail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				733DE60028A482B700D4364A /* Debug */,
+				733DE60128A482B700D4364A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		733DE60228A482B700D4364A /* Build configuration list for PBXNativeTarget "contrail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				733DE60328A482B700D4364A /* Debug */,
+				733DE60428A482B700D4364A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		733DE60528A482B700D4364A /* Build configuration list for PBXNativeTarget "contrailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				733DE60628A482B700D4364A /* Debug */,
+				733DE60728A482B700D4364A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		733DE60828A482B700D4364A /* Build configuration list for PBXNativeTarget "contrailUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				733DE60928A482B700D4364A /* Debug */,
+				733DE60A28A482B700D4364A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 733DE5D028A482B500D4364A /* Project object */;
+}
