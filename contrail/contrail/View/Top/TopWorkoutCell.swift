@@ -1,5 +1,5 @@
 //
-//  MainWorkoutCell.swift
+//  TopWorkoutCell.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/11.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct MainWorkoutCellItem: Identifiable {
+struct TopWorkoutCellItem: Identifiable {
     var id = UUID()
     let distanceText: String
     let dateText: String
 }
 
-struct MainWorkoutCell: View {
-    let item: MainWorkoutCellItem
+struct TopWorkoutCell: View {
+    let item: TopWorkoutCellItem
 
     var body: some View {
         HStack(alignment: .lastTextBaseline) {
@@ -39,7 +39,7 @@ struct MainWorkoutCell: View {
 
 struct MainWorkoutCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainWorkoutCell(
+        TopWorkoutCell(
             item: .init(
                 distanceText: "123.45",
                 dateText: "2022.08.11"
