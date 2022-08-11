@@ -12,9 +12,21 @@ struct TopScreen: View {
 
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(viewModel.data) { item in
-                    TopWorkoutCell(item: item)
+            VStack(
+                alignment: .leading,
+                spacing: 10
+            ) {
+                Text("Workout List")
+                    .font(.title)
+                    .bold()
+                    .padding(.horizontal, 5)
+                LazyVStack(
+                    alignment: .leading,
+                    spacing: 5
+                ) {
+                    ForEach(viewModel.data) { item in
+                        TopWorkoutCell(item: item)
+                    }
                 }
             }
             .padding(.horizontal, 10)
