@@ -7,7 +7,7 @@
 
 import HealthKit
 
-final class MainViewModel: ObservableObject {
+final class TopViewModel: ObservableObject {
     let workoutsCacher: WorkoutsCacherProtocol
 
     init(workoutsCacher: WorkoutsCacherProtocol) {
