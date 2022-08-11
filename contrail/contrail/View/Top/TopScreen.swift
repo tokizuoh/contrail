@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TopScreen: View {
-    @ObservedObject
-    var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
 
     var body: some View {
         ScrollView {
