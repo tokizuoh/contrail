@@ -14,19 +14,34 @@ struct TopScreen: View {
         ScrollView {
             VStack(
                 alignment: .leading,
-                spacing: 10
+                spacing: 20
             ) {
-                Text("Workout List")
-                    .font(.title)
-                    .bold()
-                    .padding(.horizontal, 5)
-                LazyVStack(
+                VStack(
                     alignment: .leading,
-                    spacing: 5
+                    spacing: 10
                 ) {
-                    ForEach(viewModel.data) { item in
-                        TopWorkoutCell(item: item)
+                    Text("Statistics")
+                        .font(.title)
+                        .bold()
+                        .padding(.horizontal, 5)
+                }
+                VStack(
+                    alignment: .leading,
+                    spacing: 10
+                ) {
+                    Text("Workout List")
+                        .font(.title)
+                        .bold()
+                        .padding(.horizontal, 5)
+                    LazyVStack(
+                        alignment: .leading,
+                        spacing: 5
+                    ) {
+                        ForEach(viewModel.data) { item in
+                            TopWorkoutCell(item: item)
+                        }
                     }
+
                 }
             }
             .padding(.horizontal, 10)
