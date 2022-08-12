@@ -67,10 +67,6 @@ struct TopStatisticsView: View {
         .padding(.vertical, 10)
         .background(Color.darkGray)
         .cornerRadius(10)
-
-        //        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        //            .padding(.horizontal, 10)
-
     }
 }
 
