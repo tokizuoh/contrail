@@ -19,11 +19,11 @@
 		733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE60D28A4B23000D4364A /* HealthKitClient.swift */; };
 		733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61128A4B28200D4364A /* TopViewModel.swift */; };
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
-		733DE61828A4B67800D4364A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
 		733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61928A4EC9D00D4364A /* TopScreen.swift */; };
 		733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
 		733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61F28A5348700D4364A /* TopStatisticsView.swift */; };
+		7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DE61828A4B67800D4364A /* HealthKit.framework in Frameworks */,
+				7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
