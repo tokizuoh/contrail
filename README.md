@@ -1,16 +1,10 @@
 # contrail
-
-[![CI](https://github.com/tokizuoh/contrail/actions/workflows/main.yml/badge.svg)](https://github.com/tokizuoh/contrail/actions/workflows/main.yml)
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/37968814/168440294-2097be29-f452-4c50-a0fa-a1a53d8845a0.png" width="250">
-</p>
-
+  
 ## About
 A simple app to view your cycling workouts in SwiftUI.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37968814/169692359-ea969e14-1ca8-4d03-bbc3-5c57a72d4010.png" width="1000">
+  <img src="https://user-images.githubusercontent.com/37968814/184345466-0863cd28-06c2-4240-ba93-b08a9e6f8440.png" width="500">
 </p>
 
 ## Development Environment
