@@ -18,55 +18,45 @@ struct TopStatisticsView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            VStack(alignment: .leading, spacing: 5) {
-                HStack {
-                    Text("All")
-                        .font(.title3)
-                    Spacer()
-                }
-                HStack(alignment: .bottom) {
-                    Text(item.allTotalDistanceText)
-                        .font(.title)
-                    Text("km")
-                        .font(.subheadline)
-                }
-                .foregroundColor(.brand)
-            }
-            .padding(.horizontal, 10)
-            VStack(alignment: .leading, spacing: 5) {
-                HStack {
-                    Text("Max")
-                        .font(.title3)
-                    Spacer()
-                }
-                HStack(alignment: .bottom) {
-                    Text(item.maxDistanceText)
-                        .font(.title)
-                    Text("km")
-                        .font(.subheadline)
-                }
-                .foregroundColor(.brand)
-            }
-            .padding(.horizontal, 10)
-            VStack(alignment: .leading, spacing: 5) {
-                HStack {
-                    Text("This Month")
-                        .font(.title3)
-                    Spacer()
-                }
-                HStack(alignment: .bottom) {
-                    Text(item.thisMonthTotalDistanceText)
-                        .font(.title)
-                    Text("km")
-                        .font(.subheadline)
-                }
-                .foregroundColor(.brand)
-            }
-            .padding(.horizontal, 10)
+            ComponentView(
+                title: "All",
+                amount: item.allTotalDistanceText
+            )
+            ComponentView(
+                title: "Max",
+                amount: item.maxDistanceText
+            )
+            ComponentView(
+                title: "This Month",
+                amount: item.thisMonthTotalDistanceText
+            )
         }
-        .padding(.vertical, 10)
+        .padding(.all, 10)
         .background(Color.darkGray)
         .cornerRadius(10)
+    }
+
+}
+
+private struct ComponentView: View {
+    let title: String
+    let amount: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            HStack {
+                Text(title)
+                    .font(.title3)
+                Spacer()
+            }
+            HStack(alignment: .bottom) {
+                Text(amount)
+                    .font(.title)
+                Text("km")
+                    .font(.subheadline)
+            }
+            .foregroundColor(.brand)
+        }
     }
 }
 
