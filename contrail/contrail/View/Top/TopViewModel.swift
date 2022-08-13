@@ -6,6 +6,7 @@
 //
 
 import HealthKit
+import Apollo
 
 struct TopItem {
     let topStatisticsItem: TopStatisticsItem
@@ -33,6 +34,40 @@ final class TopViewModel: ObservableObject {
         }
         let topItem = TopTranslator.translate(workouts)
         data = topItem
+    }
+
+    func uploadWorkout() {
+        //        Network.shared.apollo.fetch(query: GetWorkoutQuery()) { result in
+        //            switch result {
+        //            case .success(let data):
+        //                print("Success!")
+        //                print(data)
+        //            case .failure(let error):
+        //                fatalError(error.localizedDescription)
+        //            }
+        //        }
+        guard let workouts = workoutsCacher.getWorkouts() else {
+            return
+        }
+
+        for workout in workouts {
+            Network.shared.apollo.perform(
+                mutation: CreateWorkoutMutation(
+                    distance: workout.totalDistance?.kilometers() ?? 0.0,
+                    duration: workout.duration,
+                    startDate: workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: "."),
+                    type: .cycling
+                )
+            ) { result in
+                switch result {
+                case .success(let data):
+                    print(data)
+                case .failure(let error):
+                    fatalError(error.localizedDescription)
+                }
+            }
+        }
+
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		733C517428A7C91600306AD1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517328A7C91600306AD1 /* API.swift */; };
+		733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517528A7CBF900306AD1 /* ContrailAPI.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
 		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
 		733DE5E028A482B500D4364A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DF28A482B500D4364A /* RootViewController.swift */; };
@@ -49,6 +50,7 @@
 		733C516E28A7C2A300306AD1 /* Workout.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Workout.graphql; sourceTree = "<group>"; };
 		733C517228A7C70300306AD1 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		733C517328A7C91600306AD1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		733C517528A7CBF900306AD1 /* ContrailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrailAPI.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733DE5DD28A482B500D4364A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				733DE60D28A4B23000D4364A /* HealthKitClient.swift */,
 				733DE61328A4B45400D4364A /* WorkoutsCacher.swift */,
+				733C517528A7CBF900306AD1 /* ContrailAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
+				733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
