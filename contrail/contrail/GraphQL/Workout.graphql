@@ -1,0 +1,8 @@
+query getWorkout {
+  workouts {
+    distance
+    duration
+    startDate
+    type
+  }
+}
