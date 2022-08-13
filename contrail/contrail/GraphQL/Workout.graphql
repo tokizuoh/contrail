@@ -1,0 +1,17 @@
+query getWorkout {
+  workouts {
+    distance
+    duration
+    startDate
+    type
+  }
+}
+
+mutation CreateWorkout($distance: Float!, $duration: Float!, $startDate: Date!, $type: WorkoutType!) {
+  createWorkout(input:{distance:$distance, duration:$duration, startDate: $startDate, type: $type}){
+    distance
+    duration
+    startDate
+    type
+  }
+}
