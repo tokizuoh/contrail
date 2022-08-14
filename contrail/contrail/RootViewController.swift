@@ -26,7 +26,6 @@ final class RootViewController: UIViewController {
     }
 
     private func showTopScreen() {
-        // swiftlint:disable identifier_name
         let vc = TopScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
