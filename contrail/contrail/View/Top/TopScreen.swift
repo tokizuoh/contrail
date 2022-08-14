@@ -34,10 +34,17 @@ struct TopScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("List")
-                        .font(.title)
-                        .bold()
-                        .padding(.horizontal, 5)
+                    HStack(alignment: .lastTextBaseline) {
+                        Text("List")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 5)
+                        Spacer()
+                        Button("Show More") {
+                            // TODO: 一覧画面に遷移
+                        }
+                        .foregroundColor(.brand)
+                    }
                     LazyVStack(
                         alignment: .leading,
                         spacing: 5
