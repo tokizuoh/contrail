@@ -29,10 +29,3 @@ struct WorkoutListView_Previews: PreviewProvider {
         WorkoutListView()
     }
 }
-
-struct WorkoutListScreenBuilder {
-    static func build() -> UIHostingController<WorkoutListView> {
-        let vc = UIHostingController(rootView: WorkoutListView())
-        return vc
-    }
-}
