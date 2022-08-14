@@ -62,12 +62,3 @@ struct TopScreen_Previews: PreviewProvider {
         TopScreen()
     }
 }
-
-final class TopScreenHostingController: UIHostingController<TopScreen> {}
-
-struct TopScreenBuilder {
-    static func build() -> TopScreenHostingController {
-        let vc = TopScreenHostingController(rootView: TopScreen())
-        return vc
-    }
-}
