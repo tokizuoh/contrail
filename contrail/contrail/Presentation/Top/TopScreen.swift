@@ -57,6 +57,7 @@ struct TopScreen: View {
                 }
             }
             .padding(.horizontal, 10)
+            .padding(.bottom, 20)
         }
         .navigationTitle("Abstract")
         .onAppear {

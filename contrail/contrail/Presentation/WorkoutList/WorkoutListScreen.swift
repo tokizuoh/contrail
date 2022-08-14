@@ -21,6 +21,7 @@ struct WorkoutListScreen: View {
                 }
             }
             .padding(.horizontal, 10)
+            .padding(.bottom, 20)
         }
         .navigationTitle("List")
         .onAppear {
