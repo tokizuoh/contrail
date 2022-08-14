@@ -114,9 +114,3 @@ struct TopTranslator {
         return String(format: format, thisMonthTotalDistance)
     }
 }
-
-extension HKQuantity {
-    func kilometers() -> Double {
-        return self.doubleValue(for: .meter()) / 1000
-    }
-}
