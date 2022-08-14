@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WorkoutListScreenBuilder {
-    static func build() -> UIHostingController<WorkoutListView> {
-        let vc = UIHostingController(rootView: WorkoutListView())
+    static func build() -> UIHostingController<WorkoutListScreen> {
+        let vc = UIHostingController(rootView: WorkoutListScreen())
         return vc
     }
 }

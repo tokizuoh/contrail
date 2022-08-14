@@ -1,5 +1,5 @@
 //
-//  WorkoutListView.swift
+//  WorkoutListScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkoutListView: View {
+struct WorkoutListScreen: View {
     @ObservedObject var viewModel = WorkoutListVideModel(workoutsCacher: WorkoutsCacher.shared)
 
     var body: some View {
@@ -26,6 +26,6 @@ struct WorkoutListView: View {
 
 struct WorkoutListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutListView()
+        WorkoutListScreen()
     }
 }
