@@ -8,7 +8,7 @@
 import HealthKit
 import Apollo
 
-struct TopItem {
+struct TopData {
     let topStatisticsItem: TopStatisticsItem
     let workoutCellItems: [TopWorkoutCellItem]
 
@@ -21,7 +21,7 @@ struct TopItem {
 }
 
 final class TopViewModel: ObservableObject {
-    @Published var data: TopItem = .empty()
+    @Published var data: TopData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 
     init(workoutsCacher: WorkoutsCacherProtocol) {
@@ -64,7 +64,7 @@ final class TopViewModel: ObservableObject {
 
 struct TopTranslator {
     typealias From = [HKWorkout]
-    typealias To = TopItem
+    typealias To = TopData
 
     static private let format = "%.2f"
 
