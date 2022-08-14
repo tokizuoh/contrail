@@ -154,7 +154,7 @@
 				733C516B28A7C25800306AD1 /* GraphQL */,
 				733C516928A7C1FF00306AD1 /* generated */,
 				733DE61528A4B67800D4364A /* contrail.entitlements */,
-				733DE60F28A4B25D00D4364A /* View */,
+				733DE60F28A4B25D00D4364A /* Presentation */,
 				733DE60C28A4B21900D4364A /* Model */,
 				733DE5DB28A482B500D4364A /* AppDelegate.swift */,
 				733DE5DD28A482B500D4364A /* SceneDelegate.swift */,
@@ -194,14 +194,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		733DE60F28A4B25D00D4364A /* View */ = {
+		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				73C9B64828A8C7BA00BF831E /* WorkoutList */,
 				733DE61028A4B26D00D4364A /* Top */,
 				733DE61D28A4F1C600D4364A /* Color+.swift */,
 			);
-			path = View;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		733DE61028A4B26D00D4364A /* Top */ = {
