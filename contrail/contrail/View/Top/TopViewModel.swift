@@ -71,7 +71,7 @@ struct TopTranslator {
     static func translate(_ from: From) -> To {
         return .init(
             topStatisticsItem: makeStatisticsItem(from),
-            workoutCellItems: makeWorkoutCellItems(from)
+            workoutCellItems: makeWorkoutCellItems(from.prefix(5).map { $0 })
         )
     }
 
