@@ -37,15 +37,6 @@ final class TopViewModel: ObservableObject {
     }
 
     func uploadWorkout() {
-        //        Network.shared.apollo.fetch(query: GetWorkoutQuery()) { result in
-        //            switch result {
-        //            case .success(let data):
-        //                print("Success!")
-        //                print(data)
-        //            case .failure(let error):
-        //                fatalError(error.localizedDescription)
-        //            }
-        //        }
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
