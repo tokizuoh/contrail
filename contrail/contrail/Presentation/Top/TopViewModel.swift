@@ -10,7 +10,7 @@ import Apollo
 
 struct TopData {
     let topStatisticsItem: TopStatisticsItem
-    let workoutCellItems: [TopWorkoutCellItem]
+    let workoutCellItems: [WorkoutAbstractViewItem]
 
     static func empty() -> Self {
         return .init(topStatisticsItem: .init(allTotalDistanceText: "0",
@@ -123,7 +123,7 @@ private extension HKQuantity {
 
 struct WorkoutCellTranslator {
     typealias From = [HKWorkout]
-    typealias To = [TopWorkoutCellItem]
+    typealias To = [WorkoutAbstractViewItem]
 
     static private let format = "%.2f"
 

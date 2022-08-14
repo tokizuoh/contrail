@@ -22,7 +22,7 @@
 		733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61128A4B28200D4364A /* TopViewModel.swift */; };
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
 		733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61928A4EC9D00D4364A /* TopScreen.swift */; };
-		733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */; };
+		733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
 		733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61F28A5348700D4364A /* TopStatisticsView.swift */; };
 		738D9C9428A8CF0000852CF5 /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9328A8CF0000852CF5 /* WorkoutListViewModel.swift */; };
@@ -74,7 +74,7 @@
 		733DE61528A4B67800D4364A /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		733DE61928A4EC9D00D4364A /* TopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreen.swift; sourceTree = "<group>"; };
-		733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWorkoutCell.swift; sourceTree = "<group>"; };
+		733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAbstractView.swift; sourceTree = "<group>"; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		733DE61F28A5348700D4364A /* TopStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStatisticsView.swift; sourceTree = "<group>"; };
 		738D9C9328A8CF0000852CF5 /* WorkoutListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +197,7 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				738D9C9728A8D02F00852CF5 /* Common */,
 				73C9B64828A8C7BA00BF831E /* WorkoutList */,
 				733DE61028A4B26D00D4364A /* Top */,
 				733DE61D28A4F1C600D4364A /* Color+.swift */,
@@ -209,7 +210,6 @@
 			children = (
 				733DE61128A4B28200D4364A /* TopViewModel.swift */,
 				733DE61928A4EC9D00D4364A /* TopScreen.swift */,
-				733DE61B28A4EE6F00D4364A /* TopWorkoutCell.swift */,
 				733DE61F28A5348700D4364A /* TopStatisticsView.swift */,
 				73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */,
 			);
@@ -222,6 +222,14 @@
 				733DE61728A4B67800D4364A /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		738D9C9728A8D02F00852CF5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		73C9B64828A8C7BA00BF831E /* WorkoutList */ = {
@@ -413,7 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				733C517428A7C91600306AD1 /* API.swift in Sources */,
-				733DE61C28A4EE6F00D4364A /* TopWorkoutCell.swift in Sources */,
+				733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
 				733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */,

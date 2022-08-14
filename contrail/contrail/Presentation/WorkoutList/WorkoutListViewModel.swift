@@ -8,7 +8,7 @@
 import Foundation
 
 struct WorkoutListData {
-    let workoutCellItems: [TopWorkoutCellItem]
+    let workoutCellItems: [WorkoutAbstractViewItem]
 
     static func empty() -> Self {
         return .init(workoutCellItems: [])

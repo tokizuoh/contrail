@@ -17,7 +17,7 @@ struct WorkoutListScreen: View {
                 spacing: 5
             ) {
                 ForEach(viewModel.data.workoutCellItems) { item in
-                    TopWorkoutCell(item: item)
+                    WorkoutAbstractView(item: item)
                 }
             }
         }
