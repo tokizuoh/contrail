@@ -77,7 +77,6 @@ struct TopTranslator {
 
     // MARK: - makeStatisticsItem
     private static func makeStatisticsItem(_ from: From) -> TopStatisticsItem {
-        // TODO: 3回走査するの改善できそう
         return .init(
             allTotalDistanceText: makeAllTotalDistanceText(from),
             maxDistanceText: makeMaxDistanceText(from),
