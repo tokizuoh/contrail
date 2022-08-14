@@ -115,27 +115,8 @@ struct TopTranslator {
     }
 }
 
-private extension HKQuantity {
+extension HKQuantity {
     func kilometers() -> Double {
         return self.doubleValue(for: .meter()) / 1000
-    }
-}
-
-struct WorkoutCellTranslator {
-    typealias From = [HKWorkout]
-    typealias To = [WorkoutAbstractViewItem]
-
-    static private let format = "%.2f"
-
-    static func translate(_ from: From) -> To {
-        return from.map { workout in
-            let distance = workout.totalDistance!.kilometers()
-            let distanceText = String(format: format, distance)
-            let dateText = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
-            return .init(
-                distanceText: distanceText,
-                dateText: dateText
-            )
-        }
     }
 }
