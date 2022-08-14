@@ -8,9 +8,9 @@
 import HealthKit
 import Apollo
 
-struct TopItem {
+struct TopData {
     let topStatisticsItem: TopStatisticsItem
-    let workoutCellItems: [TopWorkoutCellItem]
+    let workoutCellItems: [WorkoutAbstractViewItem]
 
     static func empty() -> Self {
         return .init(topStatisticsItem: .init(allTotalDistanceText: "0",
@@ -21,7 +21,7 @@ struct TopItem {
 }
 
 final class TopViewModel: ObservableObject {
-    @Published var data: TopItem = .empty()
+    @Published var data: TopData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 
     init(workoutsCacher: WorkoutsCacherProtocol) {
@@ -58,20 +58,19 @@ final class TopViewModel: ObservableObject {
                 }
             }
         }
-
     }
 }
 
 struct TopTranslator {
     typealias From = [HKWorkout]
-    typealias To = TopItem
+    typealias To = TopData
 
     static private let format = "%.2f"
 
     static func translate(_ from: From) -> To {
         return .init(
             topStatisticsItem: makeStatisticsItem(from),
-            workoutCellItems: makeWorkoutCellItems(from)
+            workoutCellItems: WorkoutCellTranslator.translate(from.prefix(5).map { $0 })
         )
     }
 
@@ -113,24 +112,5 @@ struct TopTranslator {
             return totalDistance + (workout.totalDistance?.kilometers() ?? 0.0)
         }
         return String(format: format, thisMonthTotalDistance)
-    }
-
-    // MARK: - makeWorkoutCellItems
-    private static func makeWorkoutCellItems(_ from: From) -> [TopWorkoutCellItem] {
-        return from.map { workout in
-            let distance = workout.totalDistance!.kilometers()
-            let distanceText = String(format: format, distance)
-            let dateText = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
-            return .init(
-                distanceText: distanceText,
-                dateText: dateText
-            )
-        }
-    }
-}
-
-private extension HKQuantity {
-    func kilometers() -> Double {
-        return self.doubleValue(for: .meter()) / 1000
     }
 }

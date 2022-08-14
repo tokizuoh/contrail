@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    let showWorkoutListScreenAction: () -> Void
 
     var body: some View {
         ScrollView {
@@ -34,21 +35,29 @@ struct TopScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("Workout List")
-                        .font(.title)
-                        .bold()
-                        .padding(.horizontal, 5)
+                    HStack(alignment: .lastTextBaseline) {
+                        Text("List")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 5)
+                        Spacer()
+                        Button("Show More") {
+                            showWorkoutListScreenAction()
+                        }
+                        .foregroundColor(.brand)
+                    }
                     LazyVStack(
                         alignment: .leading,
                         spacing: 5
                     ) {
                         ForEach(viewModel.data.workoutCellItems) { item in
-                            TopWorkoutCell(item: item)
+                            WorkoutAbstractView(item: item)
                         }
                     }
                 }
             }
             .padding(.horizontal, 10)
+            .padding(.bottom, 20)
         }
         .navigationTitle("Abstract")
         .onAppear {
@@ -59,15 +68,6 @@ struct TopScreen: View {
 
 struct TopScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TopScreen()
-    }
-}
-
-final class TopScreenHostingController: UIHostingController<TopScreen> {}
-
-struct TopScreenBuilder {
-    static func build() -> TopScreenHostingController {
-        let vc = TopScreenHostingController(rootView: TopScreen())
-        return vc
+        TopScreen(showWorkoutListScreenAction: {})
     }
 }
