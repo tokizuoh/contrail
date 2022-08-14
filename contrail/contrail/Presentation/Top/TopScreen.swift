@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    let showWorkoutListScreenAction: () -> Void
 
     var body: some View {
         ScrollView {
@@ -41,7 +42,7 @@ struct TopScreen: View {
                             .padding(.horizontal, 5)
                         Spacer()
                         Button("Show More") {
-                            // TODO: 一覧画面に遷移
+                            showWorkoutListScreenAction()
                         }
                         .foregroundColor(.brand)
                     }
@@ -66,6 +67,6 @@ struct TopScreen: View {
 
 struct TopScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TopScreen()
+        TopScreen(showWorkoutListScreenAction: {})
     }
 }
