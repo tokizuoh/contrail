@@ -20,6 +20,11 @@ struct WorkoutListScreen: View {
                     WorkoutAbstractView(item: item)
                 }
             }
+            .padding(.horizontal, 10)
+        }
+        .navigationTitle("List")
+        .onAppear {
+            viewModel.dispatch()
         }
     }
 }
