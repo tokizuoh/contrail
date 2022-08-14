@@ -37,15 +37,6 @@ final class TopViewModel: ObservableObject {
     }
 
     func uploadWorkout() {
-        //        Network.shared.apollo.fetch(query: GetWorkoutQuery()) { result in
-        //            switch result {
-        //            case .success(let data):
-        //                print("Success!")
-        //                print(data)
-        //            case .failure(let error):
-        //                fatalError(error.localizedDescription)
-        //            }
-        //        }
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
@@ -86,7 +77,6 @@ struct TopTranslator {
 
     // MARK: - makeStatisticsItem
     private static func makeStatisticsItem(_ from: From) -> TopStatisticsItem {
-        // TODO: 3回走査するの改善できそう
         return .init(
             allTotalDistanceText: makeAllTotalDistanceText(from),
             maxDistanceText: makeMaxDistanceText(from),
