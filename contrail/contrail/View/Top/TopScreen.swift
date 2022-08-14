@@ -34,7 +34,7 @@ struct TopScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("Workout List")
+                    Text("List")
                         .font(.title)
                         .bold()
                         .padding(.horizontal, 5)
