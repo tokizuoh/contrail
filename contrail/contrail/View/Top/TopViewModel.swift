@@ -58,7 +58,6 @@ final class TopViewModel: ObservableObject {
                 }
             }
         }
-
     }
 }
 
@@ -71,7 +70,7 @@ struct TopTranslator {
     static func translate(_ from: From) -> To {
         return .init(
             topStatisticsItem: makeStatisticsItem(from),
-            workoutCellItems: makeWorkoutCellItems(from.prefix(5).map { $0 })
+            workoutCellItems: WorkoutCellTranslator.translate(from.prefix(5).map { $0 })
         )
     }
 
@@ -114,9 +113,21 @@ struct TopTranslator {
         }
         return String(format: format, thisMonthTotalDistance)
     }
+}
 
-    // MARK: - makeWorkoutCellItems
-    private static func makeWorkoutCellItems(_ from: From) -> [TopWorkoutCellItem] {
+private extension HKQuantity {
+    func kilometers() -> Double {
+        return self.doubleValue(for: .meter()) / 1000
+    }
+}
+
+struct WorkoutCellTranslator {
+    typealias From = [HKWorkout]
+    typealias To = [TopWorkoutCellItem]
+
+    static private let format = "%.2f"
+
+    static func translate(_ from: From) -> To {
         return from.map { workout in
             let distance = workout.totalDistance!.kilometers()
             let distanceText = String(format: format, distance)
@@ -126,11 +137,5 @@ struct TopTranslator {
                 dateText: dateText
             )
         }
-    }
-}
-
-private extension HKQuantity {
-    func kilometers() -> Double {
-        return self.doubleValue(for: .meter()) / 1000
     }
 }

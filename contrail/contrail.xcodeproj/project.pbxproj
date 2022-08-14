@@ -27,6 +27,7 @@
 		733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61F28A5348700D4364A /* TopStatisticsView.swift */; };
 		7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
 		73C9B64728A8C43700BF831E /* TopScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */; };
+		73C9B64A28A8C7CC00BF831E /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C9B64928A8C7CC00BF831E /* WorkoutListView.swift */; };
 		73D5D78628A7C00E00A02459 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 73D5D78528A7C00E00A02459 /* Apollo */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		733DE61F28A5348700D4364A /* TopStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStatisticsView.swift; sourceTree = "<group>"; };
 		73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreenBuilder.swift; sourceTree = "<group>"; };
+		73C9B64928A8C7CC00BF831E /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 		733DE60F28A4B25D00D4364A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				73C9B64828A8C7BA00BF831E /* WorkoutList */,
 				733DE61028A4B26D00D4364A /* Top */,
 				733DE61D28A4F1C600D4364A /* Color+.swift */,
 			);
@@ -215,6 +218,14 @@
 				733DE61728A4B67800D4364A /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73C9B64828A8C7BA00BF831E /* WorkoutList */ = {
+			isa = PBXGroup;
+			children = (
+				73C9B64928A8C7CC00BF831E /* WorkoutListView.swift */,
+			);
+			path = WorkoutList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 				733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
 				73C9B64728A8C43700BF831E /* TopScreenBuilder.swift in Sources */,
+				73C9B64A28A8C7CC00BF831E /* WorkoutListView.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
 				733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
