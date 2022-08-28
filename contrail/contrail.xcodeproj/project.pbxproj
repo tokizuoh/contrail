@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731F50CB28BB4FDF00AD8633 /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CA28BB4FDF00AD8633 /* AnalyticsScreen.swift */; };
+		731F50CD28BB50EB00AD8633 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CC28BB50EB00AD8633 /* AnalyticsViewModel.swift */; };
+		731F50CF28BB520B00AD8633 /* AnalyticsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CE28BB520B00AD8633 /* AnalyticsChartView.swift */; };
+		731F50D128BB558100AD8633 /* AnalyticsScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50D028BB558100AD8633 /* AnalyticsScreenBuilder.swift */; };
 		733C517428A7C91600306AD1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517328A7C91600306AD1 /* API.swift */; };
 		733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517528A7CBF900306AD1 /* ContrailAPI.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		731F50CA28BB4FDF00AD8633 /* AnalyticsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsScreen.swift; sourceTree = "<group>"; };
+		731F50CC28BB50EB00AD8633 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		731F50CE28BB520B00AD8633 /* AnalyticsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsChartView.swift; sourceTree = "<group>"; };
+		731F50D028BB558100AD8633 /* AnalyticsScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsScreenBuilder.swift; sourceTree = "<group>"; };
 		733C516E28A7C2A300306AD1 /* Workout.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Workout.graphql; sourceTree = "<group>"; };
 		733C517228A7C70300306AD1 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		733C517328A7C91600306AD1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -114,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731F50C928BB4FBD00AD8633 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				731F50CA28BB4FDF00AD8633 /* AnalyticsScreen.swift */,
+				731F50CC28BB50EB00AD8633 /* AnalyticsViewModel.swift */,
+				731F50CE28BB520B00AD8633 /* AnalyticsChartView.swift */,
+				731F50D028BB558100AD8633 /* AnalyticsScreenBuilder.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		733C516928A7C1FF00306AD1 /* generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +220,7 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				731F50C928BB4FBD00AD8633 /* Analytics */,
 				738D9C9828A8D0EF00852CF5 /* Extensions */,
 				738D9C9728A8D02F00852CF5 /* Common */,
 				73C9B64828A8C7BA00BF831E /* WorkoutList */,
@@ -434,11 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731F50D128BB558100AD8633 /* AnalyticsScreenBuilder.swift in Sources */,
 				733C517428A7C91600306AD1 /* API.swift in Sources */,
 				733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
 				733DE62028A5348700D4364A /* TopStatisticsView.swift in Sources */,
+				731F50CF28BB520B00AD8633 /* AnalyticsChartView.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
 				733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */,
 				738D9C9628A8CF4700852CF5 /* WorkoutListScreenBuilder.swift in Sources */,
@@ -450,8 +472,10 @@
 				73C9B64A28A8C7CC00BF831E /* WorkoutListScreen.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
 				733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */,
+				731F50CB28BB4FDF00AD8633 /* AnalyticsScreen.swift in Sources */,
 				738D9C9B28A8D12E00852CF5 /* WorkoutCellTranslator.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
+				731F50CD28BB50EB00AD8633 /* AnalyticsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

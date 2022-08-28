@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    let showAnalyticsScreenAction: () -> Void
     let showWorkoutListScreenAction: () -> Void
 
     var body: some View {
@@ -28,8 +29,7 @@ struct TopScreen: View {
                             .padding(.horizontal, 5)
                         Spacer()
                         Button("Show More") {
-                            //                            showWorkoutListScreenAction()
-                            // TODO: 統計画面への遷移
+                            showAnalyticsScreenAction()
                         }
                         .foregroundColor(.brand)
 
@@ -73,6 +73,9 @@ struct TopScreen: View {
 
 struct TopScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TopScreen(showWorkoutListScreenAction: {})
+        TopScreen(
+            showAnalyticsScreenAction: {},
+            showWorkoutListScreenAction: {}
+        )
     }
 }

@@ -11,7 +11,10 @@ struct TopScreenBuilder {
     static func build() -> UIHostingController<TopScreen?> {
         let vc = UIHostingController<TopScreen?>(rootView: nil)
         let rootView = TopScreen(
-            showWorkoutListScreenAction: {
+            showAnalyticsScreenAction: {
+                let hostingController = AnalyticsScreenBuilder.build()
+                vc.navigationController?.pushViewController(hostingController, animated: true)
+            }, showWorkoutListScreenAction: {
                 let hostingController = WorkoutListScreenBuilder.build()
                 vc.navigationController?.pushViewController(hostingController, animated: true)
             }
