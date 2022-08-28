@@ -5,7 +5,7 @@
 //  Created by tokizo on 2022/08/14.
 //
 
-import Foundation
+import HealthKit
 
 struct WorkoutListData {
     let workoutCellItems: [WorkoutAbstractViewItem]
@@ -27,7 +27,10 @@ final class WorkoutListVideModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        let workoutCellItems = WorkoutCellTranslator.translate(workouts)
+        let cyclingWorkouts: [HKWorkout] = workouts.filter { workout in
+            return workout.workoutActivityType == .cycling
+        }
+        let workoutCellItems = WorkoutCellTranslator.translate(cyclingWorkouts)
         data = WorkoutListData(workoutCellItems: workoutCellItems)
     }
 }

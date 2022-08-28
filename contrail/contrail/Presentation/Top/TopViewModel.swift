@@ -32,7 +32,10 @@ final class TopViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        let topItem = TopTranslator.translate(workouts)
+        let cyclingWorkouts: [HKWorkout] = workouts.filter { workout in
+            return workout.workoutActivityType == .cycling
+        }
+        let topItem = TopTranslator.translate(cyclingWorkouts)
         data = topItem
     }
 

@@ -24,7 +24,7 @@ final class HealthKitClient: HealthKitClientProtocol {
     }
 
     func fetchWorkouts() async throws -> [HKWorkout] {
-        let descriptor = HKSampleQueryDescriptor(
+        let cyclingDescriptor = HKSampleQueryDescriptor(
             predicates: [
                 .sample(
                     type: .workoutType(),
@@ -33,7 +33,17 @@ final class HealthKitClient: HealthKitClientProtocol {
             ],
             sortDescriptors: [.init(\.startDate, order: .reverse)]
         )
-        let results = try await descriptor.result(for: healthStore)
-        return results as? [HKWorkout] ?? []
+        let runningDescriptor = HKSampleQueryDescriptor(
+            predicates: [
+                .sample(
+                    type: .workoutType(),
+                    predicate: HKQuery.predicateForWorkouts(with: .running)
+                )
+            ],
+            sortDescriptors: [.init(\.startDate, order: .reverse)]
+        )
+        let cyclingResults = try await cyclingDescriptor.result(for: healthStore)
+        let runningResults = try await runningDescriptor.result(for: healthStore)
+        return cyclingResults + runningResults as? [HKWorkout] ?? []
     }
 }
