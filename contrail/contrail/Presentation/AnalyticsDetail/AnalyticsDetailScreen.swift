@@ -1,5 +1,5 @@
 //
-//  AnalyticsScreen.swift
+//  AnalyticsDetailScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/28.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct AnalyticsScreen: View {
+struct AnalyticsDetailScreen: View {
     var body: some View {
         ScrollView {
             LazyVStack(
                 alignment: .leading
             ) {
-                AnalyticsChartView()
+                AnalyticsDetailChartView()
                 // TODO: ボタン: 何かしらのAverage
             }
             .padding(.horizontal, 10)
@@ -23,8 +23,8 @@ struct AnalyticsScreen: View {
     }
 }
 
-struct AnalyticsScreen_Previews: PreviewProvider {
+struct AnalyticsDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AnalyticsScreen()
+        AnalyticsDetailScreen()
     }
 }

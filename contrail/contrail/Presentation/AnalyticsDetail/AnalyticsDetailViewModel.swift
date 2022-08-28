@@ -1,5 +1,5 @@
 //
-//  AnalyticsViewModel.swift
+//  AnalyticsDetailViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/28.
@@ -11,6 +11,6 @@ import Foundation
 //    let
 // }
 
-final class AnalyticsViewModel: ObservableObject {
+final class AnalyticsDetailViewModel: ObservableObject {
     //    @Published var data:
 }

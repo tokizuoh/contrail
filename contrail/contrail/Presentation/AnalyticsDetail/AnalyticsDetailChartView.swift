@@ -1,5 +1,5 @@
 //
-//  AnalyticsChartView.swift
+//  AnalyticsDetailChartView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/28.
@@ -21,7 +21,7 @@ var data: [WorkoutHoge] = [
     .init(date: Date(), distance: 60)
 ]
 
-struct AnalyticsChartView: View {
+struct AnalyticsDetailChartView: View {
     var body: some View {
         VStack(alignment: .leading) {
             VStack(
@@ -51,8 +51,8 @@ struct AnalyticsChartView: View {
     }
 }
 
-struct AnalyticsChartView_Previews: PreviewProvider {
+struct AnalyticsDetailChartView_Previews: PreviewProvider {
     static var previews: some View {
-        AnalyticsChartView()
+        AnalyticsDetailChartView()
     }
 }
