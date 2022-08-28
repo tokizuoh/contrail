@@ -8,10 +8,15 @@
 import HealthKit
 
 struct AnalyticsDetailData {
-    let workoutItems: [AnalyticsDetailWorkoutItem]
+    let chartViewItem: AnalyticsDetailChartViewItem
 
     static func empty() -> Self {
-        return .init(workoutItems: [])
+        return .init(
+            chartViewItem: .init(
+                totalDistanceString: "",
+                workoutItems: []
+            )
+        )
     }
 }
 
@@ -40,11 +45,6 @@ struct AnalyticsDetailTranslator {
     }
 
     static func translate(_ from: From, option: Option) -> To {
-        let workoutItems = makeWorkoutItems(from, option: option)
-        return .init(workoutItems: workoutItems)
-    }
-
-    private static func makeWorkoutItems(_ from: From, option: Option) -> [AnalyticsDetailWorkoutItem] {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         calendar.timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -57,6 +57,7 @@ struct AnalyticsDetailTranslator {
             }
         }()
 
+        var totalDistance: Double = 0.0
         let workoutItems: [AnalyticsDetailWorkoutItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
@@ -74,13 +75,19 @@ struct AnalyticsDetailTranslator {
             }() else {
                 return nil
             }
+            totalDistance += distance
             return .init(
                 type: workoutType,
                 date: workout.startDate,
                 distance: distance
             )
         }
-        return workoutItems
+        return .init(
+            chartViewItem:
+                .init(
+                    totalDistanceString: totalDistance.description,
+                    workoutItems: workoutItems)
+        )
     }
 
 }

@@ -8,6 +8,11 @@
 import Charts
 import SwiftUI
 
+struct AnalyticsDetailChartViewItem {
+    let totalDistanceString: String
+    let workoutItems: [AnalyticsDetailWorkoutItem]
+}
+
 struct AnalyticsDetailWorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
@@ -20,7 +25,7 @@ struct AnalyticsDetailWorkoutItem: Identifiable {
 }
 
 struct AnalyticsDetailChartView: View {
-    let workoutItems: [AnalyticsDetailWorkoutItem]
+    let data: AnalyticsDetailChartViewItem
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,12 +36,12 @@ struct AnalyticsDetailChartView: View {
                 Text("Total Distances")
                     .font(.subheadline)
                     .foregroundColor(.lightGray)
-                Text("150.3 km")
+                Text("\(data.totalDistanceString) km")
                     .font(.title3)
                     .bold()
             }
             Chart {
-                ForEach(workoutItems) { item in
+                ForEach(data.workoutItems) { item in
                     BarMark(
                         x: .value("Shape Type", item.date),
                         y: .value("Total Count", item.distance)
@@ -54,6 +59,11 @@ struct AnalyticsDetailChartView: View {
 
 struct AnalyticsDetailChartView_Previews: PreviewProvider {
     static var previews: some View {
-        AnalyticsDetailChartView(workoutItems: [])
+        AnalyticsDetailChartView(data:
+                                    .init(
+                                        totalDistanceString: "",
+                                        workoutItems: []
+                                    )
+        )
     }
 }

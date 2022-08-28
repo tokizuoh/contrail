@@ -15,7 +15,7 @@ struct AnalyticsDetailScreen: View {
             LazyVStack(
                 alignment: .leading
             ) {
-                AnalyticsDetailChartView(workoutItems: viewModel.data.workoutItems)
+                AnalyticsDetailChartView(data: viewModel.data.chartViewItem)
                 // TODO: ボタン: 何かしらのAverage
             }
             .padding(.horizontal, 10)
