@@ -30,6 +30,7 @@ struct AnalyticsChartView: View {
             ) {
                 Text("Total Distances")
                     .font(.subheadline)
+                    .foregroundColor(.lightGray)
                 Text("150.3 km")
                     .font(.title3)
                     .bold()
