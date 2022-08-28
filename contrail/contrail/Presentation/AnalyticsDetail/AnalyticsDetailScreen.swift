@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct AnalyticsDetailScreen: View {
+    @ObservedObject var viewModel = AnalyticsDetailViewModel(workoutsCacher: WorkoutsCacher.shared)
+
     var body: some View {
         ScrollView {
             LazyVStack(
                 alignment: .leading
             ) {
-                AnalyticsDetailChartView()
+                AnalyticsDetailChartView(workoutItems: viewModel.data.workoutItems)
                 // TODO: ボタン: 何かしらのAverage
             }
             .padding(.horizontal, 10)

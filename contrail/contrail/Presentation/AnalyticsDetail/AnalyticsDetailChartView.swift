@@ -8,20 +8,17 @@
 import Charts
 import SwiftUI
 
-struct WorkoutHoge: Identifiable {
+struct AnalyticsDetailWorkoutItem: Identifiable {
+    // TODO: タイプ？
     var id = UUID()
     let date: Date
     let distance: Double
 
 }
 
-var data: [WorkoutHoge] = [
-    .init(date: Date(), distance: 50),
-    .init(date: Date(), distance: 12),
-    .init(date: Date(), distance: 60)
-]
-
 struct AnalyticsDetailChartView: View {
+    let workoutItems: [AnalyticsDetailWorkoutItem]
+
     var body: some View {
         VStack(alignment: .leading) {
             VStack(
@@ -36,7 +33,7 @@ struct AnalyticsDetailChartView: View {
                     .bold()
             }
             Chart {
-                ForEach(data) { item in
+                ForEach(workoutItems) { item in
                     BarMark(
                         x: .value("Shape Type", item.date),
                         y: .value("Total Count", item.distance)
@@ -53,6 +50,6 @@ struct AnalyticsDetailChartView: View {
 
 struct AnalyticsDetailChartView_Previews: PreviewProvider {
     static var previews: some View {
-        AnalyticsDetailChartView()
+        AnalyticsDetailChartView(workoutItems: [])
     }
 }
