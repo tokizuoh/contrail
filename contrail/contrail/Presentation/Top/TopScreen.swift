@@ -21,10 +21,19 @@ struct TopScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("Statistics")
-                        .font(.title)
-                        .bold()
-                        .padding(.horizontal, 5)
+                    HStack {
+                        Text("Statistics")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 5)
+                        Spacer()
+                        Button("Show More") {
+                            //                            showWorkoutListScreenAction()
+                            // TODO: 統計画面への遷移
+                        }
+                        .foregroundColor(.brand)
+
+                    }
                     TopStatisticsView(item: viewModel.data.topStatisticsItem)
                 }
                 VStack(
