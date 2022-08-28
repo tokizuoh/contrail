@@ -9,14 +9,11 @@ import SwiftUI
 
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    let showAnalyticsScreenAction: () -> Void
     let showWorkoutListScreenAction: () -> Void
 
     var body: some View {
         ScrollView {
-            Button("DISPATCH APOLLO") {
-                viewModel.uploadWorkout()
-            }
-
             VStack(
                 alignment: .leading,
                 spacing: 20
@@ -25,11 +22,19 @@ struct TopScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("Statistics")
-                        .font(.title)
-                        .bold()
-                        .padding(.horizontal, 5)
-                    TopStatisticsView(item: viewModel.data.topStatisticsItem)
+                    HStack {
+                        Text("Analytics")
+                            .font(.title)
+                            .bold()
+                            .padding(.horizontal, 5)
+                        Spacer()
+                        Button("Show More") {
+                            showAnalyticsScreenAction()
+                        }
+                        .foregroundColor(.brand)
+
+                    }
+                    TopAnalyticsView(item: viewModel.data.topAnalyticsItem)
                 }
                 VStack(
                     alignment: .leading,
@@ -68,6 +73,9 @@ struct TopScreen: View {
 
 struct TopScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TopScreen(showWorkoutListScreenAction: {})
+        TopScreen(
+            showAnalyticsScreenAction: {},
+            showWorkoutListScreenAction: {}
+        )
     }
 }

@@ -1,5 +1,5 @@
 //
-//  TopStatisticsView.swift
+//  TopAnalyticsView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/11.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct TopStatisticsItem {
+struct TopAnalyticsItem {
     let allTotalDistanceText: String
     let maxDistanceText: String
     let thisMonthTotalDistanceText: String
 }
 
-struct TopStatisticsView: View {
-    let item: TopStatisticsItem
+struct TopAnalyticsView: View {
+    let item: TopAnalyticsItem
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -60,9 +60,9 @@ private struct ComponentView: View {
     }
 }
 
-struct TopStatisticsView_Previews: PreviewProvider {
+struct TopAnalyticsView_Previews: PreviewProvider {
     static var previews: some View {
-        TopStatisticsView(
+        TopAnalyticsView(
             item: .init(
                 allTotalDistanceText: "1234",
                 maxDistanceText: "56",

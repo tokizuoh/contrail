@@ -9,13 +9,13 @@ import HealthKit
 import Apollo
 
 struct TopData {
-    let topStatisticsItem: TopStatisticsItem
+    let topAnalyticsItem: TopAnalyticsItem
     let workoutCellItems: [WorkoutAbstractViewItem]
 
     static func empty() -> Self {
-        return .init(topStatisticsItem: .init(allTotalDistanceText: "0",
-                                              maxDistanceText: "0",
-                                              thisMonthTotalDistanceText: "0"),
+        return .init(topAnalyticsItem: .init(allTotalDistanceText: "0",
+                                             maxDistanceText: "0",
+                                             thisMonthTotalDistanceText: "0"),
                      workoutCellItems: [])
     }
 }
@@ -32,7 +32,10 @@ final class TopViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        let topItem = TopTranslator.translate(workouts)
+        let cyclingWorkouts: [HKWorkout] = workouts.filter { workout in
+            return workout.workoutActivityType == .cycling
+        }
+        let topItem = TopTranslator.translate(cyclingWorkouts)
         data = topItem
     }
 
@@ -69,13 +72,13 @@ struct TopTranslator {
 
     static func translate(_ from: From) -> To {
         return .init(
-            topStatisticsItem: makeStatisticsItem(from),
+            topAnalyticsItem: makeAnalyticsItem(from),
             workoutCellItems: WorkoutCellTranslator.translate(from.prefix(5).map { $0 })
         )
     }
 
-    // MARK: - makeStatisticsItem
-    private static func makeStatisticsItem(_ from: From) -> TopStatisticsItem {
+    // MARK: - makeAnalyticsItem
+    private static func makeAnalyticsItem(_ from: From) -> TopAnalyticsItem {
         return .init(
             allTotalDistanceText: makeAllTotalDistanceText(from),
             maxDistanceText: makeMaxDistanceText(from),
