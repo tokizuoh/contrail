@@ -16,9 +16,9 @@ struct WorkoutHoge: Identifiable {
 }
 
 var data: [WorkoutHoge] = [
-    .init(date: Date(), distance: 111),
+    .init(date: Date(), distance: 50),
     .init(date: Date(), distance: 12),
-    .init(date: Date(), distance: 151)
+    .init(date: Date(), distance: 60)
 ]
 
 struct AnalyticsChartView: View {
@@ -34,6 +34,10 @@ struct AnalyticsChartView: View {
                 }
             }
         }
+        .frame(height: 250)
+        .padding(20)
+        .background(Color.darkGray)
+        .cornerRadius(10)
     }
 }
 

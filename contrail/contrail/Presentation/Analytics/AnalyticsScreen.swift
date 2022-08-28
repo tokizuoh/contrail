@@ -16,6 +16,8 @@ struct AnalyticsScreen: View {
                 AnalyticsChartView()
                 // TODO: ボタン: 何かしらのAverage
             }
+            .padding(.horizontal, 10)
+            .padding(.bottom, 20)
         }
         .navigationTitle("Analytics")
     }
