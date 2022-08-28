@@ -23,7 +23,7 @@ struct TopScreen: View {
                     spacing: 10
                 ) {
                     HStack {
-                        Text("Statistics")
+                        Text("Analytics")
                             .font(.title)
                             .bold()
                             .padding(.horizontal, 5)
@@ -34,7 +34,7 @@ struct TopScreen: View {
                         .foregroundColor(.brand)
 
                     }
-                    TopStatisticsView(item: viewModel.data.topStatisticsItem)
+                    TopAnalyticsView(item: viewModel.data.topAnalyticsItem)
                 }
                 VStack(
                     alignment: .leading,
