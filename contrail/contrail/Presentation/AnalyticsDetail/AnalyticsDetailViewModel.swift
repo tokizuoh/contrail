@@ -82,11 +82,13 @@ struct AnalyticsDetailTranslator {
                 distance: distance
             )
         }
+        let totalDistanceString = String(format: "%.2f", totalDistance)
         return .init(
             chartViewItem:
                 .init(
-                    totalDistanceString: totalDistance.description,
-                    workoutItems: workoutItems)
+                    totalDistanceString: totalDistanceString,
+                    workoutItems: workoutItems
+                )
         )
     }
 
