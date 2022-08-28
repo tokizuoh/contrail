@@ -27,7 +27,7 @@ final class AnalyticsDetailViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        data = AnalyticsDetailTranslator.translate(workouts)
+        data = AnalyticsDetailTranslator.translate(workouts, option: .monthly)
     }
 }
 
@@ -35,9 +35,31 @@ struct AnalyticsDetailTranslator {
     typealias From = [HKWorkout]
     typealias To = AnalyticsDetailData
 
-    static func translate(_ from: From) -> To {
+    enum Option {
+        case monthly
+    }
+
+    static func translate(_ from: From, option: Option) -> To {
+        let workoutItems = makeWorkoutItems(from, option: option)
+        return .init(workoutItems: workoutItems)
+    }
+
+    private static func makeWorkoutItems(_ from: From, option: Option) -> [AnalyticsDetailWorkoutItem] {
+        let now = Date()
+        var calendar = Calendar(identifier: .japanese)
+        calendar.timeZone = TimeZone(identifier: "Asia/Tokyo")!
+        calendar.locale = Locale(identifier: "ja_JP")
+
+        let toGranularity: Calendar.Component = {
+            switch option {
+            case .monthly:
+                return .month
+            }
+        }()
+
         let workoutItems: [AnalyticsDetailWorkoutItem] = from.compactMap { workout in
-            guard let distance = workout.totalDistance?.kilometers() else {
+            guard let distance = workout.totalDistance?.kilometers(),
+                  calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
             return .init(
@@ -45,6 +67,7 @@ struct AnalyticsDetailTranslator {
                 distance: distance
             )
         }
-        return .init(workoutItems: workoutItems)
+        return workoutItems
     }
+
 }
