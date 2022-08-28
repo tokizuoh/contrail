@@ -22,6 +22,9 @@ struct AnalyticsDetailScreen: View {
             .padding(.bottom, 20)
         }
         .navigationTitle("Analytics")
+        .onAppear {
+            viewModel.dispatch()
+        }
     }
 }
 

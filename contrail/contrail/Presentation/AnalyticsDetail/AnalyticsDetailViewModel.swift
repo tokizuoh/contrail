@@ -36,6 +36,15 @@ struct AnalyticsDetailTranslator {
     typealias To = AnalyticsDetailData
 
     static func translate(_ from: From) -> To {
-        return .init(workoutItems: [])
+        let workoutItems: [AnalyticsDetailWorkoutItem] = from.compactMap { workout in
+            guard let distance = workout.totalDistance?.kilometers() else {
+                return nil
+            }
+            return .init(
+                date: workout.startDate,
+                distance: distance
+            )
+        }
+        return .init(workoutItems: workoutItems)
     }
 }
