@@ -62,7 +62,20 @@ struct AnalyticsDetailTranslator {
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
+            guard let workoutType: AnalyticsDetailWorkoutItem.WorkoutType = {
+                switch workout.workoutActivityType {
+                case .cycling:
+                    return .cycling
+                case .running:
+                    return .running
+                default:
+                    return nil
+                }
+            }() else {
+                return nil
+            }
             return .init(
+                type: workoutType,
                 date: workout.startDate,
                 distance: distance
             )

@@ -9,11 +9,14 @@ import Charts
 import SwiftUI
 
 struct AnalyticsDetailWorkoutItem: Identifiable {
-    // TODO: タイプ？
+    enum WorkoutType: String {
+        case cycling = "Cycling"
+        case running = "Running"
+    }
     var id = UUID()
+    let type: WorkoutType
     let date: Date
     let distance: Double
-
 }
 
 struct AnalyticsDetailChartView: View {
@@ -38,6 +41,7 @@ struct AnalyticsDetailChartView: View {
                         x: .value("Shape Type", item.date),
                         y: .value("Total Count", item.distance)
                     )
+                    .foregroundStyle(by: .value("Workout Type", item.type.rawValue))
                 }
             }
         }
