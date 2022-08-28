@@ -23,8 +23,17 @@ var data: [WorkoutHoge] = [
 
 struct AnalyticsChartView: View {
     var body: some View {
-        VStack {
-            Text("Total Distances")
+        VStack(alignment: .leading) {
+            VStack(
+                alignment: .leading,
+                spacing: 2
+            ) {
+                Text("Total Distances")
+                    .font(.subheadline)
+                Text("150.3 km")
+                    .font(.title3)
+                    .bold()
+            }
             Chart {
                 ForEach(data) { item in
                     BarMark(
