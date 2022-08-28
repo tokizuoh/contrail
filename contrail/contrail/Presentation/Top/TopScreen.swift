@@ -13,10 +13,6 @@ struct TopScreen: View {
 
     var body: some View {
         ScrollView {
-            Button("DISPATCH APOLLO") {
-                viewModel.uploadWorkout()
-            }
-
             VStack(
                 alignment: .leading,
                 spacing: 20
