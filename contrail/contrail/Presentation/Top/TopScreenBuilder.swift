@@ -14,6 +14,9 @@ struct TopScreenBuilder {
             showAnalyticsScreenAction: {
                 let hostingController = AnalyticsDetailScreenBuilder.build()
                 vc.navigationController?.pushViewController(hostingController, animated: true)
+            }, showAnalyticsYearlyScreenAction: {
+                let hostingController = AnalyticsDetailYearlyScreenBuilder.build()
+                vc.navigationController?.pushViewController(hostingController, animated: true)
             }, showWorkoutListScreenAction: {
                 let hostingController = WorkoutListScreenBuilder.build()
                 vc.navigationController?.pushViewController(hostingController, animated: true)

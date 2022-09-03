@@ -10,6 +10,7 @@ import SwiftUI
 struct TopScreen: View {
     @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
     let showAnalyticsScreenAction: () -> Void
+    let showAnalyticsYearlyScreenAction: () -> Void
     let showWorkoutListScreenAction: () -> Void
 
     var body: some View {
@@ -29,7 +30,8 @@ struct TopScreen: View {
                             .padding(.horizontal, 5)
                         Spacer()
                         Button("Show More") {
-                            showAnalyticsScreenAction()
+                            //                            showAnalyticsScreenAction()
+                            showAnalyticsYearlyScreenAction()
                         }
                         .foregroundColor(.brand)
 
@@ -68,14 +70,5 @@ struct TopScreen: View {
         .onAppear {
             viewModel.dispatch()
         }
-    }
-}
-
-struct TopScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        TopScreen(
-            showAnalyticsScreenAction: {},
-            showWorkoutListScreenAction: {}
-        )
     }
 }
