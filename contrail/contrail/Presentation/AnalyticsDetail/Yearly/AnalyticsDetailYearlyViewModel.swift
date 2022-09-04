@@ -104,7 +104,7 @@ struct AnalyticsDetailYearlyTranslator {
     }
 
     static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
-        return from.compactMap { workout in
+        let workoutItems: [WorkoutItem] = from.compactMap { workout in
             let now = Date()
             var calendar = Calendar(identifier: .japanese)
             let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -137,6 +137,8 @@ struct AnalyticsDetailYearlyTranslator {
                 dateString: dateString
             )
         }
-
+        return workoutItems.sorted(by: { li, ri in
+            li.dateString < ri.dateString
+        }).reversed()
     }
 }
