@@ -44,9 +44,9 @@ struct AnalyticsDetailYearlyChartView: View {
                 ForEach(data.workoutItems) { item in
                     BarMark(
                         x: .value("Shape Type", item.date.formatted(.dateTime.month(.twoDigits))),
-                        y: .value("Total Count", item.distance)
+                        y: .value("Distance", item.distance)
                     )
-                    .foregroundStyle(.white)
+                    .foregroundStyle(by: .value("Distance", item.type.rawValue))
                 }
             }
             .chartXAxis {
@@ -56,6 +56,10 @@ struct AnalyticsDetailYearlyChartView: View {
                     AxisValueLabel()
                 }
             }
+            .chartForegroundStyleScale([
+                AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
+                AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green
+            ])
             .frame(height: 250)
         }
         .padding(20)
