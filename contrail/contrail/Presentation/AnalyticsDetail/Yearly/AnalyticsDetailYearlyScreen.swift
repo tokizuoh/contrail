@@ -13,10 +13,21 @@ struct AnalyticsDetailYearlyScreen: View {
     var body: some View {
         ScrollView {
             LazyVStack(
-                alignment: .leading
+                alignment: .leading,
+                spacing: 20
             ) {
                 AnalyticsDetailYearlyChartView(data: viewModel.data.chartViewItem)
-                // TODO: ボタン: 何かしらのAverage
+                // 今月のワークアウトセル
+                VStack(
+                    alignment: .leading,
+                    spacing: 10
+                ) {
+                    Text("List")
+                        .font(.title)
+                        .bold()
+                        .padding(.horizontal, 5)
+                    //                    ForEach
+                }
             }
             .padding(.horizontal, 10)
             .padding(.bottom, 20)

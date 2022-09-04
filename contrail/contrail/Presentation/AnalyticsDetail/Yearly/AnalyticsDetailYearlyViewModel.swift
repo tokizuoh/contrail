@@ -9,13 +9,15 @@ import HealthKit
 
 struct AnalyticsDetailYearlyData {
     let chartViewItem: AnalyticsDetailYearlyChartViewItem
+    let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
         return .init(
             chartViewItem: .init(
                 totalDistanceString: "",
                 workoutItems: []
-            )
+            ),
+            workoutItems: []
         )
     }
 }
@@ -32,8 +34,12 @@ final class AnalyticsDetailYearlyViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        data = AnalyticsDetailYearlyTranslator.translate(workouts, option: .yearly)
-        print(data.chartViewItem.workoutItems)
+        let chartViewItem = AnalyticsDetailYearlyTranslator.makeChartViewItem(workouts, option: .yearly)
+        let workoutItems: [WorkoutItem] = []
+        data = .init(
+            chartViewItem: chartViewItem,
+            workoutItems: workoutItems
+        )
     }
 }
 
@@ -45,7 +51,7 @@ struct AnalyticsDetailYearlyTranslator {
         case yearly
     }
 
-    static func translate(_ from: From, option: Option) -> To {
+    static func makeChartViewItem(_ from: From, option: Option) -> AnalyticsDetailYearlyChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -88,13 +94,10 @@ struct AnalyticsDetailYearlyTranslator {
         }
         let totalDistanceString = String(format: "%.2f", totalDistance)
         return .init(
-            chartViewItem:
-                .init(
-                    totalDistanceString: totalDistanceString,
-                    workoutItems: workoutItems.sorted(by: { li, ri in
-                        li.date < ri.date
-                    })
-                )
+            totalDistanceString: totalDistanceString,
+            workoutItems: workoutItems.sorted(by: { li, ri in
+                li.date < ri.date
+            })
         )
     }
 
