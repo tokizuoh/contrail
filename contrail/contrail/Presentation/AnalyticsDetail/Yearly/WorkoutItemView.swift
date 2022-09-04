@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct WorkoutItem {
+struct WorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
     }
 
+    var id = UUID()
     let type: WorkoutType
     let distanceString: String
     let dateString: String
@@ -31,27 +32,48 @@ struct WorkoutItemView: View {
         }
     }
 
-    var body: some View {
-        HStack(alignment: .bottom) {
-            Image(systemName: workoutImageSystemName)
-            VStack(
-                alignment: .leading,
-                spacing: 4
-            ) {
-                Text(item.type.rawValue)
-                (
-                    Text(item.distanceString)
-                        .font(.title) +
-                        Text("km")
-                        .font(.subheadline)
-                )
-                .foregroundColor(.brand)
-            }
-            Spacer()
-            Text(item.dateString)
-                .font(.subheadline)
-                .foregroundColor(.darkGray)
-                .padding(.vertical, 5)
+    var foregroundColor: Color {
+        switch item.type {
+        case .cycling:
+            return .blue
+        case .running:
+            return .green
         }
+    }
+
+    var body: some View {
+        HStack(
+            alignment: .center,
+            spacing: 8
+        ) {
+            Image(systemName: workoutImageSystemName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 35, height: 35)
+            HStack(alignment: .lastTextBaseline) {
+                VStack(
+                    alignment: .leading,
+                    spacing: 2
+                ) {
+                    Text(item.type.rawValue)
+                    HStack(alignment: .lastTextBaseline) {
+                        Text(item.distanceString)
+                            .font(.title)
+                        Text("km")
+                            .font(.subheadline)
+                    }
+                    .foregroundColor(foregroundColor)
+                }
+                Spacer()
+                Text(item.dateString)
+                    .font(.subheadline)
+                    .foregroundColor(.lightGray)
+                    .padding(.vertical, 5)
+            }
+        }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 16)
+        .background(Color.darkGray)
+        .cornerRadius(10)
     }
 }

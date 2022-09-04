@@ -35,7 +35,7 @@ final class AnalyticsDetailYearlyViewModel: ObservableObject {
             return
         }
         let chartViewItem = AnalyticsDetailYearlyTranslator.makeChartViewItem(workouts, option: .yearly)
-        let workoutItems: [WorkoutItem] = []
+        let workoutItems: [WorkoutItem] = AnalyticsDetailYearlyTranslator.makeWorkoutItems(workouts)
         data = .init(
             chartViewItem: chartViewItem,
             workoutItems: workoutItems
@@ -46,6 +46,8 @@ final class AnalyticsDetailYearlyViewModel: ObservableObject {
 struct AnalyticsDetailYearlyTranslator {
     typealias From = [HKWorkout]
     typealias To = AnalyticsDetailYearlyData
+
+    static private let format = "%.2f"
 
     enum Option {
         case yearly
@@ -101,4 +103,40 @@ struct AnalyticsDetailYearlyTranslator {
         )
     }
 
+    static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
+        return from.compactMap { workout in
+            let now = Date()
+            var calendar = Calendar(identifier: .japanese)
+            let timeZone = TimeZone(identifier: "Asia/Tokyo")!
+            calendar.timeZone = timeZone
+            calendar.locale = Locale(identifier: "ja_JP")
+
+            guard let workoutType: WorkoutItem.WorkoutType = {
+                switch workout.workoutActivityType {
+                case .cycling:
+                    return .cycling
+                case .running:
+                    return .running
+                default:
+                    return nil
+                }
+            }() else {
+                return nil
+            }
+            guard let distance = workout.totalDistance?.kilometers() else {
+                return nil
+            }
+            guard calendar.isDate(now, equalTo: workout.startDate, toGranularity: .month) else {
+                return nil
+            }
+            let distanceString = String(format: format, distance)
+            let dateString = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
+            return .init(
+                type: workoutType,
+                distanceString: distanceString,
+                dateString: dateString
+            )
+        }
+
+    }
 }

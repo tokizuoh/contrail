@@ -22,11 +22,13 @@ struct AnalyticsDetailYearlyScreen: View {
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("List")
+                    Text("This month")
                         .font(.title)
                         .bold()
                         .padding(.horizontal, 5)
-                    //                    ForEach
+                    ForEach(viewModel.data.workoutItems) { item in
+                        WorkoutItemView(item: item)
+                    }
                 }
             }
             .padding(.horizontal, 10)
