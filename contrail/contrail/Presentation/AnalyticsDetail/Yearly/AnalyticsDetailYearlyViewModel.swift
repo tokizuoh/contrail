@@ -91,7 +91,9 @@ struct AnalyticsDetailYearlyTranslator {
             chartViewItem:
                 .init(
                     totalDistanceString: totalDistanceString,
-                    workoutItems: workoutItems
+                    workoutItems: workoutItems.sorted(by: { li, ri in
+                        li.date < ri.date
+                    })
                 )
         )
     }

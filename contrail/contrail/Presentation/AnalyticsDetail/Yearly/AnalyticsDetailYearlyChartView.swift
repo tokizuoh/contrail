@@ -29,30 +29,38 @@ struct AnalyticsDetailYearlyChartView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            VStack(
-                alignment: .leading,
-                spacing: 2
-            ) {
-                Text("Total Distances")
-                    .font(.subheadline)
-                    .foregroundColor(.lightGray)
-                Text("\(data.totalDistanceString) km")
-                    .font(.title3)
-                    .bold()
-            }
+            //            VStack(
+            //                alignment: .leading,
+            //                spacing: 2
+            //            ) {
+            //                Text("Total Distances")
+            //                    .font(.subheadline)
+            //                    .foregroundColor(.lightGray)
+            //                Text("\(data.totalDistanceString) km")
+            //                    .font(.title3)
+            //                    .bold()
+            //            }
             Chart {
                 ForEach(data.workoutItems) { item in
                     BarMark(
-                        x: .value("Shape Type", item.date),
+                        x: .value("Shape Type", item.date.formatted(.dateTime.month(.twoDigits))),
                         y: .value("Total Count", item.distance)
                     )
-                    .foregroundStyle(by: .value("Workout Type", item.type.rawValue))
+                    .foregroundStyle(.white)
                 }
             }
+            .chartXAxis {
+                AxisMarks(position: .bottom) { _ in
+                    AxisGridLine(centered: true)
+                    AxisTick(centered: true)
+                    AxisValueLabel()
+
+                }
+            }
+            .frame(height: 250)
+            .padding(20)
+            .background(Color.darkGray)
+            .cornerRadius(10)
         }
-        .frame(height: 250)
-        .padding(20)
-        .background(Color.darkGray)
-        .cornerRadius(10)
     }
 }
