@@ -36,7 +36,7 @@ final class AnalyticsDetailViewModel: ObservableObject {
     }
 }
 
-struct AnalyticsDetailTranslator {
+struct AnalyticsDetailTranslator: Translator {
     typealias From = [HKWorkout]
     typealias To = AnalyticsDetailData
 

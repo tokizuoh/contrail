@@ -7,7 +7,7 @@
 
 import HealthKit
 
-struct WorkoutCellTranslator {
+struct WorkoutCellTranslator: Translator {
     typealias From = [HKWorkout]
     typealias To = [WorkoutAbstractViewItem]
 

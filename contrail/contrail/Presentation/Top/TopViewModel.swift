@@ -64,7 +64,7 @@ final class TopViewModel: ObservableObject {
     }
 }
 
-struct TopTranslator {
+struct TopTranslator: Translator {
     typealias From = [HKWorkout]
     typealias To = TopData
 
