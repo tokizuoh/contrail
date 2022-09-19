@@ -18,14 +18,14 @@ final class RootViewController: UIViewController {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
                 workoutsCacher.cacheWorkouts(workout)
-                showTopScreen()
+                showAbstractScreen()
             } catch {
                 fatalError(error.localizedDescription)
             }
         }
     }
 
-    private func showTopScreen() {
+    private func showAbstractScreen() {
         let vc = AbstractScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
