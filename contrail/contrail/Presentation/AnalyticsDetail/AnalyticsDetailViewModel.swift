@@ -44,6 +44,10 @@ struct AnalyticsDetailTranslator: Translator {
         case monthly
     }
 
+    static func translate(_ from: From) -> To {
+        return translate(from, option: .monthly)
+    }
+
     static func translate(_ from: From, option: Option) -> To {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)

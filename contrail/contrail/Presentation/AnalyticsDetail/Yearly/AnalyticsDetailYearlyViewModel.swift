@@ -43,7 +43,8 @@ final class AnalyticsDetailYearlyViewModel: ObservableObject {
     }
 }
 
-struct AnalyticsDetailYearlyTranslator: Translator {
+// TODO: Translatorに準拠させる
+struct AnalyticsDetailYearlyTranslator {
     typealias From = [HKWorkout]
     typealias To = AnalyticsDetailYearlyData
 

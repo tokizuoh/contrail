@@ -8,4 +8,6 @@
 protocol Translator {
     associatedtype From
     associatedtype To
+
+    static func translate(_ from: From) -> To
 }
