@@ -1,5 +1,5 @@
 //
-//  TopViewModel.swift
+//  AbstractViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/11.
@@ -20,7 +20,7 @@ struct TopData {
     }
 }
 
-final class TopViewModel: ObservableObject {
+final class AbstractViewModel: ObservableObject {
     @Published var data: TopData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 

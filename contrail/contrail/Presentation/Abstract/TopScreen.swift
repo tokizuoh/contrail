@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopScreen: View {
-    @ObservedObject var viewModel = TopViewModel(workoutsCacher: WorkoutsCacher.shared)
+    @ObservedObject var viewModel = AbstractViewModel(workoutsCacher: WorkoutsCacher.shared)
     let showAnalyticsScreenAction: () -> Void
     let showAnalyticsYearlyScreenAction: () -> Void
     let showWorkoutListScreenAction: () -> Void
