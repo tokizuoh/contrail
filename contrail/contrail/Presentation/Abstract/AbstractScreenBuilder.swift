@@ -1,5 +1,5 @@
 //
-//  TopScreenBuilder.swift
+//  AbstractScreenBuilder.swift
 //  contrail
 //
 //  Created by tokizo on 2022/08/14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopScreenBuilder {
+struct AbstractScreenBuilder {
     static func build() -> UIHostingController<TopScreen?> {
         let vc = UIHostingController<TopScreen?>(rootView: nil)
         let rootView = TopScreen(

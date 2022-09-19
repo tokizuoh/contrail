@@ -26,7 +26,7 @@ final class RootViewController: UIViewController {
     }
 
     private func showTopScreen() {
-        let vc = TopScreenBuilder.build()
+        let vc = AbstractScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .crossDissolve
