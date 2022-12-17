@@ -64,8 +64,8 @@ struct WorkoutItemView: View {
                     HStack(alignment: .lastTextBaseline) {
                         Text(item.distanceString)
                             .font(.title)
-                        Text("km")
                             .font(.subheadline)
+                        Text("KM")
                     }
                     .foregroundColor(foregroundColor)
                 }

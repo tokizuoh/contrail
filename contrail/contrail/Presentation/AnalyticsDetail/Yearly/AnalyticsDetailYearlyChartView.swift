@@ -37,7 +37,7 @@ struct AnalyticsDetailYearlyChartView: View {
                 Text("Total Distances")
                     .font(.subheadline)
                     .foregroundColor(.lightGray)
-                Text("\(data.totalDistanceString) km")
+                Text("\(data.totalDistanceString) KM")
                     .font(.title2)
                     .bold()
             }
