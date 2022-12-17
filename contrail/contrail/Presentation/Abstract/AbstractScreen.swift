@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AbstractScreen: View {
-    @ObservedObject var viewModel = AbstractScreenViewModel(workoutsCacher: WorkoutsCacher.shared)
+    @ObservedObject var viewModel: AbstractScreenViewModel
 
     var body: some View {
         ScrollView {
