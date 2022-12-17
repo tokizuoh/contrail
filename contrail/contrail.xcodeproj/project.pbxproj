@@ -94,12 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731F50C928BB4FBD00AD8633 /* AnalyticsDetail */ = {
+		731F50C928BB4FBD00AD8633 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				73799A7528C38C1800B96EAD /* Yearly */,
+				73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */,
+				73799A7628C38C4700B96EAD /* AbstractScreen.swift */,
+				73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */,
+				73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */,
 			);
-			path = AnalyticsDetail;
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		733CA82B294DA9F700416E70 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		733DE5CF28A482B500D4364A = {
@@ -151,7 +162,8 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				731F50C928BB4FBD00AD8633 /* AnalyticsDetail */,
+				733CA82B294DA9F700416E70 /* Common */,
+				731F50C928BB4FBD00AD8633 /* Abstract */,
 				738D9C9828A8D0EF00852CF5 /* Extensions */,
 			);
 			path = Presentation;
@@ -163,18 +175,6 @@
 				733DE61728A4B67800D4364A /* HealthKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		73799A7528C38C1800B96EAD /* Yearly */ = {
-			isa = PBXGroup;
-			children = (
-				73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */,
-				73799A7628C38C4700B96EAD /* AbstractScreen.swift */,
-				73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */,
-				73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */,
-				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
-			);
-			path = Yearly;
 			sourceTree = "<group>";
 		};
 		738D9C9828A8D0EF00852CF5 /* Extensions */ = {
