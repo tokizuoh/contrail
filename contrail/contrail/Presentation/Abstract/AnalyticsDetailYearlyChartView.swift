@@ -71,7 +71,6 @@ struct AnalyticsDetailYearlyChartView: View {
                 .frame(height: 250)
             }
         }
-        
         .padding(20)
         .background(Color.darkGray)
         .cornerRadius(10)
