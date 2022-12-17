@@ -1,5 +1,5 @@
 //
-//  AnalyticsDetailYearlyChartView.swift
+//  AbstractChartView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -8,12 +8,12 @@
 import Charts
 import SwiftUI
 
-struct AnalyticsDetailYearlyChartViewItem {
+struct AbstractChartViewItem {
     let totalDistanceString: String
-    let workoutItems: [AnalyticsDetailYearlyWorkoutItem]
+    let workoutItems: [AbstractChartViewWorkoutItem]
 }
 
-struct AnalyticsDetailYearlyWorkoutItem: Identifiable {
+struct AbstractChartViewWorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
@@ -25,8 +25,8 @@ struct AnalyticsDetailYearlyWorkoutItem: Identifiable {
     let distance: Double
 }
 
-struct AnalyticsDetailYearlyChartView: View {
-    let data: AnalyticsDetailYearlyChartViewItem
+struct AbstractChartView: View {
+    let data: AbstractChartViewItem
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -64,9 +64,9 @@ struct AnalyticsDetailYearlyChartView: View {
                     }
                 }
                 .chartForegroundStyleScale([
-                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
-                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green,
-                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .yellow
+                    AbstractChartViewWorkoutItem.WorkoutType.cycling.rawValue: .blue,
+                    AbstractChartViewWorkoutItem.WorkoutType.running.rawValue: .green,
+                    AbstractChartViewWorkoutItem.WorkoutType.walking.rawValue: .yellow
                 ])
                 .frame(height: 250)
             }

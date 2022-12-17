@@ -17,7 +17,7 @@
 		733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE60D28A4B23000D4364A /* HealthKitClient.swift */; };
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
-		73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */; };
+		73799A7428C38B1700B96EAD /* AbstractChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* AbstractChartView.swift */; };
 		73799A7728C38C4700B96EAD /* AbstractScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* AbstractScreen.swift */; };
 		73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */; };
 		73799A7B28C38D0B00B96EAD /* AbstractScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */; };
@@ -60,7 +60,7 @@
 		733DE61528A4B67800D4364A /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
-		73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyChartView.swift; sourceTree = "<group>"; };
+		73799A7328C38B1700B96EAD /* AbstractChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractChartView.swift; sourceTree = "<group>"; };
 		73799A7628C38C4700B96EAD /* AbstractScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreen.swift; sourceTree = "<group>"; };
 		73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenViewModel.swift; sourceTree = "<group>"; };
 		73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenBuilder.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		731F50C928BB4FBD00AD8633 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */,
+				73799A7328C38B1700B96EAD /* AbstractChartView.swift */,
 				73799A7628C38C4700B96EAD /* AbstractScreen.swift */,
 				73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */,
 				73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */,
@@ -344,7 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */,
-				73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */,
+				73799A7428C38B1700B96EAD /* AbstractChartView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
 				7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */,

@@ -24,7 +24,7 @@ struct AbstractScreen: View {
                         .font(.title2)
                         .bold()
                         .padding(.horizontal, 5)
-                    AnalyticsDetailYearlyChartView(data: viewModel.data.chartViewItem)
+                    AbstractChartView(data: viewModel.data.chartViewItem)
                 }
                 VStack(
                     alignment: .leading,

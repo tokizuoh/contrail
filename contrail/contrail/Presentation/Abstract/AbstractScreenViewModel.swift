@@ -8,7 +8,7 @@
 import HealthKit
 
 struct AnalyticsDetailYearlyData {
-    let chartViewItem: AnalyticsDetailYearlyChartViewItem
+    let chartViewItem: AbstractChartViewItem
     let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
@@ -54,7 +54,7 @@ struct AnalyticsDetailYearlyTranslator {
         case yearly
     }
 
-    static func makeChartViewItem(_ from: From, option: Option) -> AnalyticsDetailYearlyChartViewItem {
+    static func makeChartViewItem(_ from: From, option: Option) -> AbstractChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -69,12 +69,12 @@ struct AnalyticsDetailYearlyTranslator {
         }()
 
         var totalDistance: Double = 0.0
-        let workoutItems: [AnalyticsDetailYearlyWorkoutItem] = from.compactMap { workout in
+        let workoutItems: [AbstractChartViewItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
-            guard let workoutType: AnalyticsDetailYearlyWorkoutItem.WorkoutType = {
+            guard let workoutType: AbstractChartViewItem.WorkoutType = {
                 switch workout.workoutActivityType {
                 case .cycling:
                     return .cycling
