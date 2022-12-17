@@ -6,7 +6,6 @@
 //
 
 import HealthKit
-import Apollo
 
 struct TopData {
     let topAnalyticsItem: TopAnalyticsItem
@@ -37,30 +36,6 @@ final class AbstractViewModel: ObservableObject {
         }
         let topItem = TopTranslator.translate(cyclingWorkouts)
         data = topItem
-    }
-
-    func uploadWorkout() {
-        guard let workouts = workoutsCacher.getWorkouts() else {
-            return
-        }
-
-        for workout in workouts {
-            Network.shared.apollo.perform(
-                mutation: CreateWorkoutMutation(
-                    distance: workout.totalDistance?.kilometers() ?? 0.0,
-                    duration: workout.duration,
-                    startDate: workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: "."),
-                    type: .cycling
-                )
-            ) { result in
-                switch result {
-                case .success(let data):
-                    print(data)
-                case .failure(let error):
-                    fatalError(error.localizedDescription)
-                }
-            }
-        }
     }
 }
 
