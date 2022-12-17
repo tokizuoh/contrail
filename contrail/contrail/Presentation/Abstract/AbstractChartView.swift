@@ -27,13 +27,21 @@ struct AbstractChartViewWorkoutItem: Identifiable {
 
 struct AbstractChartView: View {
     let data: AbstractChartViewItem
+    @State private var isPresentActivityView = false
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
             Button {
-                // TODO: 共有アクション
+                isPresentActivityView = true
             } label: {
                 Image(systemName: "square.and.arrow.up")
+            }
+            .sheet(isPresented: $isPresentActivityView) {
+                ActivityView(
+                    activityItems: ["TODO"],
+                    applicationActivities: nil
+                )
+                .presentationDetents([.medium])
             }
             VStack(alignment: .leading) {
                 VStack(

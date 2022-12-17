@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
+		733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733CA82C294DCB1000416E70 /* ActivityView.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
 		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
 		733DE5E028A482B500D4364A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DF28A482B500D4364A /* RootViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		733CA82C294DCB1000416E70 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733DE5DD28A482B500D4364A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
+				733CA82C294DCB1000416E70 /* ActivityView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
+				733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
 			);
