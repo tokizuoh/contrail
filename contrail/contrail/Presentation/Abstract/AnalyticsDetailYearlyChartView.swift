@@ -29,41 +29,49 @@ struct AnalyticsDetailYearlyChartView: View {
     let data: AnalyticsDetailYearlyChartViewItem
 
     var body: some View {
-        VStack(alignment: .leading) {
-            VStack(
-                alignment: .leading,
-                spacing: 2
-            ) {
-                Text("Total Distances")
-                    .font(.subheadline)
-                    .foregroundColor(.lightGray)
-                Text("\(data.totalDistanceString) KM")
-                    .font(.title2)
-                    .bold()
+        ZStack(alignment: .topTrailing) {
+            Button {
+                // TODO: 共有アクション
+            } label: {
+                Image(systemName: "square.and.arrow.up")
             }
-            Chart {
-                ForEach(data.workoutItems) { item in
-                    BarMark(
-                        x: .value("Shape Type", item.date.formatted(.dateTime.month(.twoDigits))),
-                        y: .value("Distance", item.distance)
-                    )
-                    .foregroundStyle(by: .value("Distance", item.type.rawValue))
+            VStack(alignment: .leading) {
+                VStack(
+                    alignment: .leading,
+                    spacing: 2
+                ) {
+                    Text("Total Distances")
+                        .font(.subheadline)
+                        .foregroundColor(.lightGray)
+                    Text("\(data.totalDistanceString) KM")
+                        .font(.title2)
+                        .bold()
                 }
-            }
-            .chartXAxis {
-                AxisMarks(position: .bottom) { _ in
-                    AxisGridLine(centered: true)
-                    AxisTick(centered: true)
-                    AxisValueLabel()
+                Chart {
+                    ForEach(data.workoutItems) { item in
+                        BarMark(
+                            x: .value("Shape Type", item.date.formatted(.dateTime.month(.twoDigits))),
+                            y: .value("Distance", item.distance)
+                        )
+                        .foregroundStyle(by: .value("Distance", item.type.rawValue))
+                    }
                 }
+                .chartXAxis {
+                    AxisMarks(position: .bottom) { _ in
+                        AxisGridLine(centered: true)
+                        AxisTick(centered: true)
+                        AxisValueLabel()
+                    }
+                }
+                .chartForegroundStyleScale([
+                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
+                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green,
+                    AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .yellow
+                ])
+                .frame(height: 250)
             }
-            .chartForegroundStyleScale([
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green,
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .yellow
-            ])
-            .frame(height: 250)
         }
+        
         .padding(20)
         .background(Color.darkGray)
         .cornerRadius(10)
