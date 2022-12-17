@@ -72,7 +72,7 @@ struct AbstractChartView: View {
         .background(Color.darkGray)
         .cornerRadius(10)
     }
-    
+
     private var shareButton: some View {
         Button {
             isPresentActivityView = true
