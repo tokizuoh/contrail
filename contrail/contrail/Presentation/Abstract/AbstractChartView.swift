@@ -1,5 +1,5 @@
 //
-//  AnalyticsDetailYearlyChartView.swift
+//  AbstractChartView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -8,15 +8,16 @@
 import Charts
 import SwiftUI
 
-struct AnalyticsDetailYearlyChartViewItem {
+struct AbstractChartViewItem {
     let totalDistanceString: String
-    let workoutItems: [AnalyticsDetailYearlyWorkoutItem]
+    let workoutItems: [AbstractChartViewWorkoutItem]
 }
 
-struct AnalyticsDetailYearlyWorkoutItem: Identifiable {
+struct AbstractChartViewWorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
+        case walking = "Walking"
     }
     var id = UUID()
     let type: WorkoutType
@@ -24,10 +25,37 @@ struct AnalyticsDetailYearlyWorkoutItem: Identifiable {
     let distance: Double
 }
 
-struct AnalyticsDetailYearlyChartView: View {
-    let data: AnalyticsDetailYearlyChartViewItem
+struct AbstractChartView: View {
+    @State private var isPresentActivityView = false
+
+    let data: AbstractChartViewItem
 
     var body: some View {
+        ZStack(alignment: .topTrailing) {
+            shareButton
+            chartView
+        }
+        .padding(20)
+        .background(Color.darkGray)
+        .cornerRadius(10)
+    }
+
+    private var shareButton: some View {
+        Button {
+            isPresentActivityView = true
+        } label: {
+            Image(systemName: "square.and.arrow.up")
+        }
+        .sheet(isPresented: $isPresentActivityView) {
+            ActivityView(
+                activityItems: ["TODO"],
+                applicationActivities: nil
+            )
+            .presentationDetents([.medium])
+        }
+    }
+
+    private var chartView: some View {
         VStack(alignment: .leading) {
             VStack(
                 alignment: .leading,
@@ -36,7 +64,7 @@ struct AnalyticsDetailYearlyChartView: View {
                 Text("Total Distances")
                     .font(.subheadline)
                     .foregroundColor(.lightGray)
-                Text("\(data.totalDistanceString) km")
+                Text("\(data.totalDistanceString) KM")
                     .font(.title2)
                     .bold()
             }
@@ -57,13 +85,11 @@ struct AnalyticsDetailYearlyChartView: View {
                 }
             }
             .chartForegroundStyleScale([
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green
+                AbstractChartViewWorkoutItem.WorkoutType.cycling.rawValue: .blue,
+                AbstractChartViewWorkoutItem.WorkoutType.running.rawValue: .green,
+                AbstractChartViewWorkoutItem.WorkoutType.walking.rawValue: .yellow
             ])
             .frame(height: 250)
         }
-        .padding(20)
-        .background(Color.darkGray)
-        .cornerRadius(10)
     }
 }

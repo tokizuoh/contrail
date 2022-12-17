@@ -7,41 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		731F50CB28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */; };
-		731F50CD28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */; };
-		731F50CF28BB520B00AD8633 /* AnalyticsDetailChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */; };
-		731F50D128BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */; };
-		733C517428A7C91600306AD1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517328A7C91600306AD1 /* API.swift */; };
-		733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733C517528A7CBF900306AD1 /* ContrailAPI.swift */; };
+		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
+		733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733CA82C294DCB1000416E70 /* ActivityView.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
 		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
 		733DE5E028A482B500D4364A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DF28A482B500D4364A /* RootViewController.swift */; };
 		733DE5E328A482B500D4364A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E128A482B500D4364A /* Main.storyboard */; };
 		733DE5E528A482B700D4364A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E428A482B700D4364A /* Assets.xcassets */; };
 		733DE5E828A482B700D4364A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E628A482B700D4364A /* LaunchScreen.storyboard */; };
-		733DE5F328A482B700D4364A /* contrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5F228A482B700D4364A /* contrailTests.swift */; };
-		733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FC28A482B700D4364A /* contrailUITests.swift */; };
-		733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */; };
 		733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE60D28A4B23000D4364A /* HealthKitClient.swift */; };
-		733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61128A4B28200D4364A /* TopViewModel.swift */; };
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
-		733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61928A4EC9D00D4364A /* TopScreen.swift */; };
-		733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
-		733DE62028A5348700D4364A /* TopAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61F28A5348700D4364A /* TopAnalyticsView.swift */; };
-		73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */; };
-		73799A7728C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */; };
-		73799A7928C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */; };
-		73799A7B28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */; };
-		738D9C9428A8CF0000852CF5 /* WorkoutListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9328A8CF0000852CF5 /* WorkoutListViewModel.swift */; };
-		738D9C9628A8CF4700852CF5 /* WorkoutListScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9528A8CF4700852CF5 /* WorkoutListScreenBuilder.swift */; };
-		738D9C9B28A8D12E00852CF5 /* WorkoutCellTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9A28A8D12E00852CF5 /* WorkoutCellTranslator.swift */; };
+		73799A7428C38B1700B96EAD /* AbstractChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* AbstractChartView.swift */; };
+		73799A7728C38C4700B96EAD /* AbstractScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* AbstractScreen.swift */; };
+		73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */; };
+		73799A7B28C38D0B00B96EAD /* AbstractScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */; };
 		738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */; };
 		7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */; };
 		7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
-		73C9B64728A8C43700BF831E /* TopScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */; };
-		73C9B64A28A8C7CC00BF831E /* WorkoutListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C9B64928A8C7CC00BF831E /* WorkoutListScreen.swift */; };
-		73D5D78628A7C00E00A02459 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 73D5D78528A7C00E00A02459 /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,14 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailScreen.swift; sourceTree = "<group>"; };
-		731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailViewModel.swift; sourceTree = "<group>"; };
-		731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailChartView.swift; sourceTree = "<group>"; };
-		731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailScreenBuilder.swift; sourceTree = "<group>"; };
-		733C516E28A7C2A300306AD1 /* Workout.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Workout.graphql; sourceTree = "<group>"; };
-		733C517228A7C70300306AD1 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		733C517328A7C91600306AD1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		733C517528A7CBF900306AD1 /* ContrailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrailAPI.swift; sourceTree = "<group>"; };
+		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		733CA82C294DCB1000416E70 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733DE5DD28A482B500D4364A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,30 +56,18 @@
 		733DE5E728A482B700D4364A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		733DE5E928A482B700D4364A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		733DE5EE28A482B700D4364A /* contrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		733DE5F228A482B700D4364A /* contrailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailTests.swift; sourceTree = "<group>"; };
 		733DE5F828A482B700D4364A /* contrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		733DE5FC28A482B700D4364A /* contrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITests.swift; sourceTree = "<group>"; };
-		733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		733DE60D28A4B23000D4364A /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
-		733DE61128A4B28200D4364A /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		733DE61328A4B45400D4364A /* WorkoutsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCacher.swift; sourceTree = "<group>"; };
 		733DE61528A4B67800D4364A /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
 		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		733DE61928A4EC9D00D4364A /* TopScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreen.swift; sourceTree = "<group>"; };
-		733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutAbstractView.swift; sourceTree = "<group>"; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
-		733DE61F28A5348700D4364A /* TopAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAnalyticsView.swift; sourceTree = "<group>"; };
-		73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyChartView.swift; sourceTree = "<group>"; };
-		73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyScreen.swift; sourceTree = "<group>"; };
-		73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyViewModel.swift; sourceTree = "<group>"; };
-		73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyScreenBuilder.swift; sourceTree = "<group>"; };
-		738D9C9328A8CF0000852CF5 /* WorkoutListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListViewModel.swift; sourceTree = "<group>"; };
-		738D9C9528A8CF4700852CF5 /* WorkoutListScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreenBuilder.swift; sourceTree = "<group>"; };
-		738D9C9A28A8D12E00852CF5 /* WorkoutCellTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCellTranslator.swift; sourceTree = "<group>"; };
+		73799A7328C38B1700B96EAD /* AbstractChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractChartView.swift; sourceTree = "<group>"; };
+		73799A7628C38C4700B96EAD /* AbstractScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreen.swift; sourceTree = "<group>"; };
+		73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenViewModel.swift; sourceTree = "<group>"; };
+		73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenBuilder.swift; sourceTree = "<group>"; };
 		738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKQuantity+.swift"; sourceTree = "<group>"; };
 		7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutItemView.swift; sourceTree = "<group>"; };
-		73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopScreenBuilder.swift; sourceTree = "<group>"; };
-		73C9B64928A8C7CC00BF831E /* WorkoutListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */,
-				73D5D78628A7C00E00A02459 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,41 +96,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731F50C928BB4FBD00AD8633 /* AnalyticsDetail */ = {
+		731F50C928BB4FBD00AD8633 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				73799A7528C38C1800B96EAD /* Yearly */,
-				731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */,
-				731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */,
-				731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */,
-				731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */,
+				73799A7328C38B1700B96EAD /* AbstractChartView.swift */,
+				73799A7628C38C4700B96EAD /* AbstractScreen.swift */,
+				73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */,
+				73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */,
 			);
-			path = AnalyticsDetail;
+			path = Abstract;
 			sourceTree = "<group>";
 		};
-		733C516928A7C1FF00306AD1 /* generated */ = {
+		733CA82B294DA9F700416E70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				733C517328A7C91600306AD1 /* API.swift */,
-				733C517228A7C70300306AD1 /* schema.json */,
+				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
+				733CA82C294DCB1000416E70 /* ActivityView.swift */,
 			);
-			path = generated;
-			sourceTree = "<group>";
-		};
-		733C516B28A7C25800306AD1 /* GraphQL */ = {
-			isa = PBXGroup;
-			children = (
-				733C516E28A7C2A300306AD1 /* Workout.graphql */,
-			);
-			path = GraphQL;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		733DE5CF28A482B500D4364A = {
 			isa = PBXGroup;
 			children = (
 				733DE5DA28A482B500D4364A /* contrail */,
-				733DE5F128A482B700D4364A /* contrailTests */,
-				733DE5FB28A482B700D4364A /* contrailUITests */,
 				733DE5D928A482B500D4364A /* Products */,
 				733DE61628A4B67800D4364A /* Frameworks */,
 			);
@@ -185,8 +138,6 @@
 		733DE5DA28A482B500D4364A /* contrail */ = {
 			isa = PBXGroup;
 			children = (
-				733C516B28A7C25800306AD1 /* GraphQL */,
-				733C516928A7C1FF00306AD1 /* generated */,
 				733DE61528A4B67800D4364A /* contrail.entitlements */,
 				733DE60F28A4B25D00D4364A /* Presentation */,
 				733DE60C28A4B21900D4364A /* Model */,
@@ -201,29 +152,12 @@
 			path = contrail;
 			sourceTree = "<group>";
 		};
-		733DE5F128A482B700D4364A /* contrailTests */ = {
-			isa = PBXGroup;
-			children = (
-				733DE5F228A482B700D4364A /* contrailTests.swift */,
-			);
-			path = contrailTests;
-			sourceTree = "<group>";
-		};
-		733DE5FB28A482B700D4364A /* contrailUITests */ = {
-			isa = PBXGroup;
-			children = (
-				733DE5FC28A482B700D4364A /* contrailUITests.swift */,
-				733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */,
-			);
-			path = contrailUITests;
-			sourceTree = "<group>";
-		};
 		733DE60C28A4B21900D4364A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				733DE60D28A4B23000D4364A /* HealthKitClient.swift */,
 				733DE61328A4B45400D4364A /* WorkoutsCacher.swift */,
-				733C517528A7CBF900306AD1 /* ContrailAPI.swift */,
+				7316DFA728D855B800DA6D27 /* Translator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,24 +165,11 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				731F50C928BB4FBD00AD8633 /* AnalyticsDetail */,
+				733CA82B294DA9F700416E70 /* Common */,
+				731F50C928BB4FBD00AD8633 /* Abstract */,
 				738D9C9828A8D0EF00852CF5 /* Extensions */,
-				738D9C9728A8D02F00852CF5 /* Common */,
-				73C9B64828A8C7BA00BF831E /* WorkoutList */,
-				733DE61028A4B26D00D4364A /* Top */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		733DE61028A4B26D00D4364A /* Top */ = {
-			isa = PBXGroup;
-			children = (
-				733DE61128A4B28200D4364A /* TopViewModel.swift */,
-				733DE61928A4EC9D00D4364A /* TopScreen.swift */,
-				733DE61F28A5348700D4364A /* TopAnalyticsView.swift */,
-				73C9B64628A8C43700BF831E /* TopScreenBuilder.swift */,
-			);
-			path = Top;
 			sourceTree = "<group>";
 		};
 		733DE61628A4B67800D4364A /* Frameworks */ = {
@@ -257,27 +178,6 @@
 				733DE61728A4B67800D4364A /* HealthKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		73799A7528C38C1800B96EAD /* Yearly */ = {
-			isa = PBXGroup;
-			children = (
-				73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */,
-				73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */,
-				73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */,
-				73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */,
-				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
-			);
-			path = Yearly;
-			sourceTree = "<group>";
-		};
-		738D9C9728A8D02F00852CF5 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				733DE61B28A4EE6F00D4364A /* WorkoutAbstractView.swift */,
-				738D9C9A28A8D12E00852CF5 /* WorkoutCellTranslator.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		738D9C9828A8D0EF00852CF5 /* Extensions */ = {
@@ -289,16 +189,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		73C9B64828A8C7BA00BF831E /* WorkoutList */ = {
-			isa = PBXGroup;
-			children = (
-				73C9B64928A8C7CC00BF831E /* WorkoutListScreen.swift */,
-				738D9C9328A8CF0000852CF5 /* WorkoutListViewModel.swift */,
-				738D9C9528A8CF4700852CF5 /* WorkoutListScreenBuilder.swift */,
-			);
-			path = WorkoutList;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,7 +196,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 733DE60228A482B700D4364A /* Build configuration list for PBXNativeTarget "contrail" */;
 			buildPhases = (
-				733C516F28A7C58B00306AD1 /* Apollo */,
 				733DE5D428A482B500D4364A /* Sources */,
 				733DE60B28A4A9FC00D4364A /* Custom: Run Swiftlint */,
 				733DE5D528A482B500D4364A /* Frameworks */,
@@ -318,7 +207,6 @@
 			);
 			name = contrail;
 			packageProductDependencies = (
-				73D5D78528A7C00E00A02459 /* Apollo */,
 			);
 			productName = contrail;
 			productReference = 733DE5D828A482B500D4364A /* contrail.app */;
@@ -393,7 +281,6 @@
 			);
 			mainGroup = 733DE5CF28A482B500D4364A;
 			packageReferences = (
-				73D5D78428A7C00E00A02459 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 733DE5D928A482B500D4364A /* Products */;
 			projectDirPath = "";
@@ -434,24 +321,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		733C516F28A7C58B00306AD1 /* Apollo */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Apollo;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"generated/schema.json\" generated/API.swift\n";
-		};
 		733DE60B28A4A9FC00D4364A /* Custom: Run Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,33 +346,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				731F50D128BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift in Sources */,
-				733C517428A7C91600306AD1 /* API.swift in Sources */,
-				73799A7928C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift in Sources */,
-				73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */,
-				733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */,
+				73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */,
+				73799A7428C38B1700B96EAD /* AbstractChartView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
-				733DE62028A5348700D4364A /* TopAnalyticsView.swift in Sources */,
 				7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */,
-				731F50CF28BB520B00AD8633 /* AnalyticsDetailChartView.swift in Sources */,
-				73799A7B28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift in Sources */,
+				73799A7B28C38D0B00B96EAD /* AbstractScreenBuilder.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
-				73799A7728C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift in Sources */,
-				733DE61228A4B28200D4364A /* TopViewModel.swift in Sources */,
-				738D9C9628A8CF4700852CF5 /* WorkoutListScreenBuilder.swift in Sources */,
-				733DE61A28A4EC9D00D4364A /* TopScreen.swift in Sources */,
+				73799A7728C38C4700B96EAD /* AbstractScreen.swift in Sources */,
+				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
-				738D9C9428A8CF0000852CF5 /* WorkoutListViewModel.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
-				73C9B64728A8C43700BF831E /* TopScreenBuilder.swift in Sources */,
-				73C9B64A28A8C7CC00BF831E /* WorkoutListScreen.swift in Sources */,
+				733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
-				733C517628A7CBF900306AD1 /* ContrailAPI.swift in Sources */,
-				731F50CB28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift in Sources */,
-				738D9C9B28A8D12E00852CF5 /* WorkoutCellTranslator.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
-				731F50CD28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DE5F328A482B700D4364A /* contrailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,8 +374,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */,
-				733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,25 +708,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		73D5D78428A7C00E00A02459 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apollographql/apollo-ios";
-			requirement = {
-				kind = exactVersion;
-				version = 0.53.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		73D5D78528A7C00E00A02459 /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 73D5D78428A7C00E00A02459 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 733DE5D028A482B500D4364A /* Project object */;
 }

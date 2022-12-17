@@ -1,5 +1,5 @@
 //
-//  AnalyticsDetailYearlyViewModel.swift
+//  AbstractScreenViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -8,7 +8,7 @@
 import HealthKit
 
 struct AnalyticsDetailYearlyData {
-    let chartViewItem: AnalyticsDetailYearlyChartViewItem
+    let chartViewItem: AbstractChartViewItem
     let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
@@ -22,7 +22,7 @@ struct AnalyticsDetailYearlyData {
     }
 }
 
-final class AnalyticsDetailYearlyViewModel: ObservableObject {
+final class AbstractScreenViewModel: ObservableObject {
     @Published var data: AnalyticsDetailYearlyData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 
@@ -43,6 +43,7 @@ final class AnalyticsDetailYearlyViewModel: ObservableObject {
     }
 }
 
+// TODO: Translatorに準拠させる
 struct AnalyticsDetailYearlyTranslator {
     typealias From = [HKWorkout]
     typealias To = AnalyticsDetailYearlyData
@@ -53,7 +54,7 @@ struct AnalyticsDetailYearlyTranslator {
         case yearly
     }
 
-    static func makeChartViewItem(_ from: From, option: Option) -> AnalyticsDetailYearlyChartViewItem {
+    static func makeChartViewItem(_ from: From, option: Option) -> AbstractChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -68,17 +69,19 @@ struct AnalyticsDetailYearlyTranslator {
         }()
 
         var totalDistance: Double = 0.0
-        let workoutItems: [AnalyticsDetailYearlyWorkoutItem] = from.compactMap { workout in
+        let workoutItems: [AbstractChartViewWorkoutItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
-            guard let workoutType: AnalyticsDetailYearlyWorkoutItem.WorkoutType = {
+            guard let workoutType: AbstractChartViewWorkoutItem.WorkoutType = {
                 switch workout.workoutActivityType {
                 case .cycling:
                     return .cycling
                 case .running:
                     return .running
+                case .walking:
+                    return .walking
                 default:
                     return nil
                 }
@@ -117,6 +120,8 @@ struct AnalyticsDetailYearlyTranslator {
                     return .cycling
                 case .running:
                     return .running
+                case .walking:
+                    return .walking
                 default:
                     return nil
                 }

@@ -1,29 +1,20 @@
 # contrail
   
 ## About
-A simple app to view your cycling workouts in SwiftUI.
+A simple app to view your workouts in SwiftUI.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/37968814/184345466-0863cd28-06c2-4240-ba93-b08a9e6f8440.png" width="500">
+  <img src="https://user-images.githubusercontent.com/37968814/208237207-4ce19159-b0b8-4a2e-aba9-08f34c550f9d.png" width="500">
 </p>
 
 ## Development Environment
   
 ```
 $ xcodebuild -version
-Xcode 13.3
-Build version 13E113
+Xcode 14.1
+Build version 14B47b
 ```
   
-## Before Development
-
-### Git Hooks
-Add the issue number to the beginning of the commit message.
-
-```sh
-$ make set-git-hooks-commit-msg
-```
-
 ### Mint
 
 ```sh

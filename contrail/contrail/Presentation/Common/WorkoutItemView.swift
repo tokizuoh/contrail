@@ -11,6 +11,7 @@ struct WorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
+        case walking = "Walking"
     }
 
     var id = UUID()
@@ -29,6 +30,8 @@ struct WorkoutItemView: View {
             return "bicycle.circle.fill"
         case .running:
             return "figure.run.circle.fill"
+        case .walking:
+            return "figure.walk.circle.fill"
         }
     }
 
@@ -38,6 +41,8 @@ struct WorkoutItemView: View {
             return .blue
         case .running:
             return .green
+        case .walking:
+            return .yellow
         }
     }
 
@@ -56,11 +61,14 @@ struct WorkoutItemView: View {
                     spacing: 2
                 ) {
                     Text(item.type.rawValue)
-                    HStack(alignment: .lastTextBaseline) {
+                    HStack(
+                        alignment: .lastTextBaseline,
+                        spacing: 4
+                    ) {
                         Text(item.distanceString)
                             .font(.title)
-                        Text("km")
-                            .font(.subheadline)
+                        Text("KM")
+                            .font(.title3)
                     }
                     .foregroundColor(foregroundColor)
                 }
