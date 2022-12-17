@@ -30,6 +30,8 @@ final class RootViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .crossDissolve
+        navigationController.navigationBar.prefersLargeTitles = true
+
         present(navigationController, animated: true)
     }
 }
