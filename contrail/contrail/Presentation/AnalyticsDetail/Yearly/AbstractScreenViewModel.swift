@@ -1,5 +1,5 @@
 //
-//  AnalyticsDetailYearlyViewModel.swift
+//  AbstractScreenViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -22,7 +22,7 @@ struct AnalyticsDetailYearlyData {
     }
 }
 
-final class AnalyticsDetailYearlyViewModel: ObservableObject {
+final class AbstractScreenViewModel: ObservableObject {
     @Published var data: AnalyticsDetailYearlyData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 

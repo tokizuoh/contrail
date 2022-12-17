@@ -18,9 +18,9 @@
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
 		73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */; };
-		73799A7728C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */; };
-		73799A7928C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */; };
-		73799A7B28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */; };
+		73799A7728C38C4700B96EAD /* AbstractScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* AbstractScreen.swift */; };
+		73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */; };
+		73799A7B28C38D0B00B96EAD /* AbstractScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */; };
 		738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */; };
 		7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */; };
 		7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
@@ -61,9 +61,9 @@
 		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyChartView.swift; sourceTree = "<group>"; };
-		73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyScreen.swift; sourceTree = "<group>"; };
-		73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyViewModel.swift; sourceTree = "<group>"; };
-		73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailYearlyScreenBuilder.swift; sourceTree = "<group>"; };
+		73799A7628C38C4700B96EAD /* AbstractScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreen.swift; sourceTree = "<group>"; };
+		73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenViewModel.swift; sourceTree = "<group>"; };
+		73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractScreenBuilder.swift; sourceTree = "<group>"; };
 		738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKQuantity+.swift"; sourceTree = "<group>"; };
 		7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,9 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				73799A7328C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift */,
-				73799A7628C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift */,
-				73799A7828C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift */,
-				73799A7A28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift */,
+				73799A7628C38C4700B96EAD /* AbstractScreen.swift */,
+				73799A7828C38CA600B96EAD /* AbstractScreenViewModel.swift */,
+				73799A7A28C38D0B00B96EAD /* AbstractScreenBuilder.swift */,
 				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
 			);
 			path = Yearly;
@@ -343,14 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73799A7928C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift in Sources */,
+				73799A7928C38CA600B96EAD /* AbstractScreenViewModel.swift in Sources */,
 				73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
 				7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */,
-				73799A7B28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift in Sources */,
+				73799A7B28C38D0B00B96EAD /* AbstractScreenBuilder.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
-				73799A7728C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift in Sources */,
+				73799A7728C38C4700B96EAD /* AbstractScreen.swift in Sources */,
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,

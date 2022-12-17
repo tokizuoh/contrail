@@ -1,5 +1,5 @@
 //
-//  AnalyticsDetailYearlyScreen.swift
+//  AbstractScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct AnalyticsDetailYearlyScreen: View {
-    @ObservedObject var viewModel = AnalyticsDetailYearlyViewModel(workoutsCacher: WorkoutsCacher.shared)
+struct AbstractScreen: View {
+    @ObservedObject var viewModel = AbstractScreenViewModel(workoutsCacher: WorkoutsCacher.shared)
 
     var body: some View {
         ScrollView {

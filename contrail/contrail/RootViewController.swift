@@ -26,7 +26,7 @@ final class RootViewController: UIViewController {
     }
 
     private func showAbstractScreen() {
-        let vc = AnalyticsDetailYearlyScreenBuilder.build()
+        let vc = AbstractScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .crossDissolve
