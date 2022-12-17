@@ -17,6 +17,7 @@ struct AnalyticsDetailYearlyWorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
+        case walking = "Walking"
     }
     var id = UUID()
     let type: WorkoutType
@@ -58,7 +59,8 @@ struct AnalyticsDetailYearlyChartView: View {
             }
             .chartForegroundStyleScale([
                 AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green
+                AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green,
+                AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .orange
             ])
             .frame(height: 250)
         }

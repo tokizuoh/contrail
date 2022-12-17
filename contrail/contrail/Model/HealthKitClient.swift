@@ -42,8 +42,18 @@ final class HealthKitClient: HealthKitClientProtocol {
             ],
             sortDescriptors: [.init(\.startDate, order: .reverse)]
         )
+        let walkingDescriptor = HKSampleQueryDescriptor(
+            predicates: [
+                .sample(
+                    type: .workoutType(),
+                    predicate: HKQuery.predicateForWorkouts(with: .walking)
+                )
+            ],
+            sortDescriptors: [.init(\.startDate, order: .reverse)]
+        )
         let cyclingResults = try await cyclingDescriptor.result(for: healthStore)
         let runningResults = try await runningDescriptor.result(for: healthStore)
-        return cyclingResults + runningResults as? [HKWorkout] ?? []
+        let walkingResults = try await walkingDescriptor.result(for: healthStore)
+        return cyclingResults + runningResults + walkingResults as? [HKWorkout] ?? []
     }
 }

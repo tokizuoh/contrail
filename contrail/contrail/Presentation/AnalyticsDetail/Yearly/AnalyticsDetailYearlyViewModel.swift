@@ -80,6 +80,8 @@ struct AnalyticsDetailYearlyTranslator {
                     return .cycling
                 case .running:
                     return .running
+                case .walking:
+                    return .walking
                 default:
                     return nil
                 }
