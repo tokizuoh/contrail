@@ -26,8 +26,9 @@ struct AbstractChartViewWorkoutItem: Identifiable {
 }
 
 struct AbstractChartView: View {
-    let data: AbstractChartViewItem
     @State private var isPresentActivityView = false
+
+    let data: AbstractChartViewItem
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
