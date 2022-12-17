@@ -14,9 +14,6 @@
 		733DE5E328A482B500D4364A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E128A482B500D4364A /* Main.storyboard */; };
 		733DE5E528A482B700D4364A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E428A482B700D4364A /* Assets.xcassets */; };
 		733DE5E828A482B700D4364A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733DE5E628A482B700D4364A /* LaunchScreen.storyboard */; };
-		733DE5F328A482B700D4364A /* contrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5F228A482B700D4364A /* contrailTests.swift */; };
-		733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FC28A482B700D4364A /* contrailUITests.swift */; };
-		733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */; };
 		733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE60D28A4B23000D4364A /* HealthKitClient.swift */; };
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
@@ -57,10 +54,7 @@
 		733DE5E728A482B700D4364A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		733DE5E928A482B700D4364A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		733DE5EE28A482B700D4364A /* contrailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		733DE5F228A482B700D4364A /* contrailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailTests.swift; sourceTree = "<group>"; };
 		733DE5F828A482B700D4364A /* contrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		733DE5FC28A482B700D4364A /* contrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITests.swift; sourceTree = "<group>"; };
-		733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contrailUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		733DE60D28A4B23000D4364A /* HealthKitClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitClient.swift; sourceTree = "<group>"; };
 		733DE61328A4B45400D4364A /* WorkoutsCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsCacher.swift; sourceTree = "<group>"; };
 		733DE61528A4B67800D4364A /* contrail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = contrail.entitlements; sourceTree = "<group>"; };
@@ -112,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				733DE5DA28A482B500D4364A /* contrail */,
-				733DE5F128A482B700D4364A /* contrailTests */,
-				733DE5FB28A482B700D4364A /* contrailUITests */,
 				733DE5D928A482B500D4364A /* Products */,
 				733DE61628A4B67800D4364A /* Frameworks */,
 			);
@@ -144,23 +136,6 @@
 				733DE5E928A482B700D4364A /* Info.plist */,
 			);
 			path = contrail;
-			sourceTree = "<group>";
-		};
-		733DE5F128A482B700D4364A /* contrailTests */ = {
-			isa = PBXGroup;
-			children = (
-				733DE5F228A482B700D4364A /* contrailTests.swift */,
-			);
-			path = contrailTests;
-			sourceTree = "<group>";
-		};
-		733DE5FB28A482B700D4364A /* contrailUITests */ = {
-			isa = PBXGroup;
-			children = (
-				733DE5FC28A482B700D4364A /* contrailUITests.swift */,
-				733DE5FE28A482B700D4364A /* contrailUITestsLaunchTests.swift */,
-			);
-			path = contrailUITests;
 			sourceTree = "<group>";
 		};
 		733DE60C28A4B21900D4364A /* Model */ = {
@@ -388,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DE5F328A482B700D4364A /* contrailTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,8 +370,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				733DE5FF28A482B700D4364A /* contrailUITestsLaunchTests.swift in Sources */,
-				733DE5FD28A482B700D4364A /* contrailUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
