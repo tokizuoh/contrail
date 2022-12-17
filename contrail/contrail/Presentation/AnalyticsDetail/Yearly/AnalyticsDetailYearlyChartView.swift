@@ -60,7 +60,7 @@ struct AnalyticsDetailYearlyChartView: View {
             .chartForegroundStyleScale([
                 AnalyticsDetailYearlyWorkoutItem.WorkoutType.cycling.rawValue: .blue,
                 AnalyticsDetailYearlyWorkoutItem.WorkoutType.running.rawValue: .green,
-                AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .orange
+                AnalyticsDetailYearlyWorkoutItem.WorkoutType.walking.rawValue: .yellow
             ])
             .frame(height: 250)
         }
