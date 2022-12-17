@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
-		731F50CB28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */; };
-		731F50CD28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */; };
-		731F50CF28BB520B00AD8633 /* AnalyticsDetailChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */; };
-		731F50D128BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
 		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
 		733DE5E028A482B500D4364A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DF28A482B500D4364A /* RootViewController.swift */; };
@@ -57,10 +53,6 @@
 
 /* Begin PBXFileReference section */
 		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
-		731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailScreen.swift; sourceTree = "<group>"; };
-		731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailViewModel.swift; sourceTree = "<group>"; };
-		731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailChartView.swift; sourceTree = "<group>"; };
-		731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDetailScreenBuilder.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733DE5DD28A482B500D4364A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,10 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				73799A7528C38C1800B96EAD /* Yearly */,
-				731F50CA28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift */,
-				731F50CC28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift */,
-				731F50CE28BB520B00AD8633 /* AnalyticsDetailChartView.swift */,
-				731F50D028BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift */,
 			);
 			path = AnalyticsDetail;
 			sourceTree = "<group>";
@@ -411,14 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				731F50D128BB558100AD8633 /* AnalyticsDetailScreenBuilder.swift in Sources */,
 				73799A7928C38CA600B96EAD /* AnalyticsDetailYearlyViewModel.swift in Sources */,
 				73799A7428C38B1700B96EAD /* AnalyticsDetailYearlyChartView.swift in Sources */,
 				733DE61C28A4EE6F00D4364A /* WorkoutAbstractView.swift in Sources */,
 				733DE61E28A4F1C600D4364A /* Color+.swift in Sources */,
 				733DE5E028A482B500D4364A /* RootViewController.swift in Sources */,
 				7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */,
-				731F50CF28BB520B00AD8633 /* AnalyticsDetailChartView.swift in Sources */,
 				73799A7B28C38D0B00B96EAD /* AnalyticsDetailYearlyScreenBuilder.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
 				73799A7728C38C4700B96EAD /* AnalyticsDetailYearlyScreen.swift in Sources */,
@@ -429,10 +415,8 @@
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
 				73C9B64A28A8C7CC00BF831E /* WorkoutListScreen.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
-				731F50CB28BB4FDF00AD8633 /* AnalyticsDetailScreen.swift in Sources */,
 				738D9C9B28A8D12E00852CF5 /* WorkoutCellTranslator.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
-				731F50CD28BB50EB00AD8633 /* AnalyticsDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
