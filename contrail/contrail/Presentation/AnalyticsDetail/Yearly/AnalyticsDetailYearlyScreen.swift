@@ -31,8 +31,8 @@ struct AnalyticsDetailYearlyScreen: View {
                     }
                 }
             }
-            .padding(.horizontal, 10)
-            .padding(.bottom, 20)
+            .padding(.vertical, 20)
+            .padding(.horizontal, 16)
         }
         .navigationTitle("Analytics")
         .onAppear {
