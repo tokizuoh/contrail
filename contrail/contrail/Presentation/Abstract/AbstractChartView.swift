@@ -31,18 +31,7 @@ struct AbstractChartView: View {
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Button {
-                isPresentActivityView = true
-            } label: {
-                Image(systemName: "square.and.arrow.up")
-            }
-            .sheet(isPresented: $isPresentActivityView) {
-                ActivityView(
-                    activityItems: ["TODO"],
-                    applicationActivities: nil
-                )
-                .presentationDetents([.medium])
-            }
+            shareButton
             VStack(alignment: .leading) {
                 VStack(
                     alignment: .leading,
@@ -82,5 +71,20 @@ struct AbstractChartView: View {
         .padding(20)
         .background(Color.darkGray)
         .cornerRadius(10)
+    }
+    
+    private var shareButton: some View {
+        Button {
+            isPresentActivityView = true
+        } label: {
+            Image(systemName: "square.and.arrow.up")
+        }
+        .sheet(isPresented: $isPresentActivityView) {
+            ActivityView(
+                activityItems: ["TODO"],
+                applicationActivities: nil
+            )
+            .presentationDetents([.medium])
+        }
     }
 }
