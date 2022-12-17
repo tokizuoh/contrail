@@ -42,7 +42,7 @@ struct AbstractScreen: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 16)
         }
-        .navigationTitle("Analytics")
+        .navigationTitle("Abstract")
         .onAppear {
             viewModel.dispatch()
         }
