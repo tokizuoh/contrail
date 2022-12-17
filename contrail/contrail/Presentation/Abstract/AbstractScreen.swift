@@ -16,28 +16,8 @@ struct AbstractScreen: View {
                 alignment: .leading,
                 spacing: 20
             ) {
-                VStack(
-                    alignment: .leading,
-                    spacing: 10
-                ) {
-                    Text("This Year")
-                        .font(.title2)
-                        .bold()
-                        .padding(.horizontal, 5)
-                    AbstractChartView(data: viewModel.data.chartViewItem)
-                }
-                VStack(
-                    alignment: .leading,
-                    spacing: 10
-                ) {
-                    Text("This Month")
-                        .font(.title2)
-                        .bold()
-                        .padding(.horizontal, 5)
-                    ForEach(viewModel.data.workoutItems) { item in
-                        WorkoutItemView(item: item)
-                    }
-                }
+                thisYear
+                thisMonth
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 16)
@@ -45,6 +25,34 @@ struct AbstractScreen: View {
         .navigationTitle("Abstract")
         .onAppear {
             viewModel.dispatch()
+        }
+    }
+
+    private var thisYear: some View {
+        VStack(
+            alignment: .leading,
+            spacing: 10
+        ) {
+            Text("This Year")
+                .font(.title2)
+                .bold()
+                .padding(.horizontal, 5)
+            AbstractChartView(data: viewModel.data.chartViewItem)
+        }
+    }
+
+    private var thisMonth: some View {
+        VStack(
+            alignment: .leading,
+            spacing: 10
+        ) {
+            Text("This Month")
+                .font(.title2)
+                .bold()
+                .padding(.horizontal, 5)
+            ForEach(viewModel.data.workoutItems) { item in
+                WorkoutItemView(item: item)
+            }
         }
     }
 }
