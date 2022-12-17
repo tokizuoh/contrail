@@ -16,14 +16,22 @@ struct AbstractScreen: View {
                 alignment: .leading,
                 spacing: 20
             ) {
-                AnalyticsDetailYearlyChartView(data: viewModel.data.chartViewItem)
-                // 今月のワークアウトセル
                 VStack(
                     alignment: .leading,
                     spacing: 10
                 ) {
-                    Text("This month")
-                        .font(.title)
+                    Text("This Year")
+                        .font(.title2)
+                        .bold()
+                        .padding(.horizontal, 5)
+                    AnalyticsDetailYearlyChartView(data: viewModel.data.chartViewItem)
+                }
+                VStack(
+                    alignment: .leading,
+                    spacing: 10
+                ) {
+                    Text("This Month")
+                        .font(.title2)
                         .bold()
                         .padding(.horizontal, 5)
                     ForEach(viewModel.data.workoutItems) { item in
