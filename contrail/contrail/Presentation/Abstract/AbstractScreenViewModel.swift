@@ -69,12 +69,12 @@ struct AnalyticsDetailYearlyTranslator {
         }()
 
         var totalDistance: Double = 0.0
-        let workoutItems: [AbstractChartViewItem] = from.compactMap { workout in
+        let workoutItems: [AbstractChartViewWorkoutItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
-            guard let workoutType: AbstractChartViewItem.WorkoutType = {
+            guard let workoutType: AbstractChartViewWorkoutItem.WorkoutType = {
                 switch workout.workoutActivityType {
                 case .cycling:
                     return .cycling
