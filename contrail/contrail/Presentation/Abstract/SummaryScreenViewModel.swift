@@ -25,9 +25,14 @@ struct SummaryDetailYearlyData {
 final class SummaryScreenViewModel: ObservableObject {
     @Published var data: SummaryDetailYearlyData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
+    private let routeToWorkoutListScreenAction: () -> Void
 
-    init(workoutsCacher: WorkoutsCacherProtocol) {
+    init(
+        workoutsCacher: WorkoutsCacherProtocol,
+        routeToWorkoutListScreenAction: @escaping () -> Void
+    ) {
         self.workoutsCacher = workoutsCacher
+        self.routeToWorkoutListScreenAction = routeToWorkoutListScreenAction
     }
 
     func dispatch() {
@@ -40,6 +45,10 @@ final class SummaryScreenViewModel: ObservableObject {
             chartViewItem: chartViewItem,
             workoutItems: workoutItems
         )
+    }
+
+    func routeToWorkoutListScreen() {
+        routeToWorkoutListScreenAction()
     }
 }
 

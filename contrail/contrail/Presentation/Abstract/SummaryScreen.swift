@@ -53,7 +53,7 @@ struct SummaryScreen: View {
                     .padding(.horizontal, 5)
                 Spacer()
                 Button("Show More") {
-                    // TODO: 一覧画面に繊維
+                    viewModel.routeToWorkoutListScreen()
                 }
             }
             // TODO: 最大3件表示に変更する
