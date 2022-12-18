@@ -46,10 +46,19 @@ struct AbstractScreen: View {
             alignment: .leading,
             spacing: 10
         ) {
-            Text("Recently")
-                .font(.title2)
-                .bold()
-                .padding(.horizontal, 5)
+            HStack(alignment: .firstTextBaseline) {
+                Text("Recently")
+                    .font(.title2)
+                    .bold()
+                    .padding(.horizontal, 5)
+                Spacer()
+                Button {
+                    // TODO: 一覧画面に繊維
+                } label: {
+                    Text("Show More")
+                        .foregroundColor(.brand)
+                }
+            }
             // TODO: 最大3件表示に変更する
             ForEach(viewModel.data.workoutItems) { item in
                 WorkoutItemView(item: item)
