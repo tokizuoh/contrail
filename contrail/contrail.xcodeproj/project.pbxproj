@@ -25,6 +25,10 @@
 		738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */; };
 		7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */; };
 		7395D06828A6693E00B8A7D6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733DE61728A4B67800D4364A /* HealthKit.framework */; };
+		73C88125294ECDFC00F3419E /* WorkoutListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C88124294ECDFC00F3419E /* WorkoutListScreen.swift */; };
+		73C88127294EDAE600F3419E /* WorkoutListScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C88126294EDAE600F3419E /* WorkoutListScreenBuilder.swift */; };
+		73C88129294EDB0700F3419E /* WorkoutListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C88128294EDB0700F3419E /* WorkoutListScreenViewModel.swift */; };
+		73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8812A294EDB3400F3419E /* WorkoutListDataTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		73799A7A28C38D0B00B96EAD /* SummaryScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenBuilder.swift; sourceTree = "<group>"; };
 		738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKQuantity+.swift"; sourceTree = "<group>"; };
 		7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutItemView.swift; sourceTree = "<group>"; };
+		73C88124294ECDFC00F3419E /* WorkoutListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreen.swift; sourceTree = "<group>"; };
+		73C88126294EDAE600F3419E /* WorkoutListScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreenBuilder.swift; sourceTree = "<group>"; };
+		73C88128294EDB0700F3419E /* WorkoutListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreenViewModel.swift; sourceTree = "<group>"; };
+		73C8812A294EDB3400F3419E /* WorkoutListDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListDataTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				73C88123294ECDEA00F3419E /* WorkoutList */,
 				733CA82B294DA9F700416E70 /* Common */,
 				731F50C928BB4FBD00AD8633 /* Abstract */,
 				738D9C9828A8D0EF00852CF5 /* Extensions */,
@@ -187,6 +196,17 @@
 				738D9C9C28A8D19A00852CF5 /* HKQuantity+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73C88123294ECDEA00F3419E /* WorkoutList */ = {
+			isa = PBXGroup;
+			children = (
+				73C88124294ECDFC00F3419E /* WorkoutListScreen.swift */,
+				73C88126294EDAE600F3419E /* WorkoutListScreenBuilder.swift */,
+				73C88128294EDB0700F3419E /* WorkoutListScreenViewModel.swift */,
+				73C8812A294EDB3400F3419E /* WorkoutListDataTranslator.swift */,
+			);
+			path = WorkoutList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +373,10 @@
 				7392F4BB28C49A9E00747DF3 /* WorkoutItemView.swift in Sources */,
 				73799A7B28C38D0B00B96EAD /* SummaryScreenBuilder.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
+				73C88129294EDB0700F3419E /* WorkoutListScreenViewModel.swift in Sources */,
+				73C88127294EDAE600F3419E /* WorkoutListScreenBuilder.swift in Sources */,
+				73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */,
+				73C88125294ECDFC00F3419E /* WorkoutListScreen.swift in Sources */,
 				73799A7728C38C4700B96EAD /* SummaryScreen.swift in Sources */,
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
