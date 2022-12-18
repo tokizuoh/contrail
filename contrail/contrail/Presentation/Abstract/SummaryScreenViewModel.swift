@@ -116,6 +116,17 @@ struct SummaryDetailYearlyTranslator {
     }
 
     static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
+        WorkoutListItemTranslator.translate(from, toGranularity: .month)
+    }
+}
+
+struct WorkoutListItemTranslator {
+    typealias From = [HKWorkout]
+    typealias To = [WorkoutItem]
+
+    static private let format = "%.2f"
+
+    static func translate(_ from: From, toGranularity component: Calendar.Component? = nil) -> To {
         let workoutItems: [WorkoutItem] = from.compactMap { workout in
             let now = Date()
             var calendar = Calendar(identifier: .japanese)
@@ -140,8 +151,10 @@ struct SummaryDetailYearlyTranslator {
             guard let distance = workout.totalDistance?.kilometers() else {
                 return nil
             }
-            guard calendar.isDate(now, equalTo: workout.startDate, toGranularity: .month) else {
-                return nil
+            if let component {
+                guard calendar.isDate(now, equalTo: workout.startDate, toGranularity: component) else {
+                    return nil
+                }
             }
             let distanceString = String(format: format, distance)
             let dateString = workout.startDate.formatted(.dateTime.year().month(.twoDigits).day(.twoDigits)).replacingOccurrences(of: "/", with: ".")
