@@ -46,7 +46,7 @@ struct AbstractScreen: View {
             alignment: .leading,
             spacing: 10
         ) {
-            Text("This Month")
+            Text("Recently")
                 .font(.title2)
                 .bold()
                 .padding(.horizontal, 5)
