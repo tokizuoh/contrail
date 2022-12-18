@@ -1,6 +1,5 @@
 # contrail
   
-## About
 A simple app to view your workouts in SwiftUI.
 
 <p align="center">
