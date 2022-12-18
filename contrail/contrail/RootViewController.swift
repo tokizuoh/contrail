@@ -18,15 +18,15 @@ final class RootViewController: UIViewController {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
                 workoutsCacher.cacheWorkouts(workout)
-                showAbstractScreen()
+                showSummaryScreen()
             } catch {
                 fatalError(error.localizedDescription)
             }
         }
     }
 
-    private func showAbstractScreen() {
-        let vc = AbstractScreenBuilder.build()
+    private func showSummaryScreen() {
+        let vc = SummaryScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .crossDissolve

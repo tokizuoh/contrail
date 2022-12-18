@@ -1,5 +1,5 @@
 //
-//  AbstractScreenViewModel.swift
+//  SummaryScreenViewModel.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -7,8 +7,8 @@
 
 import HealthKit
 
-struct AnalyticsDetailYearlyData {
-    let chartViewItem: AbstractChartViewItem
+struct SummaryDetailYearlyData {
+    let chartViewItem: SummaryChartViewItem
     let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
@@ -22,8 +22,8 @@ struct AnalyticsDetailYearlyData {
     }
 }
 
-final class AbstractScreenViewModel: ObservableObject {
-    @Published var data: AnalyticsDetailYearlyData = .empty()
+final class SummaryScreenViewModel: ObservableObject {
+    @Published var data: SummaryDetailYearlyData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
 
     init(workoutsCacher: WorkoutsCacherProtocol) {
@@ -34,8 +34,8 @@ final class AbstractScreenViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        let chartViewItem = AnalyticsDetailYearlyTranslator.makeChartViewItem(workouts, option: .yearly)
-        let workoutItems: [WorkoutItem] = AnalyticsDetailYearlyTranslator.makeWorkoutItems(workouts)
+        let chartViewItem = SummaryDetailYearlyTranslator.makeChartViewItem(workouts, option: .yearly)
+        let workoutItems: [WorkoutItem] = SummaryDetailYearlyTranslator.makeWorkoutItems(workouts)
         data = .init(
             chartViewItem: chartViewItem,
             workoutItems: workoutItems
@@ -44,9 +44,9 @@ final class AbstractScreenViewModel: ObservableObject {
 }
 
 // TODO: Translatorに準拠させる
-struct AnalyticsDetailYearlyTranslator {
+struct SummaryDetailYearlyTranslator {
     typealias From = [HKWorkout]
-    typealias To = AnalyticsDetailYearlyData
+    typealias To = SummaryDetailYearlyData
 
     static private let format = "%.2f"
 
@@ -54,7 +54,7 @@ struct AnalyticsDetailYearlyTranslator {
         case yearly
     }
 
-    static func makeChartViewItem(_ from: From, option: Option) -> AbstractChartViewItem {
+    static func makeChartViewItem(_ from: From, option: Option) -> SummaryChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -69,12 +69,12 @@ struct AnalyticsDetailYearlyTranslator {
         }()
 
         var totalDistance: Double = 0.0
-        let workoutItems: [AbstractChartViewWorkoutItem] = from.compactMap { workout in
+        let workoutItems: [SummaryChartViewWorkoutItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
                 return nil
             }
-            guard let workoutType: AbstractChartViewWorkoutItem.WorkoutType = {
+            guard let workoutType: SummaryChartViewWorkoutItem.WorkoutType = {
                 switch workout.workoutActivityType {
                 case .cycling:
                     return .cycling

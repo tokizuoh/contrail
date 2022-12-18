@@ -1,5 +1,5 @@
 //
-//  AbstractChartView.swift
+//  SummaryChartView.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -8,12 +8,12 @@
 import Charts
 import SwiftUI
 
-struct AbstractChartViewItem {
+struct SummaryChartViewItem {
     let totalDistanceString: String
-    let workoutItems: [AbstractChartViewWorkoutItem]
+    let workoutItems: [SummaryChartViewWorkoutItem]
 }
 
-struct AbstractChartViewWorkoutItem: Identifiable {
+struct SummaryChartViewWorkoutItem: Identifiable {
     enum WorkoutType: String {
         case cycling = "Cycling"
         case running = "Running"
@@ -25,10 +25,10 @@ struct AbstractChartViewWorkoutItem: Identifiable {
     let distance: Double
 }
 
-struct AbstractChartView: View {
+struct SummaryChartView: View {
     @State private var isPresentActivityView = false
 
-    let data: AbstractChartViewItem
+    let data: SummaryChartViewItem
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -85,9 +85,9 @@ struct AbstractChartView: View {
                 }
             }
             .chartForegroundStyleScale([
-                AbstractChartViewWorkoutItem.WorkoutType.cycling.rawValue: .blue,
-                AbstractChartViewWorkoutItem.WorkoutType.running.rawValue: .green,
-                AbstractChartViewWorkoutItem.WorkoutType.walking.rawValue: .yellow
+                SummaryChartViewWorkoutItem.WorkoutType.cycling.rawValue: .blue,
+                SummaryChartViewWorkoutItem.WorkoutType.running.rawValue: .green,
+                SummaryChartViewWorkoutItem.WorkoutType.walking.rawValue: .yellow
             ])
             .frame(height: 250)
         }

@@ -1,5 +1,5 @@
 //
-//  AbstractScreen.swift
+//  SummaryScreen.swift
 //  contrail
 //
 //  Created by tokizo on 2022/09/03.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct AbstractScreen: View {
-    @ObservedObject var viewModel: AbstractScreenViewModel
+struct SummaryScreen: View {
+    @ObservedObject var viewModel: SummaryScreenViewModel
 
     var body: some View {
         ScrollView {
@@ -22,7 +22,7 @@ struct AbstractScreen: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 16)
         }
-        .navigationTitle("Abstract")
+        .navigationTitle("Summary")
         .onAppear {
             viewModel.dispatch()
         }
@@ -37,7 +37,7 @@ struct AbstractScreen: View {
                 .font(.title2)
                 .bold()
                 .padding(.horizontal, 5)
-            AbstractChartView(data: viewModel.data.chartViewItem)
+            SummaryChartView(data: viewModel.data.chartViewItem)
         }
     }
 
