@@ -7,7 +7,7 @@
 
 import HealthKit
 
-struct SummaryDetailYearlyData {
+struct SummaryScreenData {
     let chartViewItem: SummaryChartViewItem
     let workoutItems: [WorkoutItem]
 
@@ -23,7 +23,7 @@ struct SummaryDetailYearlyData {
 }
 
 final class SummaryScreenViewModel: ObservableObject {
-    @Published var data: SummaryDetailYearlyData = .empty()
+    @Published var data: SummaryScreenData = .empty()
     private let workoutsCacher: WorkoutsCacherProtocol
     private let routeToWorkoutListScreenAction: () -> Void
 
@@ -55,7 +55,7 @@ final class SummaryScreenViewModel: ObservableObject {
 // TODO: Translatorに準拠させる
 struct SummaryDetailYearlyTranslator {
     typealias From = [HKWorkout]
-    typealias To = SummaryDetailYearlyData
+    typealias To = SummaryScreenData
 
     static private let format = "%.2f"
 
