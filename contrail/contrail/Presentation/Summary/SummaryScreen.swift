@@ -50,7 +50,6 @@ struct SummaryScreen: View {
                     viewModel.routeToWorkoutListScreen()
                 }
             }
-            // TODO: 最大3件表示に変更する
             ForEach(viewModel.data.workoutItems) { item in
                 WorkoutItemView(item: item)
             }

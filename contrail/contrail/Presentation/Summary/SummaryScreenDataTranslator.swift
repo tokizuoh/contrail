@@ -66,6 +66,8 @@ struct SummaryScreenDataTranslator: Translator {
     }
 
     static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
-        WorkoutListItemTranslator.translate(from, toGranularity: .month)
+        let count = min(from.count, 3)
+        let workouts = [HKWorkout](from[0..<count])
+        return WorkoutListItemTranslator.translate(workouts, toGranularity: .month)
     }
 }
