@@ -13,6 +13,7 @@ final class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         Task {
             do {
                 try await healthKitClient.requestAuthorization()
