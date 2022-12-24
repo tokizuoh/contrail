@@ -104,7 +104,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731F50C928BB4FBD00AD8633 /* Abstract */ = {
+		731F50C928BB4FBD00AD8633 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
 				73799A7328C38B1700B96EAD /* SummaryChartView.swift */,
@@ -112,7 +112,7 @@
 				73799A7828C38CA600B96EAD /* SummaryScreenViewModel.swift */,
 				73799A7A28C38D0B00B96EAD /* SummaryScreenBuilder.swift */,
 			);
-			path = Abstract;
+			path = Summary;
 			sourceTree = "<group>";
 		};
 		733CA82B294DA9F700416E70 /* Common */ = {
@@ -175,7 +175,7 @@
 			children = (
 				73C88123294ECDEA00F3419E /* WorkoutList */,
 				733CA82B294DA9F700416E70 /* Common */,
-				731F50C928BB4FBD00AD8633 /* Abstract */,
+				731F50C928BB4FBD00AD8633 /* Summary */,
 				738D9C9828A8D0EF00852CF5 /* Extensions */,
 			);
 			path = Presentation;
