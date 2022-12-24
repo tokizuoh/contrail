@@ -7,35 +7,30 @@
 
 import HealthKit
 
-// TODO: Translatorに準拠させる
-struct SummaryScreenDataTranslator {
+struct SummaryScreenDataTranslator: Translator {
     typealias From = [HKWorkout]
     typealias To = SummaryScreenData
 
     static private let format = "%.2f"
-
-    enum Option {
-        case yearly
+    
+    static func translate(_ from: From) -> SummaryScreenData {
+        return SummaryScreenData(
+            chartViewItem: makeChartViewItem(from),
+            workoutItems: makeWorkoutItems(from)
+        )
     }
 
-    static func makeChartViewItem(_ from: From, option: Option) -> SummaryChartViewItem {
+    static func makeChartViewItem(_ from: From) -> SummaryChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
         calendar.timeZone = timeZone
         calendar.locale = Locale(identifier: "ja_JP")
 
-        let toGranularity: Calendar.Component = {
-            switch option {
-            case .yearly:
-                return .year
-            }
-        }()
-
         var totalDistance: Double = 0.0
         let workoutItems: [SummaryChartViewWorkoutItem] = from.compactMap { workout in
             guard let distance = workout.totalDistance?.kilometers(),
-                  calendar.isDate(now, equalTo: workout.startDate, toGranularity: toGranularity) else {
+                  calendar.isDate(now, equalTo: workout.startDate, toGranularity: .year) else {
                 return nil
             }
             guard let workoutType: SummaryChartViewWorkoutItem.WorkoutType = {

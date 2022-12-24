@@ -40,12 +40,8 @@ final class SummaryScreenViewModel: ObservableObject {
         guard let workouts = workoutsCacher.getWorkouts() else {
             return
         }
-        let chartViewItem = SummaryScreenDataTranslator.makeChartViewItem(workouts, option: .yearly)
-        let workoutItems: [WorkoutItem] = SummaryScreenDataTranslator.makeWorkoutItems(workouts)
-        data = .init(
-            chartViewItem: chartViewItem,
-            workoutItems: workoutItems
-        )
+
+        data = SummaryScreenDataTranslator.translate(workouts)
     }
 
     func routeToWorkoutListScreen() {
