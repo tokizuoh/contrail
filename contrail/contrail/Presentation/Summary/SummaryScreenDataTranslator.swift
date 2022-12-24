@@ -20,7 +20,7 @@ struct SummaryScreenDataTranslator: Translator {
         )
     }
 
-    static func makeChartViewItem(_ from: From) -> SummaryChartViewItem {
+    static private func makeChartViewItem(_ from: From) -> SummaryChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
