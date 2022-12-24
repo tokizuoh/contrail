@@ -33,10 +33,7 @@ struct SummaryScreen: View {
             alignment: .leading,
             spacing: 10
         ) {
-            Text("This Year")
-                .font(.title2)
-                .bold()
-                .padding(.horizontal, 5)
+            SectionHeaderView("This Year")
             SummaryChartView(data: viewModel.data.chartViewItem)
         }
     }
@@ -47,10 +44,7 @@ struct SummaryScreen: View {
             spacing: 10
         ) {
             HStack(alignment: .firstTextBaseline) {
-                Text("Recently")
-                    .font(.title2)
-                    .bold()
-                    .padding(.horizontal, 5)
+                SectionHeaderView("Recently")
                 Spacer()
                 Button("Show More") {
                     viewModel.routeToWorkoutListScreen()
