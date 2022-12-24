@@ -17,7 +17,7 @@ struct SummaryScreen: View {
                 spacing: 20
             ) {
                 thisYear
-                thisMonth
+                recently
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 16)
@@ -38,7 +38,7 @@ struct SummaryScreen: View {
         }
     }
 
-    private var thisMonth: some View {
+    private var recently: some View {
         VStack(
             alignment: .leading,
             spacing: 10
