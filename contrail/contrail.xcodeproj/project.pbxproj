@@ -30,6 +30,7 @@
 		73C88129294EDB0700F3419E /* WorkoutListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C88128294EDB0700F3419E /* WorkoutListScreenViewModel.swift */; };
 		73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8812A294EDB3400F3419E /* WorkoutListDataTranslator.swift */; };
 		73CDFE932956D8F700B2EA29 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CDFE922956D8F700B2EA29 /* SectionHeaderView.swift */; };
+		73CDFE952956DC4800B2EA29 /* SummaryScreenDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CDFE942956DC4800B2EA29 /* SummaryScreenDataTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		73C88128294EDB0700F3419E /* WorkoutListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreenViewModel.swift; sourceTree = "<group>"; };
 		73C8812A294EDB3400F3419E /* WorkoutListDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListDataTranslator.swift; sourceTree = "<group>"; };
 		73CDFE922956D8F700B2EA29 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		73CDFE942956DC4800B2EA29 /* SummaryScreenDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenDataTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				73799A7628C38C4700B96EAD /* SummaryScreen.swift */,
 				73799A7828C38CA600B96EAD /* SummaryScreenViewModel.swift */,
 				73799A7A28C38D0B00B96EAD /* SummaryScreenBuilder.swift */,
+				73CDFE942956DC4800B2EA29 /* SummaryScreenDataTranslator.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				73C88129294EDB0700F3419E /* WorkoutListScreenViewModel.swift in Sources */,
 				73C88127294EDAE600F3419E /* WorkoutListScreenBuilder.swift in Sources */,
 				73CDFE932956D8F700B2EA29 /* SectionHeaderView.swift in Sources */,
+				73CDFE952956DC4800B2EA29 /* SummaryScreenDataTranslator.swift in Sources */,
 				73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */,
 				73C88125294ECDFC00F3419E /* WorkoutListScreen.swift in Sources */,
 				73799A7728C38C4700B96EAD /* SummaryScreen.swift in Sources */,
