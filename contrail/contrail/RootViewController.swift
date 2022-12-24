@@ -19,14 +19,14 @@ final class RootViewController: UIViewController {
                 try await healthKitClient.requestAuthorization()
                 let workout = try await healthKitClient.fetchWorkouts()
                 workoutsCacher.cacheWorkouts(workout)
-                showSummaryScreen()
+                routeToSummaryScreen()
             } catch {
                 showAlert(error)
             }
         }
     }
 
-    private func showSummaryScreen() {
+    private func routeToSummaryScreen() {
         let vc = SummaryScreenBuilder.build()
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.modalPresentationStyle = .fullScreen
