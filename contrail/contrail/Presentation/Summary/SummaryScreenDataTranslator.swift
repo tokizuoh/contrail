@@ -12,7 +12,7 @@ struct SummaryScreenDataTranslator: Translator {
     typealias To = SummaryScreenData
 
     static private let format = "%.2f"
-    
+
     static func translate(_ from: From) -> SummaryScreenData {
         return SummaryScreenData(
             chartViewItem: makeChartViewItem(from),

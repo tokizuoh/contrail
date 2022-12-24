@@ -1,10 +1,10 @@
+included:
+  - contrail
+
 identifier_name:
   min_length:
     warning: 1
     error: 1
-  excluded:
-    - __unknown
-    - __typename
 
 type_name:
   min_length:
@@ -20,7 +20,3 @@ opt_in_rules:
 
 disabled_rules:
   - force_cast
-  - type_name
-
-excluded:
-  - contrail/generated

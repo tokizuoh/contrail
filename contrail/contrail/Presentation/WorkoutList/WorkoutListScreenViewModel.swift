@@ -44,4 +44,3 @@ final class WorkoutListScreenViewModel: ObservableObject {
         data = WorkoutListDataTranslator.translate(workouts)
     }
 }
-

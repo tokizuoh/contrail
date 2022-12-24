@@ -363,7 +363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which mint > /dev/null; then\n  mint run swiftlint autocorrect --format\n  mint run swiftlint\nelse\n  echo \"warning: mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+			shellScript = "if which mint > /dev/null; then\n  mint run swiftlint --fix\n  mint run swiftlint\nelse\n  echo \"warning: mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
