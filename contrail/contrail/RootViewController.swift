@@ -21,7 +21,7 @@ final class RootViewController: UIViewController {
                 workoutsCacher.cacheWorkouts(workout)
                 showSummaryScreen()
             } catch {
-                fatalError(error.localizedDescription)
+                showAlert(error)
             }
         }
     }
@@ -34,5 +34,17 @@ final class RootViewController: UIViewController {
         navigationController.navigationBar.prefersLargeTitles = true
 
         present(navigationController, animated: true)
+    }
+
+    private func showAlert(_ error: Error) {
+        let alertController = UIAlertController(
+            title: "Error getting workouts",
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        alertController.addAction(
+            UIAlertAction(title: "OK", style: .default)
+        )
+        present(alertController, animated: true)
     }
 }
