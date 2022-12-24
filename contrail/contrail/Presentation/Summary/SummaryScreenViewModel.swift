@@ -24,6 +24,7 @@ struct SummaryScreenData {
 
 final class SummaryScreenViewModel: ObservableObject {
     @Published var data: SummaryScreenData = .empty()
+
     private let workoutsCacher: WorkoutsCacherProtocol
     private let routeToWorkoutListScreenAction: () -> Void
 
