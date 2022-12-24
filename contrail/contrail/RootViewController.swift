@@ -45,6 +45,7 @@ final class RootViewController: UIViewController {
         alertController.addAction(
             UIAlertAction(title: "OK", style: .default)
         )
+
         present(alertController, animated: true)
     }
 }
