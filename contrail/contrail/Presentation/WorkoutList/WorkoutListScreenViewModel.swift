@@ -11,10 +11,10 @@ struct WorkoutListData {
     let sectionList: [Section]
 
     struct Section: Identifiable {
-        var id = UUID()
-
         let headerItem: HeaderItem
         let itemList: [WorkoutItem]
+
+        var id: Date { headerItem.date }
     }
 
     struct HeaderItem {

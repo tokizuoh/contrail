@@ -19,10 +19,11 @@ struct SummaryChartViewWorkoutItem: Identifiable {
         case running = "Running"
         case walking = "Walking"
     }
-    var id = UUID()
     let type: WorkoutType
     let date: Date
     let distance: Double
+
+    var id: Date { return date }
 }
 
 struct SummaryChartView: View {
