@@ -14,11 +14,11 @@ struct WorkoutItem: Identifiable {
         case walking = "Walking"
     }
 
-    var id = UUID()
     let type: WorkoutType
     let distanceString: String
     let dateString: String
 
+    var id: String { distanceString + dateString }
 }
 
 struct WorkoutItemView: View {
