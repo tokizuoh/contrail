@@ -52,6 +52,7 @@ struct SummaryChartView: View {
                 applicationActivities: nil
             )
             .presentationDetents([.medium])
+            .ignoresSafeArea(edges: [.bottom])
         }
     }
 
