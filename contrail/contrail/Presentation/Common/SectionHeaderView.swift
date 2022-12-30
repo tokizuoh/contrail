@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SectionHeaderView: View {
-    let headerTitle: String
+    let title: String
 
-    init(_ headerTitle: String) {
-        self.headerTitle = headerTitle
+    init(_ title: String) {
+        self.title = title
     }
 
     var body: some View {
-        Text(headerTitle)
+        Text(title)
             .font(.title2)
             .bold()
             .padding(.horizontal, 5)
