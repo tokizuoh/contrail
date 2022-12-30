@@ -54,12 +54,6 @@ final class HealthKitClient: HealthKitClientProtocol {
         let cyclingResults = try await cyclingDescriptor.result(for: healthStore)
         let runningResults = try await runningDescriptor.result(for: healthStore)
         let walkingResults = try await walkingDescriptor.result(for: healthStore)
-        guard let workouts = cyclingResults + runningResults + walkingResults as? [HKWorkout] else {
-            return []
-        }
-        let sortedWorkouts = workouts.sorted { lw, rw in
-            lw.startDate > rw.endDate
-        }
-        return sortedWorkouts
+        return cyclingResults + runningResults + walkingResults as? [HKWorkout] ?? []
     }
 }
