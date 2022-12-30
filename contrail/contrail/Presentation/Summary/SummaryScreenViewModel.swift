@@ -55,7 +55,7 @@ struct WorkoutListItemTranslator {
 
     static private let format = "%.2f"
 
-    static func translate(_ from: From, toGranularity component: Calendar.Component? = nil) -> To {
+    static func translate(_ from: From, count: Int? = nil, toGranularity component: Calendar.Component? = nil) -> To {
         let workoutItems: [WorkoutItem] = from.compactMap { workout in
             let now = Date()
             var calendar = Calendar(identifier: .japanese)
@@ -93,8 +93,14 @@ struct WorkoutListItemTranslator {
                 dateString: dateString
             )
         }
-        return workoutItems.sorted(by: { li, ri in
+        let sortedWorkoutItems = workoutItems.sorted(by: { li, ri in
             li.dateString < ri.dateString
         }).reversed()
+
+        if let count {
+            return [WorkoutItem]([WorkoutItem](sortedWorkoutItems)[0..<count])
+        } else {
+            return [WorkoutItem](sortedWorkoutItems)
+        }
     }
 }
