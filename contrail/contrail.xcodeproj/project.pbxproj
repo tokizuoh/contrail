@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7302A4CE296139A7002DA7E1 /* SummaryHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */; };
 		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
 		733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733CA82C294DCB1000416E70 /* ActivityView.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHighlightView.swift; sourceTree = "<group>"; };
 		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		733CA82C294DCB1000416E70 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				73799A7828C38CA600B96EAD /* SummaryScreenViewModel.swift */,
 				73799A7A28C38D0B00B96EAD /* SummaryScreenBuilder.swift */,
 				73CDFE942956DC4800B2EA29 /* SummaryScreenDataTranslator.swift */,
+				7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */,
 			);
 			path = Summary;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				73CDFE932956D8F700B2EA29 /* SectionHeaderView.swift in Sources */,
 				73CDFE952956DC4800B2EA29 /* SummaryScreenDataTranslator.swift in Sources */,
 				73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */,
+				7302A4CE296139A7002DA7E1 /* SummaryHighlightView.swift in Sources */,
 				73C88125294ECDFC00F3419E /* WorkoutListScreen.swift in Sources */,
 				73799A7728C38C4700B96EAD /* SummaryScreen.swift in Sources */,
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,

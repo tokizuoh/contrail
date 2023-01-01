@@ -17,6 +17,7 @@ struct SummaryScreen: View {
                 spacing: 20
             ) {
                 thisYear
+                highlights
                 recently
             }
             .padding(.vertical, 20)
@@ -25,6 +26,19 @@ struct SummaryScreen: View {
         .navigationTitle("Summary")
         .onAppear {
             viewModel.dispatch()
+        }
+    }
+
+    private var highlights: some View {
+        VStack(
+            alignment: .leading,
+            spacing: 10
+        ) {
+            SectionHeaderView("Highlights")
+            // TODO
+            SummaryHighlightView(type: .distance, quantity: 127.2)
+            SummaryHighlightView(type: .kilocalories, quantity: 137)
+
         }
     }
 
