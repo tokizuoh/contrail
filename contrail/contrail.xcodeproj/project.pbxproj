@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7302A4CE296139A7002DA7E1 /* SummaryHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */; };
+		7302A4D029617781002DA7E1 /* WorkoutListItemTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A4CF29617781002DA7E1 /* WorkoutListItemTranslator.swift */; };
 		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
 		733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733CA82C294DCB1000416E70 /* ActivityView.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHighlightView.swift; sourceTree = "<group>"; };
+		7302A4CF29617781002DA7E1 /* WorkoutListItemTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemTranslator.swift; sourceTree = "<group>"; };
 		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		733CA82C294DCB1000416E70 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				7392F4BA28C49A9E00747DF3 /* WorkoutItemView.swift */,
 				733CA82C294DCB1000416E70 /* ActivityView.swift */,
 				73CDFE922956D8F700B2EA29 /* SectionHeaderView.swift */,
+				7302A4CF29617781002DA7E1 /* WorkoutListItemTranslator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
+				7302A4D029617781002DA7E1 /* WorkoutListItemTranslator.swift in Sources */,
 				733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
 				733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */,
