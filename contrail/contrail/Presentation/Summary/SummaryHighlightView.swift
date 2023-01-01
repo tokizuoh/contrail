@@ -41,6 +41,12 @@ struct HighlightItem: Identifiable {
     }
 }
 
+private let dateFormatter: DateFormatter = {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMM yyyy"
+    return dateFormatter
+}()
+
 struct SummaryHighlightView: View {
     let item: HighlightItem
 
@@ -57,7 +63,7 @@ struct SummaryHighlightView: View {
                         .bold()
                     Spacer()
                     HStack(alignment: .center) {
-                        Text("Jun 2023")
+                        Text(item.date, formatter: dateFormatter)
                         Image(systemName: "chevron.forward")
                     }
                     .foregroundColor(.lightGray)
