@@ -97,6 +97,10 @@ struct WorkoutListItemTranslator {
             li.dateString < ri.dateString
         }).reversed()
 
+        if sortedWorkoutItems.isEmpty {
+            return []
+        }
+
         if let count {
             return [WorkoutItem]([WorkoutItem](sortedWorkoutItems)[0..<count])
         } else {
