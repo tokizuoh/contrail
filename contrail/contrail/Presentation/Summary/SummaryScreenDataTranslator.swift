@@ -20,6 +20,35 @@ struct SummaryScreenDataTranslator: Translator {
         )
     }
 
+    static func makeHighlightItems(_ from: From) -> [HighlightItem] {
+        // TODO: 当月の消費カロリーの合計とランニング・サイクリング・ウォーキングの走行距離の合計を出す
+
+        let now = Date()
+        var calendar = Calendar(identifier: .japanese)
+        let timeZone = TimeZone(identifier: "Asia/Tokyo")!
+        calendar.timeZone = timeZone
+        calendar.locale = Locale(identifier: "ja_JP")
+
+        let totalDistance: Double = from.reduce(0.0) { partialResult, workout in
+            guard let distance = workout.totalDistance?.kilometers(),
+                  calendar.isDate(now, equalTo: workout.startDate, toGranularity: .month) else {
+                return partialResult
+            }
+            return partialResult + distance
+        }
+
+        let distanceHighlightItem = HighlightItem(
+            type: .distance,
+            date: Date(),
+            quantity: totalDistance,
+            action: {
+                // TODO
+            }
+        )
+
+        return [distanceHighlightItem]
+    }
+
     static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
         let count = min(from.count, 3)
         return WorkoutListItemTranslator.translate(from, count: count)

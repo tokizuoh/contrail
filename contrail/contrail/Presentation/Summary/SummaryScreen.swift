@@ -34,23 +34,14 @@ struct SummaryScreen: View {
             spacing: 10
         ) {
             SectionHeaderView("Highlights")
-            // TODO
-            SummaryHighlightView(
-                item: HighlightItem(
-                    type: .distance,
-                    date: Date(),
-                    quantity: 127.2,
-                    action: {}
-                )
-            )
-            SummaryHighlightView(
-                item: HighlightItem(
-                    type: .distance,
-                    date: Date(),
-                    quantity: 137,
-                    action: {}
-                )
-            )
+            LazyVStack(
+                alignment: .leading,
+                spacing: 10
+            ) {
+                ForEach(viewModel.data.highlightItems) { item in
+                    SummaryHighlightView(item: item)
+                }
+            }
         }
     }
 
