@@ -40,7 +40,6 @@ struct SummaryScreenDataTranslator: Translator {
                   calendar.isDate(now, equalTo: workout.startDate, toGranularity: .month) else {
                 return partialResult
             }
-            print(1)
             return partialResult + (statistics.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0.0)
         }
 
