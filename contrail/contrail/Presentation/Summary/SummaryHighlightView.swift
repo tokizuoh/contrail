@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SummaryHighlightView: View {
+struct HighlightItem: Identifiable {
     enum HighlightType {
         case distance
         case kilocalories
@@ -32,17 +32,26 @@ struct SummaryHighlightView: View {
     }
 
     let type: HighlightType
+    let date: Date
     let quantity: Double
     let action: () -> Void
 
+    var id: HighlightType {
+        return type
+    }
+}
+
+struct SummaryHighlightView: View {
+    let item: HighlightItem
+
     var body: some View {
-        Button(action: action) {
+        Button(action: item.action) {
             VStack(
                 alignment: .leading,
                 spacing: 8
             ) {
                 HStack(alignment: .firstTextBaseline) {
-                    Text(type.name)
+                    Text(item.type.name)
                         .font(.subheadline)
                         .foregroundColor(.healthOrange)
                         .bold()
@@ -59,9 +68,9 @@ struct SummaryHighlightView: View {
                     alignment: .firstTextBaseline,
                     spacing: 2
                 ) {
-                    Text("\(quantity, specifier: "%.0f")")
+                    Text("\(item.quantity, specifier: "%.0f")")
                         .font(.title2)
-                    Text(type.degree)
+                    Text(item.type.degree)
                         .font(.headline)
                 }
                 .bold()
@@ -83,14 +92,20 @@ struct SummaryTotalKilocaloriesView_Previews: PreviewProvider {
             spacing: 16
         ) {
             SummaryHighlightView(
-                type: .distance,
-                quantity: 213.7,
-                action: {}
+                item: HighlightItem(
+                    type: .distance,
+                    date: Date(),
+                    quantity: 213.7,
+                    action: {}
+                )
             )
             SummaryHighlightView(
-                type: .kilocalories,
-                quantity: 137,
-                action: {}
+                item: HighlightItem(
+                    type: .distance,
+                    date: Date(),
+                    quantity: 137,
+                    action: {}
+                )
             )
         }
     }

@@ -36,14 +36,20 @@ struct SummaryScreen: View {
             SectionHeaderView("Highlights")
             // TODO
             SummaryHighlightView(
-                type: .distance,
-                quantity: 127.2,
-                action: {}
+                item: HighlightItem(
+                    type: .distance,
+                    date: Date(),
+                    quantity: 127.2,
+                    action: {}
+                )
             )
             SummaryHighlightView(
-                type: .kilocalories,
-                quantity: 137,
-                action: {}
+                item: HighlightItem(
+                    type: .distance,
+                    date: Date(),
+                    quantity: 137,
+                    action: {}
+                )
             )
         }
     }
