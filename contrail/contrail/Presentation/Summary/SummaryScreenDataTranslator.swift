@@ -15,11 +15,16 @@ struct SummaryScreenDataTranslator: Translator {
 
     static func translate(_ from: From) -> SummaryScreenData {
         return SummaryScreenData(
-            chartViewItem: makeChartViewItem(from),
             workoutItems: makeWorkoutItems(from)
         )
     }
 
+    static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
+        let count = min(from.count, 3)
+        return WorkoutListItemTranslator.translate(from, count: count)
+    }
+
+    // TODO: Detail作成後に移動する
     static private func makeChartViewItem(_ from: From) -> SummaryChartViewItem {
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
@@ -65,8 +70,4 @@ struct SummaryScreenDataTranslator: Translator {
         )
     }
 
-    static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
-        let count = min(from.count, 3)
-        return WorkoutListItemTranslator.translate(from, count: count)
-    }
 }

@@ -48,16 +48,6 @@ struct SummaryScreen: View {
         }
     }
 
-    private var thisYear: some View {
-        VStack(
-            alignment: .leading,
-            spacing: 10
-        ) {
-            SectionHeaderView("This Year")
-            SummaryChartView(data: viewModel.data.chartViewItem)
-        }
-    }
-
     private var recently: some View {
         VStack(
             alignment: .leading,

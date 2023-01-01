@@ -8,15 +8,10 @@
 import HealthKit
 
 struct SummaryScreenData {
-    let chartViewItem: SummaryChartViewItem
     let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
         return .init(
-            chartViewItem: .init(
-                totalDistanceString: "",
-                workoutItems: []
-            ),
             workoutItems: []
         )
     }
