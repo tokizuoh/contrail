@@ -21,8 +21,6 @@ struct SummaryScreenDataTranslator: Translator {
     }
 
     static func makeHighlightItems(_ from: From) -> [HighlightItem] {
-        // TODO: 当月の消費カロリーの合計とランニング・サイクリング・ウォーキングの走行距離の合計を出す
-
         let now = Date()
         var calendar = Calendar(identifier: .japanese)
         let timeZone = TimeZone(identifier: "Asia/Tokyo")!
@@ -37,16 +35,34 @@ struct SummaryScreenDataTranslator: Translator {
             return partialResult + distance
         }
 
+        let totalKilocalories: Double = from.reduce(0.0) { partialResult, workout in
+            guard let statistics = workout.statistics(for: HKQuantityType(.activeEnergyBurned)),
+                  calendar.isDate(now, equalTo: workout.startDate, toGranularity: .month) else {
+                return partialResult
+            }
+            print(1)
+            return partialResult + (statistics.sumQuantity()?.doubleValue(for: .kilocalorie()) ?? 0.0)
+        }
+
         let distanceHighlightItem = HighlightItem(
             type: .distance,
-            date: Date(),
+            date: now,
             quantity: totalDistance,
             action: {
                 // TODO
             }
         )
 
-        return [distanceHighlightItem]
+        let kilocalorieHighlightItem = HighlightItem(
+            type: .kilocalories,
+            date: now,
+            quantity: totalKilocalories,
+            action: {
+                // TODO
+            }
+        )
+
+        return [distanceHighlightItem, kilocalorieHighlightItem]
     }
 
     static func makeWorkoutItems(_ from: From) -> [WorkoutItem] {
