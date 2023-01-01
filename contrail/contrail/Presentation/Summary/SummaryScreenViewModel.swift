@@ -53,7 +53,7 @@ struct WorkoutListItemTranslator {
     typealias From = [HKWorkout]
     typealias To = [WorkoutItem]
 
-    static private let format = "%.2f"
+    static private let format = "%.2f"  // TODO: view側で丸める
 
     static func translate(_ from: From, count: Int? = nil, toGranularity component: Calendar.Component? = nil) -> To {
         let workoutItems: [WorkoutItem] = from.compactMap { workout in
