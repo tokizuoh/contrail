@@ -15,6 +15,7 @@ struct SummaryScreenDataTranslator: Translator {
 
     static func translate(_ from: From) -> SummaryScreenData {
         return SummaryScreenData(
+            highlightItems: makeHighlightItems(from),
             workoutItems: makeWorkoutItems(from)
         )
     }

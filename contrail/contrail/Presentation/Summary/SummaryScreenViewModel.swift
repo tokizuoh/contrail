@@ -8,10 +8,12 @@
 import HealthKit
 
 struct SummaryScreenData {
+    let highlightItems: [HighlightItem]
     let workoutItems: [WorkoutItem]
 
     static func empty() -> Self {
         return .init(
+            highlightItems: [],
             workoutItems: []
         )
     }
