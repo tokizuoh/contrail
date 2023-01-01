@@ -25,6 +25,7 @@ struct WorkoutListScreen: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 16)
         }
+        // TODO: 月別でセクション別にするメニューを追加
         .navigationTitle("Workouts")
         .onAppear {
             viewModel.dispatch()
