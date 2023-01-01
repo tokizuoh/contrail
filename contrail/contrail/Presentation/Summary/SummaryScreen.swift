@@ -16,7 +16,6 @@ struct SummaryScreen: View {
                 alignment: .leading,
                 spacing: 20
             ) {
-                thisYear
                 highlights
                 recently
             }
