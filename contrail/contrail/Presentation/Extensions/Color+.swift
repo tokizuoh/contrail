@@ -16,4 +16,5 @@ extension Color {
     // HealthKit
     static let healthRed = Color("healthRed")
     static let healthOrange = Color("healthOrange")
+    static let healthBlue = Color("healthBlue")
 }
