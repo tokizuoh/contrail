@@ -34,7 +34,6 @@ struct HighlightItem: Identifiable {
     let type: HighlightType
     let date: Date
     let quantity: Double
-    let action: () -> Void
 
     var id: HighlightType {
         return type
@@ -49,9 +48,10 @@ private let dateFormatter: DateFormatter = {
 
 struct SummaryHighlightView: View {
     let item: HighlightItem
+    let action: () -> Void
 
     var body: some View {
-        Button(action: item.action) {
+        Button(action: action) {
             VStack(
                 alignment: .leading,
                 spacing: 8
@@ -101,17 +101,17 @@ struct SummaryTotalKilocaloriesView_Previews: PreviewProvider {
                 item: HighlightItem(
                     type: .distance,
                     date: Date(),
-                    quantity: 213.7,
-                    action: {}
-                )
+                    quantity: 213.7
+                ),
+                action: {}
             )
             SummaryHighlightView(
                 item: HighlightItem(
                     type: .distance,
                     date: Date(),
-                    quantity: 137,
-                    action: {}
-                )
+                    quantity: 137
+                ),
+                action: {}
             )
         }
     }

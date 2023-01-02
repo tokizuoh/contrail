@@ -46,19 +46,13 @@ struct SummaryScreenDataTranslator: Translator {
         let distanceHighlightItem = HighlightItem(
             type: .distance,
             date: now,
-            quantity: totalDistance,
-            action: {
-                // TODO
-            }
+            quantity: totalDistance
         )
 
         let kilocalorieHighlightItem = HighlightItem(
             type: .kilocalories,
             date: now,
-            quantity: totalKilocalories,
-            action: {
-                // TODO
-            }
+            quantity: totalKilocalories
         )
 
         return [distanceHighlightItem, kilocalorieHighlightItem]

@@ -39,7 +39,14 @@ struct SummaryScreen: View {
                 spacing: 10
             ) {
                 ForEach(viewModel.data.highlightItems) { item in
-                    SummaryHighlightView(item: item)
+                    SummaryHighlightView(item: item) {
+                        switch item.type {
+                        case .distance:
+                            break
+                        case .kilocalories:
+                            break
+                        }
+                    }
                 }
             }
         }
