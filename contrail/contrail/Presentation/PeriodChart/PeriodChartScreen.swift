@@ -22,10 +22,10 @@ struct PeriodChartScreen: View {
                     .frame(height: 350)
             }
             .padding(.horizontal, 24)
+            .background(Color.darkGray)
         }
         .navigationTitle("Active Energy")
         .navigationBarTitleDisplayMode(.inline)
-        .background(Color.darkGray)
         .onAppear(perform: viewModel.dispatch)
     }
 }
