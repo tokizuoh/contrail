@@ -9,11 +9,14 @@ import Charts
 import SwiftUI
 
 struct PeriodChartScreen: View {
+    @ObservedObject
+    var viewModel = PeriodChartScreenViewModel(workoutsCacher: WorkoutsCacher.shared)
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("TODO")
             Text("TODO")
-            ChartView(items: [])
+            ChartView(items: viewModel.data.chartItems)
             .padding(.vertical, 20)
             .frame(height: 350)
         }
@@ -21,6 +24,7 @@ struct PeriodChartScreen: View {
         .navigationTitle("Active Energy")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.darkGray)
+        .onAppear(perform: viewModel.dispatch)
     }
 }
 

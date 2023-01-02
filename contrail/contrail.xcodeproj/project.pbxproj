@@ -23,6 +23,7 @@
 		733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61328A4B45400D4364A /* WorkoutsCacher.swift */; };
 		733DE61E28A4F1C600D4364A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE61D28A4F1C600D4364A /* Color+.swift */; };
 		733FB2AA2962AE8100F23262 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FB2A92962AE8100F23262 /* ChartView.swift */; };
+		733FB2AC2962B08B00F23262 /* PeriodChartScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FB2AB2962B08B00F23262 /* PeriodChartScreenViewModel.swift */; };
 		73799A7428C38B1700B96EAD /* SummaryChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7328C38B1700B96EAD /* SummaryChartView.swift */; };
 		73799A7728C38C4700B96EAD /* SummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7628C38C4700B96EAD /* SummaryScreen.swift */; };
 		73799A7928C38CA600B96EAD /* SummaryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73799A7828C38CA600B96EAD /* SummaryScreenViewModel.swift */; };
@@ -78,6 +79,7 @@
 		733DE61728A4B67800D4364A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		733DE61D28A4F1C600D4364A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		733FB2A92962AE8100F23262 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		733FB2AB2962B08B00F23262 /* PeriodChartScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodChartScreenViewModel.swift; sourceTree = "<group>"; };
 		73799A7328C38B1700B96EAD /* SummaryChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryChartView.swift; sourceTree = "<group>"; };
 		73799A7628C38C4700B96EAD /* SummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreen.swift; sourceTree = "<group>"; };
 		73799A7828C38CA600B96EAD /* SummaryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				73284F6029627908007C339D /* PeriodChartScreen.swift */,
 				73284F6229627935007C339D /* PeriodChartScreenBuilder.swift */,
 				733FB2A92962AE8100F23262 /* ChartView.swift */,
+				733FB2AB2962B08B00F23262 /* PeriodChartScreenViewModel.swift */,
 			);
 			path = PeriodChart;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				7316DFA828D855B800DA6D27 /* Translator.swift in Sources */,
 				738D9C9D28A8D19A00852CF5 /* HKQuantity+.swift in Sources */,
 				733DE61428A4B45400D4364A /* WorkoutsCacher.swift in Sources */,
+				733FB2AC2962B08B00F23262 /* PeriodChartScreenViewModel.swift in Sources */,
 				7302A4D029617781002DA7E1 /* WorkoutListItemTranslator.swift in Sources */,
 				733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */,
 				733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */,
