@@ -24,6 +24,7 @@ struct ChartView: View {
                 y: .value("Quantity", item.quantity)
             )
         }
+        .foregroundColor(.healthRed)
         .chartXAxis {
             AxisMarks(values: .stride(by: .day)) { _ in
                 AxisGridLine()
