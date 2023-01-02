@@ -20,7 +20,7 @@ struct PeriodChartScreen: View {
             ) {
                 texts
                 ChartView(items: viewModel.data.chartItems)
-                    .frame(height: 350)
+                    .frame(height: 250)
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 24)
