@@ -19,7 +19,8 @@ struct SummaryScreenBuilder {
             routeToWorkoutListScreenAction: {
                 let hostingController = WorkoutListScreenBuilder.build()
                 vc.navigationController?.pushViewController(hostingController, animated: true)
-            })
+            }
+        )
         let rootView = SummaryScreen(viewModel: viewModel)
         vc.rootView = rootView
         return vc
