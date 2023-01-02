@@ -14,19 +14,43 @@ struct PeriodChartScreen: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                Text("TODO")
-                Text("TODO")
+            VStack(
+                alignment: .leading,
+                spacing: 12
+            ) {
+                texts
                 ChartView(items: viewModel.data.chartItems)
-                    .padding(.vertical, 20)
                     .frame(height: 350)
             }
+            .padding(.vertical, 20)
             .padding(.horizontal, 24)
             .background(Color.darkGray)
         }
         .navigationTitle("Active Energy")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: viewModel.dispatch)
+    }
+
+    private var texts: some View {
+        VStack(
+            alignment: .leading,
+            spacing: 4
+        ) {
+            Text("TOTAL")
+                .font(.subheadline)
+                .foregroundColor(.lightGray)
+            HStack(
+                alignment: .firstTextBaseline,
+                spacing: 4
+            ) {
+                Text("96.3")
+                    .font(.title)
+                Text("kcal")
+                    .font(.subheadline)
+                    .foregroundColor(.lightGray)
+            }
+        }
+        .bold()
     }
 }
 
