@@ -29,6 +29,16 @@ struct HighlightItem: Identifiable {
                 return "kcal"
             }
         }
+
+        // ここでcolorをもたせるのは責務として良くなさそう？
+        var color: Color {
+            switch self {
+            case .distance:
+                return .healthBlue
+            case .kilocalories:
+                return .healthRed
+            }
+        }
     }
 
     let type: HighlightType
@@ -59,7 +69,7 @@ struct SummaryHighlightView: View {
                 HStack(alignment: .firstTextBaseline) {
                     Text(item.type.name)
                         .font(.subheadline)
-                        .foregroundColor(.healthOrange)
+                        .foregroundColor(item.type.color)
                         .bold()
                     Spacer()
                     HStack(alignment: .center) {
