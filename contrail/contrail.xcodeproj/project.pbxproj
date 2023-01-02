@@ -10,6 +10,8 @@
 		7302A4CE296139A7002DA7E1 /* SummaryHighlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */; };
 		7302A4D029617781002DA7E1 /* WorkoutListItemTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A4CF29617781002DA7E1 /* WorkoutListItemTranslator.swift */; };
 		7316DFA828D855B800DA6D27 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7316DFA728D855B800DA6D27 /* Translator.swift */; };
+		73284F6129627908007C339D /* PeriodChartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73284F6029627908007C339D /* PeriodChartScreen.swift */; };
+		73284F6329627935007C339D /* PeriodChartScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73284F6229627935007C339D /* PeriodChartScreenBuilder.swift */; };
 		733CA82D294DCB1000416E70 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733CA82C294DCB1000416E70 /* ActivityView.swift */; };
 		733DE5DC28A482B500D4364A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DB28A482B500D4364A /* AppDelegate.swift */; };
 		733DE5DE28A482B500D4364A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DE5DD28A482B500D4364A /* SceneDelegate.swift */; };
@@ -56,6 +58,8 @@
 		7302A4CD296139A7002DA7E1 /* SummaryHighlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryHighlightView.swift; sourceTree = "<group>"; };
 		7302A4CF29617781002DA7E1 /* WorkoutListItemTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItemTranslator.swift; sourceTree = "<group>"; };
 		7316DFA728D855B800DA6D27 /* Translator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		73284F6029627908007C339D /* PeriodChartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodChartScreen.swift; sourceTree = "<group>"; };
+		73284F6229627935007C339D /* PeriodChartScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodChartScreenBuilder.swift; sourceTree = "<group>"; };
 		733CA82C294DCB1000416E70 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		733DE5D828A482B500D4364A /* contrail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contrail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733DE5DB28A482B500D4364A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = Summary;
 			sourceTree = "<group>";
 		};
+		73284F5E296275EF007C339D /* PeriodChart */ = {
+			isa = PBXGroup;
+			children = (
+				73284F6029627908007C339D /* PeriodChartScreen.swift */,
+				73284F6229627935007C339D /* PeriodChartScreenBuilder.swift */,
+			);
+			path = PeriodChart;
+			sourceTree = "<group>";
+		};
 		733CA82B294DA9F700416E70 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +198,7 @@
 		733DE60F28A4B25D00D4364A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				73284F5E296275EF007C339D /* PeriodChart */,
 				73C88123294ECDEA00F3419E /* WorkoutList */,
 				733CA82B294DA9F700416E70 /* Common */,
 				731F50C928BB4FBD00AD8633 /* Summary */,
@@ -386,10 +400,12 @@
 				73799A7B28C38D0B00B96EAD /* SummaryScreenBuilder.swift in Sources */,
 				733DE60E28A4B23000D4364A /* HealthKitClient.swift in Sources */,
 				73C88129294EDB0700F3419E /* WorkoutListScreenViewModel.swift in Sources */,
+				73284F6129627908007C339D /* PeriodChartScreen.swift in Sources */,
 				73C88127294EDAE600F3419E /* WorkoutListScreenBuilder.swift in Sources */,
 				73CDFE932956D8F700B2EA29 /* SectionHeaderView.swift in Sources */,
 				73CDFE952956DC4800B2EA29 /* SummaryScreenDataTranslator.swift in Sources */,
 				73C8812B294EDB3400F3419E /* WorkoutListDataTranslator.swift in Sources */,
+				73284F6329627935007C339D /* PeriodChartScreenBuilder.swift in Sources */,
 				7302A4CE296139A7002DA7E1 /* SummaryHighlightView.swift in Sources */,
 				73C88125294ECDFC00F3419E /* WorkoutListScreen.swift in Sources */,
 				73799A7728C38C4700B96EAD /* SummaryScreen.swift in Sources */,

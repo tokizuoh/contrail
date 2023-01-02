@@ -44,7 +44,7 @@ struct SummaryScreen: View {
                         case .distance:
                             break
                         case .kilocalories:
-                            break
+                            viewModel.routeToPeriodChartScreen()
                         }
                     }
                 }
