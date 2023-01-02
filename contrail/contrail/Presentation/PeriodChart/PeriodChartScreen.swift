@@ -19,7 +19,7 @@ struct PeriodChartScreen: View {
                 spacing: 12
             ) {
                 texts
-                ChartView(items: viewModel.data.chartItems)
+                ChartView(items: viewModel.data.chartItem.items)
                     .frame(height: 250)
             }
             .padding(.vertical, 20)
@@ -43,7 +43,7 @@ struct PeriodChartScreen: View {
                 alignment: .firstTextBaseline,
                 spacing: 4
             ) {
-                Text("96.3")
+                Text("\(viewModel.data.chartItem.total, specifier: "%.1f")")
                     .font(.title)
                 Text("kcal")
                     .font(.subheadline)

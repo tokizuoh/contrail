@@ -9,10 +9,10 @@ import SwiftUI
 import HealthKit
 
 struct PeriodChartData {
-    let chartItems: [ChartItem]
+    let chartItem: (total: Double, items: [ChartItem])
 
     static var empty: Self {
-        return .init(chartItems: [])
+        return .init(chartItem: (total: 0, items: []))
     }
 }
 
@@ -40,17 +40,19 @@ struct PeriodChartDataTranslator: Translator {
 
     static func translate(_ from: From) -> To {
         let dateBeforeAWeek = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+        var total: Double = 0
         let chartItems: [ChartItem] = from.compactMap { workout in
             guard workout.startDate > dateBeforeAWeek,
                   let statistics = workout.statistics(for: HKQuantityType(.activeEnergyBurned)),
                   let kilocalorie = statistics.sumQuantity()?.doubleValue(for: .kilocalorie()) else {
                 return nil
             }
+            total += kilocalorie
             return ChartItem(
                 date: workout.startDate,
                 quantity: kilocalorie
             )
         }
-        return To(chartItems: chartItems)
+        return To(chartItem: (total: total, items: chartItems))
     }
 }
