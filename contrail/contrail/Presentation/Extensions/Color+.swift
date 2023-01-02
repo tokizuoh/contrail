@@ -9,7 +9,8 @@ import SwiftUI
 
 extension Color {
     static let brand = Color("brand")
-    static let lightGray = Color("lightGray")
+    static let lightGray1 = Color("lightGray1")
+    static let lightGray2 = Color("lightGray2")
     static let darkGray = Color("darkGray")
 
     // HealthKit

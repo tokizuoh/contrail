@@ -75,7 +75,7 @@ struct WorkoutItemView: View {
                 Spacer()
                 Text(item.dateString)
                     .font(.subheadline)
-                    .foregroundColor(.lightGray)
+                    .foregroundColor(.lightGray1)
                     .padding(.vertical, 5)
             }
         }

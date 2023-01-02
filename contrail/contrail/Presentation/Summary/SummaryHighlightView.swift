@@ -66,7 +66,7 @@ struct SummaryHighlightView: View {
                         Text(item.date, formatter: dateFormatter)
                         Image(systemName: "chevron.forward")
                     }
-                    .foregroundColor(.lightGray)
+                    .foregroundColor(.lightGray1)
                     .font(.footnote)
 
                 }

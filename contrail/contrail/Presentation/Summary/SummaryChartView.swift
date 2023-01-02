@@ -65,7 +65,7 @@ struct SummaryChartView: View {
             ) {
                 Text("Total Distances")
                     .font(.subheadline)
-                    .foregroundColor(.lightGray)
+                    .foregroundColor(.lightGray1)
                 Text("\(data.totalDistanceString) KM")
                     .font(.title2)
                     .bold()

@@ -38,7 +38,7 @@ struct PeriodChartScreen: View {
         ) {
             Text("TOTAL")
                 .font(.subheadline)
-                .foregroundColor(.lightGray)
+                .foregroundColor(.lightGray2)
             HStack(
                 alignment: .firstTextBaseline,
                 spacing: 4
@@ -47,7 +47,7 @@ struct PeriodChartScreen: View {
                     .font(.title)
                 Text("kcal")
                     .font(.subheadline)
-                    .foregroundColor(.lightGray)
+                    .foregroundColor(.lightGray2)
             }
         }
         .bold()
