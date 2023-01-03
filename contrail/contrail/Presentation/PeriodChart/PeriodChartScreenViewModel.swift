@@ -30,6 +30,5 @@ final class PeriodChartScreenViewModel: ObservableObject {
         }
 
         data = PeriodChartDataTranslator.translate(workouts)
-        print(data)
     }
 }
