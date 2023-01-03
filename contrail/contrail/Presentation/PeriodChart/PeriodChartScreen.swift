@@ -52,11 +52,3 @@ struct PeriodChartScreen: View {
         .bold()
     }
 }
-
-#if DEBUG
-struct PeriodChartScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        PeriodChartScreen()
-    }
-}
-#endif
