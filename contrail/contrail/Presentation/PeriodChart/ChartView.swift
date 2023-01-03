@@ -15,6 +15,7 @@ struct ChartItem: Identifiable {
 }
 
 struct ChartView: View {
+    let type: HighlightType
     let items: [ChartItem]
 
     var body: some View {
@@ -24,7 +25,7 @@ struct ChartView: View {
                 y: .value("Quantity", item.quantity)
             )
         }
-        .foregroundColor(.healthRed)
+        .foregroundColor(type.color)
         .chartXAxis {
             AxisMarks(values: .stride(by: .day)) { _ in
                 AxisGridLine()
@@ -68,7 +69,7 @@ struct ChartView_Previews: PreviewProvider {
     ]
 
     static var previews: some View {
-        ChartView(items: chartItems)
+        ChartView(type: .distance, items: chartItems)
     }
 }
 #endif

@@ -18,7 +18,7 @@ struct PeriodChartData {
 
 final class PeriodChartScreenViewModel: ObservableObject {
     @Published var data: PeriodChartData = .empty
-    private let highlightType: HighlightType
+    let highlightType: HighlightType
     private let workoutsCacher: WorkoutsCacherProtocol
 
     init(
@@ -34,6 +34,11 @@ final class PeriodChartScreenViewModel: ObservableObject {
             return
         }
 
-        data = PeriodChartDataTranslator.translate(workouts)
+        data = PeriodChartDataTranslator.translate(
+            PeriodChartDataTranslator.From(
+                workouts: workouts,
+                type: highlightType
+            )
+        )
     }
 }

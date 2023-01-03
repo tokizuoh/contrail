@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PeriodChartScreen: View {
     @ObservedObject var viewModel: PeriodChartScreenViewModel
+    let type: HighlightType
 
     var body: some View {
         ScrollView {
@@ -18,14 +19,14 @@ struct PeriodChartScreen: View {
                 spacing: 12
             ) {
                 texts
-                ChartView(items: viewModel.data.chartItem.items)
+                ChartView(type: type, items: viewModel.data.chartItem.items)
                     .frame(height: 250)
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 24)
             .background(Color.darkGray)
         }
-        .navigationTitle("Active Energy")
+        .navigationTitle(navigationTitle)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: viewModel.dispatch)
     }
@@ -44,11 +45,20 @@ struct PeriodChartScreen: View {
             ) {
                 Text("\(viewModel.data.chartItem.total, specifier: "%.1f")")
                     .font(.title)
-                Text("kcal")
+                Text(type.degree)
                     .font(.subheadline)
                     .foregroundColor(.lightGray2)
             }
         }
         .bold()
+    }
+
+    private var navigationTitle: String {
+        switch type {
+        case .distance:
+            return "Distance"
+        case .kilocalories:
+            return "Active Energy"
+        }
     }
 }

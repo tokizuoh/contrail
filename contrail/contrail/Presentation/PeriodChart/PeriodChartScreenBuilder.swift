@@ -14,7 +14,7 @@ struct PeriodChartScreenBuilder {
             highlightType: highlightType,
             workoutsCacher: WorkoutsCacher.shared
         )
-        let rootView = PeriodChartScreen(viewModel: viewModel)
+        let rootView = PeriodChartScreen(viewModel: viewModel, type: highlightType)
         vc.rootView = rootView
         return vc
     }
