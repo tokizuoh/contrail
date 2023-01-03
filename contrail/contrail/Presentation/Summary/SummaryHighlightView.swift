@@ -7,40 +7,31 @@
 
 import SwiftUI
 
-struct HighlightItem: Identifiable {
-    enum HighlightType {
-        case distance
-        case kilocalories
+enum HighlightType {
+    case distance
+    case kilocalories
 
-        var name: String {
-            switch self {
-            case .distance:
-                return "Total Distance"
-            case .kilocalories:
-                return "Total Kilocalories"
-            }
-        }
-
-        var degree: String {
-            switch self {
-            case .distance:
-                return "km"
-            case .kilocalories:
-                return "kcal"
-            }
-        }
-
-        // ここでcolorをもたせるのは責務として良くなさそう？
-        var color: Color {
-            switch self {
-            case .distance:
-                return .healthBlue
-            case .kilocalories:
-                return .healthRed
-            }
+    var degree: String {
+        switch self {
+        case .distance:
+            return "km"
+        case .kilocalories:
+            return "kcal"
         }
     }
 
+    // ここでcolorをもたせるのは責務として良くなさそう？
+    var color: Color {
+        switch self {
+        case .distance:
+            return .healthBlue
+        case .kilocalories:
+            return .healthRed
+        }
+    }
+}
+
+struct HighlightItem: Identifiable {
     let type: HighlightType
     let date: Date
     let quantity: Double
@@ -67,7 +58,7 @@ struct SummaryHighlightView: View {
                 spacing: 8
             ) {
                 HStack(alignment: .firstTextBaseline) {
-                    Text(item.type.name)
+                    headlineText
                         .font(.subheadline)
                         .foregroundColor(item.type.color)
                         .bold()
@@ -97,6 +88,15 @@ struct SummaryHighlightView: View {
             .cornerRadius(10)
         }
         .buttonStyle(.plain)
+    }
+
+    private var headlineText: some View {
+        switch item.type {
+        case .distance:
+            return Text("Total Distance")
+        case .kilocalories:
+            return Text("Total Kilocalories")
+        }
     }
 }
 
