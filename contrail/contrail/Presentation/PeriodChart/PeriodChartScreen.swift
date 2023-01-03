@@ -9,8 +9,7 @@ import Charts
 import SwiftUI
 
 struct PeriodChartScreen: View {
-    @ObservedObject
-    var viewModel = PeriodChartScreenViewModel(workoutsCacher: WorkoutsCacher.shared)
+    @ObservedObject var viewModel: PeriodChartScreenViewModel
 
     var body: some View {
         ScrollView {
