@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct PeriodChartScreenBuilder {
-    static func build() -> UIHostingController<PeriodChartScreen?> {
+    static func build(highlightType: HighlightType) -> UIHostingController<PeriodChartScreen?> {
         let vc = UIHostingController<PeriodChartScreen?>(rootView: nil)
-        let viewModel = PeriodChartScreenViewModel(workoutsCacher: WorkoutsCacher.shared)
+        let viewModel = PeriodChartScreenViewModel(
+            highlightType: highlightType,
+            workoutsCacher: WorkoutsCacher.shared
+        )
         let rootView = PeriodChartScreen(viewModel: viewModel)
         vc.rootView = rootView
         return vc

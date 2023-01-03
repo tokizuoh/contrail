@@ -23,12 +23,12 @@ final class SummaryScreenViewModel: ObservableObject {
     @Published var data: SummaryScreenData = .empty()
 
     private let workoutsCacher: WorkoutsCacherProtocol
-    private let routeToPeriodChartScreenAction: () -> Void
+    private let routeToPeriodChartScreenAction: (_ highlightType: HighlightType) -> Void
     private let routeToWorkoutListScreenAction: () -> Void
 
     init(
         workoutsCacher: WorkoutsCacherProtocol,
-        routeToPeriodChartScreenAction: @escaping () -> Void,
+        routeToPeriodChartScreenAction: @escaping (_ highlightType: HighlightType) -> Void,
         routeToWorkoutListScreenAction: @escaping () -> Void
     ) {
         self.workoutsCacher = workoutsCacher
@@ -44,8 +44,8 @@ final class SummaryScreenViewModel: ObservableObject {
         data = SummaryScreenDataTranslator.translate(workouts)
     }
 
-    func routeToPeriodChartScreen() {
-        routeToPeriodChartScreenAction()
+    func routeToPeriodChartScreen(highlightType: HighlightType) {
+        routeToPeriodChartScreenAction(highlightType)
     }
 
     func routeToWorkoutListScreen() {

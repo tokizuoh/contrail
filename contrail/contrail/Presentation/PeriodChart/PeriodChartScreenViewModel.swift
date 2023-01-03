@@ -18,9 +18,14 @@ struct PeriodChartData {
 
 final class PeriodChartScreenViewModel: ObservableObject {
     @Published var data: PeriodChartData = .empty
+    private let highlightType: HighlightType
     private let workoutsCacher: WorkoutsCacherProtocol
 
-    init(workoutsCacher: WorkoutsCacherProtocol) {
+    init(
+        highlightType: HighlightType,
+        workoutsCacher: WorkoutsCacherProtocol
+    ) {
+        self.highlightType = highlightType
         self.workoutsCacher = workoutsCacher
     }
 

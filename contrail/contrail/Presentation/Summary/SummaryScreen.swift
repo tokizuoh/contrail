@@ -40,12 +40,7 @@ struct SummaryScreen: View {
             ) {
                 ForEach(viewModel.data.highlightItems) { item in
                     SummaryHighlightView(item: item) {
-                        switch item.type {
-                        case .distance:
-                            break
-                        case .kilocalories:
-                            viewModel.routeToPeriodChartScreen()
-                        }
+                        viewModel.routeToPeriodChartScreen(highlightType: item.type)
                     }
                 }
             }

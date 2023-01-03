@@ -12,8 +12,8 @@ struct SummaryScreenBuilder {
         let vc = UIHostingController<SummaryScreen?>(rootView: nil)
         let viewModel = SummaryScreenViewModel(
             workoutsCacher: WorkoutsCacher.shared,
-            routeToPeriodChartScreenAction: {
-                let hostingController = PeriodChartScreenBuilder.build()
+            routeToPeriodChartScreenAction: { highlightType in
+                let hostingController = PeriodChartScreenBuilder.build(highlightType: highlightType)
                 vc.navigationController?.pushViewController(hostingController, animated: true)
             },
             routeToWorkoutListScreenAction: {
